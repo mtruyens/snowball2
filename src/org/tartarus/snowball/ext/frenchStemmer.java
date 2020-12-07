@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,177 +15,177 @@ public class frenchStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("col", -1, -1),
-    new Among("par", -1, -1),
-    new Among("tap", -1, -1)
+private final static Among2 a_0[] = {
+    new Among2("col", -1, -1),
+    new Among2("par", -1, -1),
+    new Among2("tap", -1, -1)
 };
 
-private final static Among a_1[] = {
-    new Among("", -1, 7),
-    new Among("H", 0, 6),
-    new Among("He", 1, 4),
-    new Among("Hi", 1, 5),
-    new Among("I", 0, 1),
-    new Among("U", 0, 2),
-    new Among("Y", 0, 3)
+private final static Among2 a_1[] = {
+    new Among2("", -1, 7),
+    new Among2("H", 0, 6),
+    new Among2("He", 1, 4),
+    new Among2("Hi", 1, 5),
+    new Among2("I", 0, 1),
+    new Among2("U", 0, 2),
+    new Among2("Y", 0, 3)
 };
 
-private final static Among a_2[] = {
-    new Among("iqU", -1, 3),
-    new Among("abl", -1, 3),
-    new Among("I\u00E8r", -1, 4),
-    new Among("i\u00E8r", -1, 4),
-    new Among("eus", -1, 2),
-    new Among("iv", -1, 1)
+private final static Among2 a_2[] = {
+    new Among2("iqU", -1, 3),
+    new Among2("abl", -1, 3),
+    new Among2("I\u00E8r", -1, 4),
+    new Among2("i\u00E8r", -1, 4),
+    new Among2("eus", -1, 2),
+    new Among2("iv", -1, 1)
 };
 
-private final static Among a_3[] = {
-    new Among("ic", -1, 2),
-    new Among("abil", -1, 1),
-    new Among("iv", -1, 3)
+private final static Among2 a_3[] = {
+    new Among2("ic", -1, 2),
+    new Among2("abil", -1, 1),
+    new Among2("iv", -1, 3)
 };
 
-private final static Among a_4[] = {
-    new Among("iqUe", -1, 1),
-    new Among("atrice", -1, 2),
-    new Among("ance", -1, 1),
-    new Among("ence", -1, 5),
-    new Among("logie", -1, 3),
-    new Among("able", -1, 1),
-    new Among("isme", -1, 1),
-    new Among("euse", -1, 11),
-    new Among("iste", -1, 1),
-    new Among("ive", -1, 8),
-    new Among("if", -1, 8),
-    new Among("usion", -1, 4),
-    new Among("ation", -1, 2),
-    new Among("ution", -1, 4),
-    new Among("ateur", -1, 2),
-    new Among("iqUes", -1, 1),
-    new Among("atrices", -1, 2),
-    new Among("ances", -1, 1),
-    new Among("ences", -1, 5),
-    new Among("logies", -1, 3),
-    new Among("ables", -1, 1),
-    new Among("ismes", -1, 1),
-    new Among("euses", -1, 11),
-    new Among("istes", -1, 1),
-    new Among("ives", -1, 8),
-    new Among("ifs", -1, 8),
-    new Among("usions", -1, 4),
-    new Among("ations", -1, 2),
-    new Among("utions", -1, 4),
-    new Among("ateurs", -1, 2),
-    new Among("ments", -1, 15),
-    new Among("ements", 30, 6),
-    new Among("issements", 31, 12),
-    new Among("it\u00E9s", -1, 7),
-    new Among("ment", -1, 15),
-    new Among("ement", 34, 6),
-    new Among("issement", 35, 12),
-    new Among("amment", 34, 13),
-    new Among("emment", 34, 14),
-    new Among("aux", -1, 10),
-    new Among("eaux", 39, 9),
-    new Among("eux", -1, 1),
-    new Among("it\u00E9", -1, 7)
+private final static Among2 a_4[] = {
+    new Among2("iqUe", -1, 1),
+    new Among2("atrice", -1, 2),
+    new Among2("ance", -1, 1),
+    new Among2("ence", -1, 5),
+    new Among2("logie", -1, 3),
+    new Among2("able", -1, 1),
+    new Among2("isme", -1, 1),
+    new Among2("euse", -1, 11),
+    new Among2("iste", -1, 1),
+    new Among2("ive", -1, 8),
+    new Among2("if", -1, 8),
+    new Among2("usion", -1, 4),
+    new Among2("ation", -1, 2),
+    new Among2("ution", -1, 4),
+    new Among2("ateur", -1, 2),
+    new Among2("iqUes", -1, 1),
+    new Among2("atrices", -1, 2),
+    new Among2("ances", -1, 1),
+    new Among2("ences", -1, 5),
+    new Among2("logies", -1, 3),
+    new Among2("ables", -1, 1),
+    new Among2("ismes", -1, 1),
+    new Among2("euses", -1, 11),
+    new Among2("istes", -1, 1),
+    new Among2("ives", -1, 8),
+    new Among2("ifs", -1, 8),
+    new Among2("usions", -1, 4),
+    new Among2("ations", -1, 2),
+    new Among2("utions", -1, 4),
+    new Among2("ateurs", -1, 2),
+    new Among2("ments", -1, 15),
+    new Among2("ements", 30, 6),
+    new Among2("issements", 31, 12),
+    new Among2("it\u00E9s", -1, 7),
+    new Among2("ment", -1, 15),
+    new Among2("ement", 34, 6),
+    new Among2("issement", 35, 12),
+    new Among2("amment", 34, 13),
+    new Among2("emment", 34, 14),
+    new Among2("aux", -1, 10),
+    new Among2("eaux", 39, 9),
+    new Among2("eux", -1, 1),
+    new Among2("it\u00E9", -1, 7)
 };
 
-private final static Among a_5[] = {
-    new Among("ira", -1, 1),
-    new Among("ie", -1, 1),
-    new Among("isse", -1, 1),
-    new Among("issante", -1, 1),
-    new Among("i", -1, 1),
-    new Among("irai", 4, 1),
-    new Among("ir", -1, 1),
-    new Among("iras", -1, 1),
-    new Among("ies", -1, 1),
-    new Among("\u00EEmes", -1, 1),
-    new Among("isses", -1, 1),
-    new Among("issantes", -1, 1),
-    new Among("\u00EEtes", -1, 1),
-    new Among("is", -1, 1),
-    new Among("irais", 13, 1),
-    new Among("issais", 13, 1),
-    new Among("irions", -1, 1),
-    new Among("issions", -1, 1),
-    new Among("irons", -1, 1),
-    new Among("issons", -1, 1),
-    new Among("issants", -1, 1),
-    new Among("it", -1, 1),
-    new Among("irait", 21, 1),
-    new Among("issait", 21, 1),
-    new Among("issant", -1, 1),
-    new Among("iraIent", -1, 1),
-    new Among("issaIent", -1, 1),
-    new Among("irent", -1, 1),
-    new Among("issent", -1, 1),
-    new Among("iront", -1, 1),
-    new Among("\u00EEt", -1, 1),
-    new Among("iriez", -1, 1),
-    new Among("issiez", -1, 1),
-    new Among("irez", -1, 1),
-    new Among("issez", -1, 1)
+private final static Among2 a_5[] = {
+    new Among2("ira", -1, 1),
+    new Among2("ie", -1, 1),
+    new Among2("isse", -1, 1),
+    new Among2("issante", -1, 1),
+    new Among2("i", -1, 1),
+    new Among2("irai", 4, 1),
+    new Among2("ir", -1, 1),
+    new Among2("iras", -1, 1),
+    new Among2("ies", -1, 1),
+    new Among2("\u00EEmes", -1, 1),
+    new Among2("isses", -1, 1),
+    new Among2("issantes", -1, 1),
+    new Among2("\u00EEtes", -1, 1),
+    new Among2("is", -1, 1),
+    new Among2("irais", 13, 1),
+    new Among2("issais", 13, 1),
+    new Among2("irions", -1, 1),
+    new Among2("issions", -1, 1),
+    new Among2("irons", -1, 1),
+    new Among2("issons", -1, 1),
+    new Among2("issants", -1, 1),
+    new Among2("it", -1, 1),
+    new Among2("irait", 21, 1),
+    new Among2("issait", 21, 1),
+    new Among2("issant", -1, 1),
+    new Among2("iraIent", -1, 1),
+    new Among2("issaIent", -1, 1),
+    new Among2("irent", -1, 1),
+    new Among2("issent", -1, 1),
+    new Among2("iront", -1, 1),
+    new Among2("\u00EEt", -1, 1),
+    new Among2("iriez", -1, 1),
+    new Among2("issiez", -1, 1),
+    new Among2("irez", -1, 1),
+    new Among2("issez", -1, 1)
 };
 
-private final static Among a_6[] = {
-    new Among("a", -1, 3),
-    new Among("era", 0, 2),
-    new Among("asse", -1, 3),
-    new Among("ante", -1, 3),
-    new Among("\u00E9e", -1, 2),
-    new Among("ai", -1, 3),
-    new Among("erai", 5, 2),
-    new Among("er", -1, 2),
-    new Among("as", -1, 3),
-    new Among("eras", 8, 2),
-    new Among("\u00E2mes", -1, 3),
-    new Among("asses", -1, 3),
-    new Among("antes", -1, 3),
-    new Among("\u00E2tes", -1, 3),
-    new Among("\u00E9es", -1, 2),
-    new Among("ais", -1, 3),
-    new Among("erais", 15, 2),
-    new Among("ions", -1, 1),
-    new Among("erions", 17, 2),
-    new Among("assions", 17, 3),
-    new Among("erons", -1, 2),
-    new Among("ants", -1, 3),
-    new Among("\u00E9s", -1, 2),
-    new Among("ait", -1, 3),
-    new Among("erait", 23, 2),
-    new Among("ant", -1, 3),
-    new Among("aIent", -1, 3),
-    new Among("eraIent", 26, 2),
-    new Among("\u00E8rent", -1, 2),
-    new Among("assent", -1, 3),
-    new Among("eront", -1, 2),
-    new Among("\u00E2t", -1, 3),
-    new Among("ez", -1, 2),
-    new Among("iez", 32, 2),
-    new Among("eriez", 33, 2),
-    new Among("assiez", 33, 3),
-    new Among("erez", 32, 2),
-    new Among("\u00E9", -1, 2)
+private final static Among2 a_6[] = {
+    new Among2("a", -1, 3),
+    new Among2("era", 0, 2),
+    new Among2("asse", -1, 3),
+    new Among2("ante", -1, 3),
+    new Among2("\u00E9e", -1, 2),
+    new Among2("ai", -1, 3),
+    new Among2("erai", 5, 2),
+    new Among2("er", -1, 2),
+    new Among2("as", -1, 3),
+    new Among2("eras", 8, 2),
+    new Among2("\u00E2mes", -1, 3),
+    new Among2("asses", -1, 3),
+    new Among2("antes", -1, 3),
+    new Among2("\u00E2tes", -1, 3),
+    new Among2("\u00E9es", -1, 2),
+    new Among2("ais", -1, 3),
+    new Among2("erais", 15, 2),
+    new Among2("ions", -1, 1),
+    new Among2("erions", 17, 2),
+    new Among2("assions", 17, 3),
+    new Among2("erons", -1, 2),
+    new Among2("ants", -1, 3),
+    new Among2("\u00E9s", -1, 2),
+    new Among2("ait", -1, 3),
+    new Among2("erait", 23, 2),
+    new Among2("ant", -1, 3),
+    new Among2("aIent", -1, 3),
+    new Among2("eraIent", 26, 2),
+    new Among2("\u00E8rent", -1, 2),
+    new Among2("assent", -1, 3),
+    new Among2("eront", -1, 2),
+    new Among2("\u00E2t", -1, 3),
+    new Among2("ez", -1, 2),
+    new Among2("iez", 32, 2),
+    new Among2("eriez", 33, 2),
+    new Among2("assiez", 33, 3),
+    new Among2("erez", 32, 2),
+    new Among2("\u00E9", -1, 2)
 };
 
-private final static Among a_7[] = {
-    new Among("e", -1, 3),
-    new Among("I\u00E8re", 0, 2),
-    new Among("i\u00E8re", 0, 2),
-    new Among("ion", -1, 1),
-    new Among("Ier", -1, 2),
-    new Among("ier", -1, 2)
+private final static Among2 a_7[] = {
+    new Among2("e", -1, 3),
+    new Among2("I\u00E8re", 0, 2),
+    new Among2("i\u00E8re", 0, 2),
+    new Among2("ion", -1, 1),
+    new Among2("Ier", -1, 2),
+    new Among2("ier", -1, 2)
 };
 
-private final static Among a_8[] = {
-    new Among("ell", -1, -1),
-    new Among("eill", -1, -1),
-    new Among("enn", -1, -1),
-    new Among("onn", -1, -1),
-    new Among("ett", -1, -1)
+private final static Among2 a_8[] = {
+    new Among2("ell", -1, -1),
+    new Among2("eill", -1, -1),
+    new Among2("enn", -1, -1),
+    new Among2("onn", -1, -1),
+    new Among2("ett", -1, -1)
 };
 
 private static final char g_v[] = {17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 130, 103, 8, 5 };
@@ -393,7 +393,7 @@ private boolean r_mark_regions() {
             }
             cursor = v_2;
             lab3: {
-                // among, line 63
+                // Among2, line 63
                 if (find_among(a_0) == 0)
                 {
                     break lab3;
@@ -1268,7 +1268,7 @@ private boolean r_un_double() {
     // (, line 217
     // test, line 218
     int v_1 = limit - cursor;
-    // among, line 218
+    // Among2, line 218
     if (find_among_b(a_8) == 0)
     {
         return false;

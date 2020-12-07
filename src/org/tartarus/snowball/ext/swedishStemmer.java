@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,62 +15,62 @@ public class swedishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("a", -1, 1),
-    new Among("arna", 0, 1),
-    new Among("erna", 0, 1),
-    new Among("heterna", 2, 1),
-    new Among("orna", 0, 1),
-    new Among("ad", -1, 1),
-    new Among("e", -1, 1),
-    new Among("ade", 6, 1),
-    new Among("ande", 6, 1),
-    new Among("arne", 6, 1),
-    new Among("are", 6, 1),
-    new Among("aste", 6, 1),
-    new Among("en", -1, 1),
-    new Among("anden", 12, 1),
-    new Among("aren", 12, 1),
-    new Among("heten", 12, 1),
-    new Among("ern", -1, 1),
-    new Among("ar", -1, 1),
-    new Among("er", -1, 1),
-    new Among("heter", 18, 1),
-    new Among("or", -1, 1),
-    new Among("s", -1, 2),
-    new Among("as", 21, 1),
-    new Among("arnas", 22, 1),
-    new Among("ernas", 22, 1),
-    new Among("ornas", 22, 1),
-    new Among("es", 21, 1),
-    new Among("ades", 26, 1),
-    new Among("andes", 26, 1),
-    new Among("ens", 21, 1),
-    new Among("arens", 29, 1),
-    new Among("hetens", 29, 1),
-    new Among("erns", 21, 1),
-    new Among("at", -1, 1),
-    new Among("andet", -1, 1),
-    new Among("het", -1, 1),
-    new Among("ast", -1, 1)
+private final static Among2 a_0[] = {
+    new Among2("a", -1, 1),
+    new Among2("arna", 0, 1),
+    new Among2("erna", 0, 1),
+    new Among2("heterna", 2, 1),
+    new Among2("orna", 0, 1),
+    new Among2("ad", -1, 1),
+    new Among2("e", -1, 1),
+    new Among2("ade", 6, 1),
+    new Among2("ande", 6, 1),
+    new Among2("arne", 6, 1),
+    new Among2("are", 6, 1),
+    new Among2("aste", 6, 1),
+    new Among2("en", -1, 1),
+    new Among2("anden", 12, 1),
+    new Among2("aren", 12, 1),
+    new Among2("heten", 12, 1),
+    new Among2("ern", -1, 1),
+    new Among2("ar", -1, 1),
+    new Among2("er", -1, 1),
+    new Among2("heter", 18, 1),
+    new Among2("or", -1, 1),
+    new Among2("s", -1, 2),
+    new Among2("as", 21, 1),
+    new Among2("arnas", 22, 1),
+    new Among2("ernas", 22, 1),
+    new Among2("ornas", 22, 1),
+    new Among2("es", 21, 1),
+    new Among2("ades", 26, 1),
+    new Among2("andes", 26, 1),
+    new Among2("ens", 21, 1),
+    new Among2("arens", 29, 1),
+    new Among2("hetens", 29, 1),
+    new Among2("erns", 21, 1),
+    new Among2("at", -1, 1),
+    new Among2("andet", -1, 1),
+    new Among2("het", -1, 1),
+    new Among2("ast", -1, 1)
 };
 
-private final static Among a_1[] = {
-    new Among("dd", -1, -1),
-    new Among("gd", -1, -1),
-    new Among("nn", -1, -1),
-    new Among("dt", -1, -1),
-    new Among("gt", -1, -1),
-    new Among("kt", -1, -1),
-    new Among("tt", -1, -1)
+private final static Among2 a_1[] = {
+    new Among2("dd", -1, -1),
+    new Among2("gd", -1, -1),
+    new Among2("nn", -1, -1),
+    new Among2("dt", -1, -1),
+    new Among2("gt", -1, -1),
+    new Among2("kt", -1, -1),
+    new Among2("tt", -1, -1)
 };
 
-private final static Among a_2[] = {
-    new Among("ig", -1, 1),
-    new Among("lig", 0, 1),
-    new Among("els", -1, 1),
-    new Among("fullt", -1, 3),
-    new Among("l\u00F6st", -1, 2)
+private final static Among2 a_2[] = {
+    new Among2("ig", -1, 1),
+    new Among2("lig", 0, 1),
+    new Among2("els", -1, 1),
+    new Among2("fullt", -1, 3),
+    new Among2("l\u00F6st", -1, 2)
 };
 
 private static final char g_v[] = {17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 32 };
@@ -201,7 +201,7 @@ private boolean r_consonant_pair() {
     // (, line 50
     // and, line 52
     int v_3 = limit - cursor;
-    // among, line 51
+    // Among2, line 51
     if (find_among_b(a_1) == 0)
     {
         limit_backward = v_2;

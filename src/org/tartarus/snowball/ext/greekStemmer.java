@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,1136 +15,1136 @@ public class greekStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("", -1, 25),
-    new Among("\u0386", 0, 1),
-    new Among("\u0388", 0, 5),
-    new Among("\u0389", 0, 7),
-    new Among("\u038A", 0, 9),
-    new Among("\u038C", 0, 15),
-    new Among("\u038E", 0, 20),
-    new Among("\u038F", 0, 24),
-    new Among("\u0390", 0, 7),
-    new Among("\u0391", 0, 1),
-    new Among("\u0392", 0, 2),
-    new Among("\u0393", 0, 3),
-    new Among("\u0394", 0, 4),
-    new Among("\u0395", 0, 5),
-    new Among("\u0396", 0, 6),
-    new Among("\u0397", 0, 7),
-    new Among("\u0398", 0, 8),
-    new Among("\u0399", 0, 9),
-    new Among("\u039A", 0, 10),
-    new Among("\u039B", 0, 11),
-    new Among("\u039C", 0, 12),
-    new Among("\u039D", 0, 13),
-    new Among("\u039E", 0, 14),
-    new Among("\u039F", 0, 15),
-    new Among("\u03A0", 0, 16),
-    new Among("\u03A1", 0, 17),
-    new Among("\u03A3", 0, 18),
-    new Among("\u03A4", 0, 19),
-    new Among("\u03A5", 0, 20),
-    new Among("\u03A6", 0, 21),
-    new Among("\u03A7", 0, 22),
-    new Among("\u03A8", 0, 23),
-    new Among("\u03A9", 0, 24),
-    new Among("\u03AA", 0, 9),
-    new Among("\u03AB", 0, 20),
-    new Among("\u03AC", 0, 1),
-    new Among("\u03AD", 0, 5),
-    new Among("\u03AE", 0, 7),
-    new Among("\u03AF", 0, 9),
-    new Among("\u03B0", 0, 20),
-    new Among("\u03C2", 0, 18),
-    new Among("\u03CA", 0, 7),
-    new Among("\u03CB", 0, 20),
-    new Among("\u03CC", 0, 15),
-    new Among("\u03CD", 0, 20),
-    new Among("\u03CE", 0, 24)
-};
-
-private final static Among a_1[] = {
-    new Among("\u03C3\u03BA\u03B1\u03B3\u03B9\u03B1", -1, 2),
-    new Among("\u03C6\u03B1\u03B3\u03B9\u03B1", -1, 1),
-    new Among("\u03BF\u03BB\u03BF\u03B3\u03B9\u03B1", -1, 3),
-    new Among("\u03C3\u03BF\u03B3\u03B9\u03B1", -1, 4),
-    new Among("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03B1", -1, 5),
-    new Among("\u03BA\u03C1\u03B5\u03B1\u03C4\u03B1", -1, 6),
-    new Among("\u03C0\u03B5\u03C1\u03B1\u03C4\u03B1", -1, 7),
-    new Among("\u03C4\u03B5\u03C1\u03B1\u03C4\u03B1", -1, 8),
-    new Among("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03B1", -1, 11),
-    new Among("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03B1", -1, 10),
-    new Among("\u03C6\u03C9\u03C4\u03B1", -1, 9),
-    new Among("\u03C0\u03B5\u03C1\u03B1\u03C4\u03B7", -1, 7),
-    new Among("\u03C3\u03BA\u03B1\u03B3\u03B9\u03C9\u03BD", -1, 2),
-    new Among("\u03C6\u03B1\u03B3\u03B9\u03C9\u03BD", -1, 1),
-    new Among("\u03BF\u03BB\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 3),
-    new Among("\u03C3\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 4),
-    new Among("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 5),
-    new Among("\u03BA\u03C1\u03B5\u03B1\u03C4\u03C9\u03BD", -1, 6),
-    new Among("\u03C0\u03B5\u03C1\u03B1\u03C4\u03C9\u03BD", -1, 7),
-    new Among("\u03C4\u03B5\u03C1\u03B1\u03C4\u03C9\u03BD", -1, 8),
-    new Among("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03C9\u03BD", -1, 11),
-    new Among("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03C9\u03BD", -1, 10),
-    new Among("\u03C6\u03C9\u03C4\u03C9\u03BD", -1, 9),
-    new Among("\u03BA\u03C1\u03B5\u03B1\u03C3", -1, 6),
-    new Among("\u03C0\u03B5\u03C1\u03B1\u03C3", -1, 7),
-    new Among("\u03C4\u03B5\u03C1\u03B1\u03C3", -1, 8),
-    new Among("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C3", -1, 11),
-    new Among("\u03BA\u03C1\u03B5\u03B1\u03C4\u03BF\u03C3", -1, 6),
-    new Among("\u03C0\u03B5\u03C1\u03B1\u03C4\u03BF\u03C3", -1, 7),
-    new Among("\u03C4\u03B5\u03C1\u03B1\u03C4\u03BF\u03C3", -1, 8),
-    new Among("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03BF\u03C3", -1, 11),
-    new Among("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03BF\u03C3", -1, 10),
-    new Among("\u03C6\u03C9\u03C4\u03BF\u03C3", -1, 9),
-    new Among("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C3", -1, 10),
-    new Among("\u03C6\u03C9\u03C3", -1, 9),
-    new Among("\u03C3\u03BA\u03B1\u03B3\u03B9\u03BF\u03C5", -1, 2),
-    new Among("\u03C6\u03B1\u03B3\u03B9\u03BF\u03C5", -1, 1),
-    new Among("\u03BF\u03BB\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 3),
-    new Among("\u03C3\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 4),
-    new Among("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 5)
-};
-
-private final static Among a_2[] = {
-    new Among("\u03C0\u03B1", -1, 1),
-    new Among("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", 0, 1),
-    new Among("\u03B5\u03C0\u03B1", 0, 1),
-    new Among("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", 0, 1),
-    new Among("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", 0, 1),
-    new Among("\u03B5\u03BC\u03C0\u03B1", 0, 1),
-    new Among("\u03B4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B1\u03B8\u03C1\u03BF", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 7, 1)
-};
-
-private final static Among a_3[] = {
-    new Among("\u03B2", -1, 1),
-    new Among("\u03B2\u03B1\u03B8\u03C5\u03C1\u03B9", -1, 1),
-    new Among("\u03B2\u03B1\u03C1\u03BA", -1, 1),
-    new Among("\u03BC\u03B1\u03C1\u03BA", -1, 1),
-    new Among("\u03BB", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03BA\u03BF\u03C1\u03BD", -1, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03B9\u03BC\u03C0", 7, 1),
-    new Among("\u03C1", -1, 1),
-    new Among("\u03BC\u03B1\u03C1", 9, 1),
-    new Among("\u03B1\u03BC\u03C0\u03B1\u03C1", 9, 1),
-    new Among("\u03B3\u03BA\u03C1", 9, 1),
-    new Among("\u03B2\u03BF\u03BB\u03B2\u03BF\u03C1", 9, 1),
-    new Among("\u03B3\u03BB\u03C5\u03BA\u03BF\u03C1", 9, 1),
-    new Among("\u03C0\u03B9\u03C0\u03B5\u03C1\u03BF\u03C1", 9, 1),
-    new Among("\u03C0\u03C1", 9, 1),
-    new Among("\u03BC\u03C0\u03C1", 16, 1),
-    new Among("\u03B1\u03C1\u03C1", 9, 1),
-    new Among("\u03B3\u03BB\u03C5\u03BA\u03C5\u03C1", 9, 1),
-    new Among("\u03C0\u03BF\u03BB\u03C5\u03C1", 9, 1),
-    new Among("\u03BB\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_4[] = {
-    new Among("\u03B9\u03B6\u03B1", -1, 1),
-    new Among("\u03B9\u03B6\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03BF\u03C5\u03BC\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03BF\u03C5\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03B1\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03B5\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03B6\u03B5\u03B9", -1, 1),
-    new Among("\u03B9\u03B6\u03B1\u03BD", -1, 1),
-    new Among("\u03B9\u03B6\u03BF\u03C5\u03BD", -1, 1),
-    new Among("\u03B9\u03B6\u03B5\u03C3", -1, 1),
-    new Among("\u03B9\u03B6\u03B5\u03B9\u03C3", -1, 1),
-    new Among("\u03B9\u03B6\u03C9", -1, 1)
-};
-
-private final static Among a_5[] = {
-    new Among("\u03B2\u03B9", -1, 1),
-    new Among("\u03BB\u03B9", -1, 1),
-    new Among("\u03B1\u03BB", -1, 1),
-    new Among("\u03B5\u03BD", -1, 1),
-    new Among("\u03C3", -1, 1),
-    new Among("\u03C7", -1, 1),
-    new Among("\u03C5\u03C8", -1, 1),
-    new Among("\u03B6\u03C9", -1, 1)
-};
-
-private final static Among a_6[] = {
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B1", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B5", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B1\u03C4\u03B5", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BD", -1, 1),
-    new Among("\u03C9\u03B8\u03B7\u03BA\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_7[] = {
-    new Among("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03C0\u03B1", -1, 1),
-    new Among("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", -1, 1),
-    new Among("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03BC\u03C0\u03B1", -1, 1),
-    new Among("\u03C7\u03B1\u03C1\u03C4\u03BF\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03BE\u03B1\u03C1\u03C7\u03B1", -1, 1),
-    new Among("\u03BA\u03BB\u03B5", -1, 1),
-    new Among("\u03B5\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B1\u03C0\u03B5\u03BA\u03BB\u03B5", 8, 1),
-    new Among("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03C0\u03B5", -1, 1),
-    new Among("\u03B5\u03C0\u03B5", 13, 1),
-    new Among("\u03BC\u03B5\u03C4\u03B5\u03C0\u03B5", 14, 1),
-    new Among("\u03B5\u03C3\u03B5", -1, 1),
-    new Among("\u03B1\u03B8\u03C1\u03BF", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 17, 1)
-};
-
-private final static Among a_8[] = {
-    new Among("\u03B3\u03B5", -1, 1),
-    new Among("\u03B3\u03BA\u03B5", -1, 1),
-    new Among("\u03B3\u03BA", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03C0\u03BF\u03C5\u03BA\u03B1\u03BC", 3, 1),
-    new Among("\u03BA\u03BF\u03BC", 3, 1),
-    new Among("\u03B1\u03BD", -1, 1),
-    new Among("\u03BF\u03BB\u03BF", -1, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03BB\u03B1\u03C1", -1, 1),
-    new Among("\u03B4\u03B7\u03BC\u03BF\u03BA\u03C1\u03B1\u03C4", -1, 1),
-    new Among("\u03B1\u03C6", -1, 1),
-    new Among("\u03B3\u03B9\u03B3\u03B1\u03BD\u03C4\u03BF\u03B1\u03C6", 11, 1)
-};
-
-private final static Among a_9[] = {
-    new Among("\u03B9\u03C3\u03B1", -1, 1),
-    new Among("\u03B9\u03C3\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B1\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B1\u03BD", -1, 1),
-    new Among("\u03B9\u03C3\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_10[] = {
-    new Among("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03C0\u03B1", -1, 1),
-    new Among("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", -1, 1),
-    new Among("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03BC\u03C0\u03B1", -1, 1),
-    new Among("\u03C7\u03B1\u03C1\u03C4\u03BF\u03C0\u03B1", -1, 1),
-    new Among("\u03B5\u03BE\u03B1\u03C1\u03C7\u03B1", -1, 1),
-    new Among("\u03BA\u03BB\u03B5", -1, 1),
-    new Among("\u03B5\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B1\u03C0\u03B5\u03BA\u03BB\u03B5", 8, 1),
-    new Among("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 7, 1),
-    new Among("\u03B4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03C0\u03B5", -1, 1),
-    new Among("\u03B5\u03C0\u03B5", 13, 1),
-    new Among("\u03BC\u03B5\u03C4\u03B5\u03C0\u03B5", 14, 1),
-    new Among("\u03B5\u03C3\u03B5", -1, 1),
-    new Among("\u03B1\u03B8\u03C1\u03BF", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 17, 1)
-};
-
-private final static Among a_11[] = {
-    new Among("\u03B9\u03C3\u03BF\u03C5\u03BC\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03BF\u03C5\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B5\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03B5\u03B9", -1, 1),
-    new Among("\u03B9\u03C3\u03BF\u03C5\u03BD", -1, 1),
-    new Among("\u03B9\u03C3\u03B5\u03B9\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03C9", -1, 1)
-};
-
-private final static Among a_12[] = {
-    new Among("\u03BA\u03BB\u03B5", -1, 1),
-    new Among("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 0, 1),
-    new Among("\u03C0\u03BB\u03B5", -1, 1),
-    new Among("\u03B4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03C3\u03B5", -1, 1),
-    new Among("\u03B1\u03C3\u03B5", 4, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", -1, 1)
-};
-
-private final static Among a_13[] = {
-    new Among("\u03B1\u03C4\u03B1", -1, 1),
-    new Among("\u03C6\u03B1", -1, 1),
-    new Among("\u03B7\u03C6\u03B1", 1, 1),
-    new Among("\u03BC\u03B5\u03B3", -1, 1),
-    new Among("\u03BB\u03C5\u03B3", -1, 1),
-    new Among("\u03B7\u03B4", -1, 1),
-    new Among("\u03BA\u03B1\u03B8", -1, 1),
-    new Among("\u03B5\u03C7\u03B8", -1, 1),
-    new Among("\u03BA\u03B1\u03BA", -1, 1),
-    new Among("\u03BC\u03B1\u03BA", -1, 1),
-    new Among("\u03C3\u03BA", -1, 1),
-    new Among("\u03C6\u03B9\u03BB", -1, 1),
-    new Among("\u03BA\u03C5\u03BB", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03B3\u03B5\u03BC", 13, 1),
-    new Among("\u03B1\u03C7\u03BD", -1, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03B1\u03C0", 16, 1),
-    new Among("\u03B5\u03BC\u03C0", 16, 1),
-    new Among("\u03B5\u03C5\u03C0", 16, 1),
-    new Among("\u03B1\u03C1", -1, 1),
-    new Among("\u03B1\u03BF\u03C1", -1, 1),
-    new Among("\u03B3\u03C5\u03C1", -1, 1),
-    new Among("\u03C7\u03C1", -1, 1),
-    new Among("\u03C7\u03C9\u03C1", -1, 1),
-    new Among("\u03BA\u03C4", -1, 1),
-    new Among("\u03B1\u03BA\u03C4", 25, 1),
-    new Among("\u03C7\u03C4", -1, 1),
-    new Among("\u03B1\u03C7\u03C4", 27, 1),
-    new Among("\u03C4\u03B1\u03C7", -1, 1),
-    new Among("\u03C3\u03C7", -1, 1),
-    new Among("\u03B1\u03C3\u03C7", 30, 1),
-    new Among("\u03C5\u03C8", -1, 1)
-};
-
-private final static Among a_14[] = {
-    new Among("\u03B9\u03C3\u03C4\u03B1", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03B7", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03BF\u03B9", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03BF", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03B5\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03B7\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03BF\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03BF\u03C5\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03C4\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_15[] = {
-    new Among("\u03B5\u03B3\u03BA\u03BB\u03B5", -1, 1),
-    new Among("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", -1, 1),
-    new Among("\u03C3\u03B5", -1, 1),
-    new Among("\u03BC\u03B5\u03C4\u03B1\u03C3\u03B5", 2, 1),
-    new Among("\u03BC\u03B9\u03BA\u03C1\u03BF\u03C3\u03B5", 2, 1)
-};
-
-private final static Among a_16[] = {
-    new Among("\u03B4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B1\u03BD\u03C4\u03B9\u03B4\u03B1\u03BD\u03B5", 0, 1)
-};
-
-private final static Among a_17[] = {
-    new Among("\u03B1\u03C4\u03BF\u03BC\u03B9\u03BA", -1, 2),
-    new Among("\u03B5\u03B8\u03BD\u03B9\u03BA", -1, 4),
-    new Among("\u03C4\u03BF\u03C0\u03B9\u03BA", -1, 7),
-    new Among("\u03B5\u03BA\u03BB\u03B5\u03BA\u03C4\u03B9\u03BA", -1, 5),
-    new Among("\u03C3\u03BA\u03B5\u03C0\u03C4\u03B9\u03BA", -1, 6),
-    new Among("\u03B3\u03BD\u03C9\u03C3\u03C4\u03B9\u03BA", -1, 3),
-    new Among("\u03B1\u03B3\u03BD\u03C9\u03C3\u03C4\u03B9\u03BA", 5, 1),
-    new Among("\u03B1\u03BB\u03B5\u03BE\u03B1\u03BD\u03B4\u03C1\u03B9\u03BD", -1, 8),
-    new Among("\u03B8\u03B5\u03B1\u03C4\u03C1\u03B9\u03BD", -1, 10),
-    new Among("\u03B2\u03C5\u03B6\u03B1\u03BD\u03C4\u03B9\u03BD", -1, 9)
-};
-
-private final static Among a_18[] = {
-    new Among("\u03B9\u03C3\u03BC\u03BF\u03B9", -1, 1),
-    new Among("\u03B9\u03C3\u03BC\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03C3\u03BC\u03BF", -1, 1),
-    new Among("\u03B9\u03C3\u03BC\u03BF\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03BC\u03BF\u03C5\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03BC\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_19[] = {
-    new Among("\u03C3", -1, 1),
-    new Among("\u03C7", -1, 1)
-};
-
-private final static Among a_20[] = {
-    new Among("\u03BF\u03C5\u03B4\u03B1\u03BA\u03B9\u03B1", -1, 1),
-    new Among("\u03B1\u03C1\u03B1\u03BA\u03B9\u03B1", -1, 1),
-    new Among("\u03BF\u03C5\u03B4\u03B1\u03BA\u03B9", -1, 1),
-    new Among("\u03B1\u03C1\u03B1\u03BA\u03B9", -1, 1)
-};
-
-private final static Among a_21[] = {
-    new Among("\u03B2\u03B1\u03BC\u03B2", -1, 1),
-    new Among("\u03C3\u03BB\u03BF\u03B2", -1, 1),
-    new Among("\u03C4\u03C3\u03B5\u03C7\u03BF\u03C3\u03BB\u03BF\u03B2", 1, 1),
-    new Among("\u03C4\u03B6", -1, 1),
-    new Among("\u03BA", -1, 1),
-    new Among("\u03BA\u03B1\u03C0\u03B1\u03BA", 4, 1),
-    new Among("\u03C3\u03BF\u03BA", 4, 1),
-    new Among("\u03C3\u03BA", 4, 1),
-    new Among("\u03BC\u03B1\u03BB", -1, 1),
-    new Among("\u03C0\u03BB", -1, 1),
-    new Among("\u03BB\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03C6\u03C5\u03BB", -1, 1),
-    new Among("\u03BA\u03B1\u03B9\u03BC", -1, 1),
-    new Among("\u03BA\u03BB\u03B9\u03BC", -1, 1),
-    new Among("\u03C6\u03B1\u03C1\u03BC", -1, 1),
-    new Among("\u03C3\u03C0\u03B1\u03BD", -1, 1),
-    new Among("\u03BA\u03BF\u03BD", -1, 1),
-    new Among("\u03BA\u03B1\u03C4\u03C1\u03B1\u03C0", -1, 1),
-    new Among("\u03C1", -1, 1),
-    new Among("\u03B2\u03C1", 18, 1),
-    new Among("\u03BB\u03B1\u03B2\u03C1", 19, 1),
-    new Among("\u03B1\u03BC\u03B2\u03C1", 19, 1),
-    new Among("\u03BC\u03B5\u03C1", 18, 1),
-    new Among("\u03B1\u03BD\u03B8\u03C1", 18, 1),
-    new Among("\u03BA\u03BF\u03C1", 18, 1),
-    new Among("\u03C3", -1, 1),
-    new Among("\u03BD\u03B1\u03B3\u03BA\u03B1\u03C3", 25, 1),
-    new Among("\u03BC\u03BF\u03C5\u03C3\u03C4", -1, 1),
-    new Among("\u03C1\u03C5", -1, 1),
-    new Among("\u03C6", -1, 1),
-    new Among("\u03C3\u03C6", 29, 1),
-    new Among("\u03B1\u03BB\u03B9\u03C3\u03C6", 30, 1),
-    new Among("\u03C7", -1, 1)
-};
-
-private final static Among a_22[] = {
-    new Among("\u03B2", -1, 1),
-    new Among("\u03BA\u03B1\u03C1\u03B4", -1, 1),
-    new Among("\u03B6", -1, 1),
-    new Among("\u03C3\u03BA", -1, 1),
-    new Among("\u03B2\u03B1\u03BB", -1, 1),
-    new Among("\u03B3\u03BB", -1, 1),
-    new Among("\u03C4\u03C1\u03B9\u03C0\u03BF\u03BB", -1, 1),
-    new Among("\u03B3\u03B9\u03B1\u03BD", -1, 1),
-    new Among("\u03B7\u03B3\u03BF\u03C5\u03BC\u03B5\u03BD", -1, 1),
-    new Among("\u03BA\u03BF\u03BD", -1, 1),
-    new Among("\u03BC\u03B1\u03BA\u03C1\u03C5\u03BD", -1, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03C0\u03B1\u03C4\u03B5\u03C1", -1, 1),
-    new Among("\u03C4\u03BF\u03C3", -1, 1),
-    new Among("\u03BD\u03C5\u03C6", -1, 1)
-};
-
-private final static Among a_23[] = {
-    new Among("\u03B1\u03BA\u03B9\u03B1", -1, 1),
-    new Among("\u03B1\u03C1\u03B1\u03BA\u03B9\u03B1", 0, 1),
-    new Among("\u03B9\u03C4\u03C3\u03B1", -1, 1),
-    new Among("\u03B1\u03BA\u03B9", -1, 1),
-    new Among("\u03B1\u03C1\u03B1\u03BA\u03B9", 3, 1),
-    new Among("\u03B9\u03C4\u03C3\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03C4\u03C3\u03B1\u03C3", -1, 1),
-    new Among("\u03B9\u03C4\u03C3\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_24[] = {
-    new Among("\u03C8\u03B1\u03BB", -1, 1),
-    new Among("\u03B1\u03B9\u03C6\u03BD", -1, 1),
-    new Among("\u03BF\u03BB\u03BF", -1, 1),
-    new Among("\u03B9\u03C1", -1, 1)
-};
-
-private final static Among a_25[] = {
-    new Among("\u03B5", -1, 1),
-    new Among("\u03C0\u03B1\u03B9\u03C7\u03BD", -1, 1)
-};
-
-private final static Among a_26[] = {
-    new Among("\u03B9\u03B4\u03B9\u03B1", -1, 1),
-    new Among("\u03B9\u03B4\u03B9\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03B4\u03B9\u03BF", -1, 1)
-};
-
-private final static Among a_27[] = {
-    new Among("\u03B9\u03B2", -1, 1),
-    new Among("\u03B4", -1, 1),
-    new Among("\u03C6\u03C1\u03B1\u03B3\u03BA", -1, 1),
-    new Among("\u03BB\u03C5\u03BA", -1, 1),
-    new Among("\u03BF\u03B2\u03B5\u03BB", -1, 1),
-    new Among("\u03BC\u03B7\u03BD", -1, 1),
-    new Among("\u03C1", -1, 1)
-};
-
-private final static Among a_28[] = {
-    new Among("\u03B9\u03C3\u03BA\u03B5", -1, 1),
-    new Among("\u03B9\u03C3\u03BA\u03BF", -1, 1),
-    new Among("\u03B9\u03C3\u03BA\u03BF\u03C3", -1, 1),
-    new Among("\u03B9\u03C3\u03BA\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_29[] = {
-    new Among("\u03B1\u03B4\u03C9\u03BD", -1, 1),
-    new Among("\u03B1\u03B4\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_30[] = {
-    new Among("\u03B3\u03B9\u03B1\u03B3\u03B9", -1, -1),
-    new Among("\u03B8\u03B5\u03B9", -1, -1),
-    new Among("\u03BF\u03BA", -1, -1),
-    new Among("\u03BC\u03B1\u03BC", -1, -1),
-    new Among("\u03BC\u03B1\u03BD", -1, -1),
-    new Among("\u03BC\u03C0\u03B1\u03BC\u03C0", -1, -1),
-    new Among("\u03C0\u03B5\u03B8\u03B5\u03C1", -1, -1),
-    new Among("\u03C0\u03B1\u03C4\u03B5\u03C1", -1, -1),
-    new Among("\u03BA\u03C5\u03C1", -1, -1),
-    new Among("\u03BD\u03C4\u03B1\u03BD\u03C4", -1, -1)
-};
-
-private final static Among a_31[] = {
-    new Among("\u03B5\u03B4\u03C9\u03BD", -1, 1),
-    new Among("\u03B5\u03B4\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_32[] = {
-    new Among("\u03BC\u03B9\u03BB", -1, 1),
-    new Among("\u03B4\u03B1\u03C0", -1, 1),
-    new Among("\u03B3\u03B7\u03C0", -1, 1),
-    new Among("\u03B9\u03C0", -1, 1),
-    new Among("\u03B5\u03BC\u03C0", -1, 1),
-    new Among("\u03BF\u03C0", -1, 1),
-    new Among("\u03BA\u03C1\u03B1\u03C3\u03C0", -1, 1),
-    new Among("\u03C5\u03C0", -1, 1)
-};
-
-private final static Among a_33[] = {
-    new Among("\u03BF\u03C5\u03B4\u03C9\u03BD", -1, 1),
-    new Among("\u03BF\u03C5\u03B4\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_34[] = {
-    new Among("\u03C4\u03C1\u03B1\u03B3", -1, 1),
-    new Among("\u03C6\u03B5", -1, 1),
-    new Among("\u03BA\u03B1\u03BB\u03B9\u03B1\u03BA", -1, 1),
-    new Among("\u03B1\u03C1\u03BA", -1, 1),
-    new Among("\u03C3\u03BA", -1, 1),
-    new Among("\u03C0\u03B5\u03C4\u03B1\u03BB", -1, 1),
-    new Among("\u03B2\u03B5\u03BB", -1, 1),
-    new Among("\u03BB\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03C6\u03BB", -1, 1),
-    new Among("\u03C7\u03BD", -1, 1),
-    new Among("\u03C0\u03BB\u03B5\u03BE", -1, 1),
-    new Among("\u03C3\u03C0", -1, 1),
-    new Among("\u03C6\u03C1", -1, 1),
-    new Among("\u03C3", -1, 1),
-    new Among("\u03BB\u03B9\u03C7", -1, 1)
-};
-
-private final static Among a_35[] = {
-    new Among("\u03B5\u03C9\u03BD", -1, 1),
-    new Among("\u03B5\u03C9\u03C3", -1, 1)
-};
-
-private final static Among a_36[] = {
-    new Among("\u03B4", -1, 1),
-    new Among("\u03B9\u03B4", 0, 1),
-    new Among("\u03B8", -1, 1),
-    new Among("\u03B3\u03B1\u03BB", -1, 1),
-    new Among("\u03B5\u03BB", -1, 1),
-    new Among("\u03BD", -1, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03C0\u03B1\u03C1", -1, 1)
-};
-
-private final static Among a_37[] = {
-    new Among("\u03B9\u03B1", -1, 1),
-    new Among("\u03B9\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_38[] = {
-    new Among("\u03B9\u03BA\u03B1", -1, 1),
-    new Among("\u03B9\u03BA\u03C9\u03BD", -1, 1),
-    new Among("\u03B9\u03BA\u03BF", -1, 1),
-    new Among("\u03B9\u03BA\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_39[] = {
-    new Among("\u03B1\u03B4", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B1\u03B4", 0, 1),
-    new Among("\u03BA\u03B1\u03C4\u03B1\u03B4", 0, 1),
-    new Among("\u03B1\u03BD\u03C4\u03B9\u03B4", -1, 1),
-    new Among("\u03B5\u03BD\u03B4", -1, 1),
-    new Among("\u03C6\u03C5\u03BB\u03BF\u03B4", -1, 1),
-    new Among("\u03C5\u03C0\u03BF\u03B4", -1, 1),
-    new Among("\u03C0\u03C1\u03C9\u03C4\u03BF\u03B4", -1, 1),
-    new Among("\u03B5\u03BE\u03C9\u03B4", -1, 1),
-    new Among("\u03B7\u03B8", -1, 1),
-    new Among("\u03B1\u03BD\u03B7\u03B8", 9, 1),
-    new Among("\u03BE\u03B9\u03BA", -1, 1),
-    new Among("\u03B1\u03BB", -1, 1),
-    new Among("\u03B1\u03BC\u03BC\u03BF\u03C7\u03B1\u03BB", 12, 1),
-    new Among("\u03C3\u03C5\u03BD\u03BF\u03BC\u03B7\u03BB", -1, 1),
-    new Among("\u03BC\u03C0\u03BF\u03BB", -1, 1),
-    new Among("\u03BC\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03C4\u03C3\u03B1\u03BC", -1, 1),
-    new Among("\u03B2\u03C1\u03C9\u03BC", -1, 1),
-    new Among("\u03B1\u03BC\u03B1\u03BD", -1, 1),
-    new Among("\u03BC\u03C0\u03B1\u03BD", -1, 1),
-    new Among("\u03BA\u03B1\u03BB\u03BB\u03B9\u03BD", -1, 1),
-    new Among("\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03BD", -1, 1),
-    new Among("\u03C6\u03B9\u03BB\u03BF\u03BD", -1, 1),
-    new Among("\u03BA\u03B1\u03BB\u03C0", -1, 1),
-    new Among("\u03B3\u03B5\u03C1", -1, 1),
-    new Among("\u03C7\u03B1\u03C3", -1, 1),
-    new Among("\u03BC\u03C0\u03BF\u03C3", -1, 1),
-    new Among("\u03C0\u03BB\u03B9\u03B1\u03C4\u03C3", -1, 1),
-    new Among("\u03C0\u03B5\u03C4\u03C3", -1, 1),
-    new Among("\u03C0\u03B9\u03C4\u03C3", -1, 1),
-    new Among("\u03C6\u03C5\u03C3", -1, 1),
-    new Among("\u03BC\u03C0\u03B1\u03B3\u03B9\u03B1\u03C4", -1, 1),
-    new Among("\u03BD\u03B9\u03C4", -1, 1),
-    new Among("\u03C0\u03B9\u03BA\u03B1\u03BD\u03C4", -1, 1),
-    new Among("\u03C3\u03B5\u03C1\u03C4", -1, 1)
-};
-
-private final static Among a_40[] = {
-    new Among("\u03B1\u03B3\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03B7\u03BA\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BC\u03B5", 1, 1),
-    new Among("\u03B7\u03C3\u03B1\u03BC\u03B5", -1, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B1\u03BC\u03B5", -1, 1)
-};
-
-private final static Among a_41[] = {
-    new Among("\u03B2\u03BF\u03C5\u03B2", -1, 1),
-    new Among("\u03BE\u03B5\u03B8", -1, 1),
-    new Among("\u03C0\u03B5\u03B8", -1, 1),
-    new Among("\u03B1\u03C0\u03BF\u03B8", -1, 1),
-    new Among("\u03B1\u03C0\u03BF\u03BA", -1, 1),
-    new Among("\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03B1\u03BD\u03B1\u03C0", -1, 1),
-    new Among("\u03C0\u03B9\u03BA\u03C1", -1, 1),
-    new Among("\u03C0\u03BF\u03C4", -1, 1),
-    new Among("\u03B1\u03C0\u03BF\u03C3\u03C4", -1, 1),
-    new Among("\u03C7", -1, 1),
-    new Among("\u03C3\u03B9\u03C7", 10, 1)
-};
-
-private final static Among a_42[] = {
-    new Among("\u03C4\u03C1", -1, 1),
-    new Among("\u03C4\u03C3", -1, 1)
-};
-
-private final static Among a_43[] = {
-    new Among("\u03B1\u03B3\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B7\u03BA\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BD\u03B5", 1, 1),
-    new Among("\u03B7\u03C3\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03BF\u03BD\u03C4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03BF\u03BD\u03C4\u03B1\u03BD\u03B5", 5, 1),
-    new Among("\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD\u03B5", 7, 1),
-    new Among("\u03BF\u03C4\u03B1\u03BD\u03B5", -1, 1),
-    new Among("\u03B9\u03BF\u03C4\u03B1\u03BD\u03B5", 9, 1)
-};
-
-private final static Among a_44[] = {
-    new Among("\u03C4\u03B1\u03B2", -1, 1),
-    new Among("\u03BD\u03C4\u03B1\u03B2", 0, 1),
-    new Among("\u03C8\u03B7\u03BB\u03BF\u03C4\u03B1\u03B2", 0, 1),
-    new Among("\u03BB\u03B9\u03B2", -1, 1),
-    new Among("\u03BA\u03BB\u03B9\u03B2", 3, 1),
-    new Among("\u03BE\u03B7\u03C1\u03BF\u03BA\u03BB\u03B9\u03B2", 4, 1),
-    new Among("\u03B3", -1, 1),
-    new Among("\u03B1\u03B3", 6, 1),
-    new Among("\u03C4\u03C1\u03B1\u03B3", 7, 1),
-    new Among("\u03C4\u03C3\u03B1\u03B3", 7, 1),
-    new Among("\u03B1\u03B8\u03B9\u03B3\u03B3", 6, 1),
-    new Among("\u03C4\u03C3\u03B9\u03B3\u03B3", 6, 1),
-    new Among("\u03B1\u03C4\u03C3\u03B9\u03B3\u03B3", 11, 1),
-    new Among("\u03C3\u03C4\u03B5\u03B3", 6, 1),
-    new Among("\u03B1\u03C0\u03B7\u03B3", 6, 1),
-    new Among("\u03C3\u03B9\u03B3", 6, 1),
-    new Among("\u03B1\u03BD\u03BF\u03C1\u03B3", 6, 1),
-    new Among("\u03B5\u03BD\u03BF\u03C1\u03B3", 6, 1),
-    new Among("\u03BA\u03B1\u03BB\u03C0\u03BF\u03C5\u03B6", -1, 1),
-    new Among("\u03B8", -1, 1),
-    new Among("\u03BC\u03C9\u03B1\u03BC\u03B5\u03B8", 19, 1),
-    new Among("\u03C0\u03B9\u03B8", 19, 1),
-    new Among("\u03B1\u03C0\u03B9\u03B8", 21, 1),
-    new Among("\u03B4\u03B5\u03BA", -1, 1),
-    new Among("\u03C0\u03B5\u03BB\u03B5\u03BA", -1, 1),
-    new Among("\u03B9\u03BA", -1, 1),
-    new Among("\u03B1\u03BD\u03B9\u03BA", 25, 1),
-    new Among("\u03B2\u03BF\u03C5\u03BB\u03BA", -1, 1),
-    new Among("\u03B2\u03B1\u03C3\u03BA", -1, 1),
-    new Among("\u03B2\u03C1\u03B1\u03C7\u03C5\u03BA", -1, 1),
-    new Among("\u03B3\u03B1\u03BB", -1, 1),
-    new Among("\u03BA\u03B1\u03C4\u03B1\u03B3\u03B1\u03BB", 30, 1),
-    new Among("\u03BF\u03BB\u03BF\u03B3\u03B1\u03BB", 30, 1),
-    new Among("\u03B2\u03B1\u03B8\u03C5\u03B3\u03B1\u03BB", 30, 1),
-    new Among("\u03BC\u03B5\u03BB", -1, 1),
-    new Among("\u03BA\u03B1\u03C3\u03C4\u03B5\u03BB", -1, 1),
-    new Among("\u03C0\u03BF\u03C1\u03C4\u03BF\u03BB", -1, 1),
-    new Among("\u03C0\u03BB", -1, 1),
-    new Among("\u03B4\u03B9\u03C0\u03BB", 37, 1),
-    new Among("\u03BB\u03B1\u03BF\u03C0\u03BB", 37, 1),
-    new Among("\u03C8\u03C5\u03C7\u03BF\u03C0\u03BB", 37, 1),
-    new Among("\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03BF\u03BB\u03B9\u03B3\u03BF\u03B4\u03B1\u03BC", 42, 1),
-    new Among("\u03BC\u03BF\u03C5\u03C3\u03BF\u03C5\u03BB\u03BC", 42, 1),
-    new Among("\u03B4\u03C1\u03B1\u03B4\u03BF\u03C5\u03BC", 42, 1),
-    new Among("\u03B2\u03C1\u03B1\u03C7\u03BC", 42, 1),
-    new Among("\u03BD", -1, 1),
-    new Among("\u03B1\u03BC\u03B5\u03C1\u03B9\u03BA\u03B1\u03BD", 47, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03B1\u03B4\u03B1\u03C0", 49, 1),
-    new Among("\u03C7\u03B1\u03BC\u03B7\u03BB\u03BF\u03B4\u03B1\u03C0", 49, 1),
-    new Among("\u03C0\u03BF\u03BB\u03C5\u03B4\u03B1\u03C0", 49, 1),
-    new Among("\u03BA\u03BF\u03C0", 49, 1),
-    new Among("\u03C5\u03C0\u03BF\u03BA\u03BF\u03C0", 53, 1),
-    new Among("\u03C4\u03C3\u03BF\u03C0", 49, 1),
-    new Among("\u03C3\u03C0", 49, 1),
-    new Among("\u03B5\u03C1", -1, 1),
-    new Among("\u03B3\u03B5\u03C1", 57, 1),
-    new Among("\u03B2\u03B5\u03C4\u03B5\u03C1", 57, 1),
-    new Among("\u03BB\u03BF\u03C5\u03B8\u03B7\u03C1", -1, 1),
-    new Among("\u03BA\u03BF\u03C1\u03BC\u03BF\u03C1", -1, 1),
-    new Among("\u03C0\u03B5\u03C1\u03B9\u03C4\u03C1", -1, 1),
-    new Among("\u03BF\u03C5\u03C1", -1, 1),
-    new Among("\u03C3", -1, 1),
-    new Among("\u03B2\u03B1\u03C3", 64, 1),
-    new Among("\u03C0\u03BF\u03BB\u03B9\u03C3", 64, 1),
-    new Among("\u03C3\u03B1\u03C1\u03B1\u03BA\u03B1\u03C4\u03C3", 64, 1),
-    new Among("\u03B8\u03C5\u03C3", 64, 1),
-    new Among("\u03B4\u03B9\u03B1\u03C4", -1, 1),
-    new Among("\u03C0\u03BB\u03B1\u03C4", -1, 1),
-    new Among("\u03C4\u03C3\u03B1\u03C1\u03BB\u03B1\u03C4", -1, 1),
-    new Among("\u03C4\u03B5\u03C4", -1, 1),
-    new Among("\u03C0\u03BF\u03C5\u03C1\u03B9\u03C4", -1, 1),
-    new Among("\u03C3\u03BF\u03C5\u03BB\u03C4", -1, 1),
-    new Among("\u03BC\u03B1\u03B9\u03BD\u03C4", -1, 1),
-    new Among("\u03B6\u03C9\u03BD\u03C4", -1, 1),
-    new Among("\u03BA\u03B1\u03C3\u03C4", -1, 1),
-    new Among("\u03C6", -1, 1),
-    new Among("\u03B4\u03B9\u03B1\u03C6", 78, 1),
-    new Among("\u03C3\u03C4\u03B5\u03C6", 78, 1),
-    new Among("\u03C6\u03C9\u03C4\u03BF\u03C3\u03C4\u03B5\u03C6", 80, 1),
-    new Among("\u03C0\u03B5\u03C1\u03B7\u03C6", 78, 1),
-    new Among("\u03C5\u03C0\u03B5\u03C1\u03B7\u03C6", 82, 1),
-    new Among("\u03BA\u03BF\u03B9\u03BB\u03B1\u03C1\u03C6", 78, 1),
-    new Among("\u03C0\u03B5\u03BD\u03C4\u03B1\u03C1\u03C6", 78, 1),
-    new Among("\u03BF\u03C1\u03C6", 78, 1),
-    new Among("\u03C7", -1, 1),
-    new Among("\u03B1\u03BC\u03B7\u03C7", 87, 1),
-    new Among("\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 87, 1),
-    new Among("\u03BC\u03B5\u03B3\u03BB\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
-    new Among("\u03BA\u03B1\u03C0\u03BD\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
-    new Among("\u03BC\u03B9\u03BA\u03C1\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
-    new Among("\u03C0\u03BF\u03BB\u03C5\u03BC\u03B7\u03C7", 87, 1),
-    new Among("\u03BB\u03B9\u03C7", 87, 1)
-};
-
-private final static Among a_45[] = {
-    new Among("\u03B7\u03C3\u03B5\u03C4\u03B5", -1, 1)
-};
-
-private final static Among a_46[] = {
-    new Among("\u03B5\u03BD\u03B4", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B4", -1, 1),
-    new Among("\u03BF\u03B4", -1, 1),
-    new Among("\u03B4\u03B9\u03B1\u03B8", -1, 1),
-    new Among("\u03BA\u03B1\u03B8", -1, 1),
-    new Among("\u03C1\u03B1\u03B8", -1, 1),
-    new Among("\u03C4\u03B1\u03B8", -1, 1),
-    new Among("\u03C4\u03B9\u03B8", -1, 1),
-    new Among("\u03B5\u03BA\u03B8", -1, 1),
-    new Among("\u03B5\u03BD\u03B8", -1, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B8", -1, 1),
-    new Among("\u03C1\u03BF\u03B8", -1, 1),
-    new Among("\u03C5\u03C0\u03B5\u03C1\u03B8", -1, 1),
-    new Among("\u03C3\u03B8", -1, 1),
-    new Among("\u03B5\u03C5\u03B8", -1, 1),
-    new Among("\u03B1\u03C1\u03BA", -1, 1),
-    new Among("\u03C9\u03C6\u03B5\u03BB", -1, 1),
-    new Among("\u03B2\u03BF\u03BB", -1, 1),
-    new Among("\u03B1\u03B9\u03BD", -1, 1),
-    new Among("\u03C0\u03BF\u03BD", -1, 1),
-    new Among("\u03C1\u03BF\u03BD", -1, 1),
-    new Among("\u03C3\u03C5\u03BD", -1, 1),
-    new Among("\u03B2\u03B1\u03C1", -1, 1),
-    new Among("\u03B2\u03C1", -1, 1),
-    new Among("\u03B1\u03B9\u03C1", -1, 1),
-    new Among("\u03C6\u03BF\u03C1", -1, 1),
-    new Among("\u03B5\u03C5\u03C1", -1, 1),
-    new Among("\u03C0\u03C5\u03C1", -1, 1),
-    new Among("\u03C7\u03C9\u03C1", -1, 1),
-    new Among("\u03BD\u03B5\u03C4", -1, 1),
-    new Among("\u03C3\u03C7", -1, 1)
-};
-
-private final static Among a_47[] = {
-    new Among("\u03C0\u03B1\u03B3", -1, 1),
-    new Among("\u03B4", -1, 1),
-    new Among("\u03B1\u03B4", 1, 1),
-    new Among("\u03B8", -1, 1),
-    new Among("\u03B1\u03B8", 3, 1),
-    new Among("\u03C4\u03BF\u03BA", -1, 1),
-    new Among("\u03C3\u03BA", -1, 1),
-    new Among("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB", -1, 1),
-    new Among("\u03C3\u03BA\u03B5\u03BB", -1, 1),
-    new Among("\u03B1\u03C0\u03BB", -1, 1),
-    new Among("\u03B5\u03BC", -1, 1),
-    new Among("\u03B1\u03BD", -1, 1),
-    new Among("\u03B2\u03B5\u03BD", -1, 1),
-    new Among("\u03B2\u03B1\u03C1\u03BF\u03BD", -1, 1),
-    new Among("\u03BA\u03BF\u03C0", -1, 1),
-    new Among("\u03C3\u03B5\u03C1\u03C0", -1, 1),
-    new Among("\u03B1\u03B2\u03B1\u03C1", -1, 1),
-    new Among("\u03B5\u03BD\u03B1\u03C1", -1, 1),
-    new Among("\u03B1\u03B2\u03C1", -1, 1),
-    new Among("\u03BC\u03C0\u03BF\u03C1", -1, 1),
-    new Among("\u03B8\u03B1\u03C1\u03C1", -1, 1),
-    new Among("\u03BD\u03C4\u03C1", -1, 1),
-    new Among("\u03C5", -1, 1),
-    new Among("\u03BD\u03B9\u03C6", -1, 1),
-    new Among("\u03C3\u03C5\u03C1\u03C6", -1, 1)
-};
-
-private final static Among a_48[] = {
-    new Among("\u03BF\u03BD\u03C4\u03B1\u03C3", -1, 1),
-    new Among("\u03C9\u03BD\u03C4\u03B1\u03C3", -1, 1)
-};
-
-private final static Among a_49[] = {
-    new Among("\u03BF\u03BC\u03B1\u03C3\u03C4\u03B5", -1, 1),
-    new Among("\u03B9\u03BF\u03BC\u03B1\u03C3\u03C4\u03B5", 0, 1)
-};
-
-private final static Among a_50[] = {
-    new Among("\u03C0", -1, 1),
-    new Among("\u03B1\u03C0", 0, 1),
-    new Among("\u03B1\u03BA\u03B1\u03C4\u03B1\u03C0", 1, 1),
-    new Among("\u03C3\u03C5\u03BC\u03C0", 0, 1),
-    new Among("\u03B1\u03C3\u03C5\u03BC\u03C0", 3, 1),
-    new Among("\u03B1\u03BC\u03B5\u03C4\u03B1\u03BC\u03C6", -1, 1)
-};
-
-private final static Among a_51[] = {
-    new Among("\u03B6", -1, 1),
-    new Among("\u03B1\u03BB", -1, 1),
-    new Among("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB", 1, 1),
-    new Among("\u03B5\u03BA\u03C4\u03B5\u03BB", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03BE", -1, 1),
-    new Among("\u03C0\u03C1\u03BF", -1, 1),
-    new Among("\u03B1\u03C1", -1, 1),
-    new Among("\u03BD\u03B9\u03C3", -1, 1)
-};
-
-private final static Among a_52[] = {
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B1", -1, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B5", -1, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_53[] = {
-    new Among("\u03C0\u03B9\u03B8", -1, 1),
-    new Among("\u03BF\u03B8", -1, 1),
-    new Among("\u03BD\u03B1\u03C1\u03B8", -1, 1),
-    new Among("\u03C3\u03BA\u03BF\u03C5\u03BB", -1, 1),
-    new Among("\u03C3\u03BA\u03C9\u03BB", -1, 1),
-    new Among("\u03C3\u03C6", -1, 1)
-};
-
-private final static Among a_54[] = {
-    new Among("\u03B8", -1, 1),
-    new Among("\u03B4\u03B9\u03B1\u03B8", 0, 1),
-    new Among("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03C4\u03B1\u03B8", 0, 1),
-    new Among("\u03C3\u03C5\u03BD\u03B8", 0, 1),
-    new Among("\u03C0\u03C1\u03BF\u03C3\u03B8", 0, 1)
-};
-
-private final static Among a_55[] = {
-    new Among("\u03B7\u03BA\u03B1", -1, 1),
-    new Among("\u03B7\u03BA\u03B5", -1, 1),
-    new Among("\u03B7\u03BA\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_56[] = {
-    new Among("\u03C6\u03B1\u03B3", -1, 1),
-    new Among("\u03BB\u03B7\u03B3", -1, 1),
-    new Among("\u03C6\u03C1\u03C5\u03B4", -1, 1),
-    new Among("\u03BC\u03B1\u03BD\u03C4\u03B9\u03BB", -1, 1),
-    new Among("\u03BC\u03B1\u03BB\u03BB", -1, 1),
-    new Among("\u03BF\u03BC", -1, 1),
-    new Among("\u03B2\u03BB\u03B5\u03C0", -1, 1),
-    new Among("\u03C0\u03BF\u03B4\u03B1\u03C1", -1, 1),
-    new Among("\u03BA\u03C5\u03BC\u03B1\u03C4", -1, 1),
-    new Among("\u03C0\u03C1\u03C9\u03C4", -1, 1),
-    new Among("\u03BB\u03B1\u03C7", -1, 1),
-    new Among("\u03C0\u03B1\u03BD\u03C4\u03B1\u03C7", -1, 1)
-};
-
-private final static Among a_57[] = {
-    new Among("\u03C4\u03C3\u03B1", -1, 1),
-    new Among("\u03C7\u03B1\u03B4", -1, 1),
-    new Among("\u03BC\u03B5\u03B4", -1, 1),
-    new Among("\u03BB\u03B1\u03BC\u03C0\u03B9\u03B4", -1, 1),
-    new Among("\u03B4\u03B5", -1, 1),
-    new Among("\u03C0\u03BB\u03B5", -1, 1),
-    new Among("\u03BC\u03B5\u03C3\u03B1\u03B6", -1, 1),
-    new Among("\u03B4\u03B5\u03C3\u03C0\u03BF\u03B6", -1, 1),
-    new Among("\u03B1\u03B9\u03B8", -1, 1),
-    new Among("\u03C6\u03B1\u03C1\u03BC\u03B1\u03BA", -1, 1),
-    new Among("\u03B1\u03B3\u03BA", -1, 1),
-    new Among("\u03B1\u03BD\u03B7\u03BA", -1, 1),
-    new Among("\u03BB", -1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03B1\u03BC", 13, 1),
-    new Among("\u03B2\u03C1\u03BF\u03BC", 13, 1),
-    new Among("\u03C5\u03C0\u03BF\u03C4\u03B5\u03B9\u03BD", -1, 1),
-    new Among("\u03B5\u03BA\u03BB\u03B9\u03C0", -1, 1),
-    new Among("\u03C1", -1, 1),
-    new Among("\u03B5\u03BD\u03B4\u03B9\u03B1\u03C6\u03B5\u03C1", 18, 1),
-    new Among("\u03B1\u03BD\u03B1\u03C1\u03C1", 18, 1),
-    new Among("\u03C0\u03B1\u03C4", -1, 1),
-    new Among("\u03BA\u03B1\u03B8\u03B1\u03C1\u03B5\u03C5", -1, 1),
-    new Among("\u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03B5\u03C5", -1, 1),
-    new Among("\u03BB\u03B5\u03C7", -1, 1)
-};
-
-private final static Among a_58[] = {
-    new Among("\u03BF\u03C5\u03C3\u03B1", -1, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B5", -1, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_59[] = {
-    new Among("\u03C8\u03BF\u03C6", -1, -1),
-    new Among("\u03BD\u03B1\u03C5\u03BB\u03BF\u03C7", -1, -1)
-};
-
-private final static Among a_60[] = {
-    new Among("\u03C0\u03B5\u03BB", -1, 1),
-    new Among("\u03BB\u03BB", -1, 1),
-    new Among("\u03C3\u03BC\u03B7\u03BD", -1, 1),
-    new Among("\u03C1\u03C0", -1, 1),
-    new Among("\u03C0\u03C1", -1, 1),
-    new Among("\u03C6\u03C1", -1, 1),
-    new Among("\u03C7\u03BF\u03C1\u03C4", -1, 1),
-    new Among("\u03BF\u03C6", -1, 1),
-    new Among("\u03C3\u03C6", -1, 1),
-    new Among("\u03BB\u03BF\u03C7", -1, 1)
-};
-
-private final static Among a_61[] = {
-    new Among("\u03B1\u03BC\u03B1\u03BB\u03BB\u03B9", -1, 1),
-    new Among("\u03BB", -1, 1),
-    new Among("\u03B1\u03BC\u03B1\u03BB", 1, 1),
-    new Among("\u03BC", -1, 1),
-    new Among("\u03BF\u03C5\u03BB\u03B1\u03BC", 3, 1),
-    new Among("\u03B5\u03BD", -1, 1),
-    new Among("\u03B4\u03B5\u03C1\u03B2\u03B5\u03BD", 5, 1),
-    new Among("\u03C0", -1, 1),
-    new Among("\u03B1\u03B5\u03B9\u03C0", 7, 1),
-    new Among("\u03B1\u03C1\u03C4\u03B9\u03C0", 7, 1),
-    new Among("\u03C3\u03C5\u03BC\u03C0", 7, 1),
-    new Among("\u03BD\u03B5\u03BF\u03C0", 7, 1),
-    new Among("\u03BA\u03C1\u03BF\u03BA\u03B1\u03BB\u03BF\u03C0", 7, 1),
-    new Among("\u03BF\u03BB\u03BF\u03C0", 7, 1),
-    new Among("\u03C0\u03C1\u03BF\u03C3\u03C9\u03C0\u03BF\u03C0", 7, 1),
-    new Among("\u03C3\u03B9\u03B4\u03B7\u03C1\u03BF\u03C0", 7, 1),
-    new Among("\u03B4\u03C1\u03BF\u03C3\u03BF\u03C0", 7, 1),
-    new Among("\u03B1\u03C3\u03C0", 7, 1),
-    new Among("\u03B1\u03BD\u03C5\u03C0", 7, 1),
-    new Among("\u03C1", -1, 1),
-    new Among("\u03B1\u03C3\u03C0\u03B1\u03C1", 19, 1),
-    new Among("\u03C7\u03B1\u03C1", 19, 1),
-    new Among("\u03B1\u03C7\u03B1\u03C1", 21, 1),
-    new Among("\u03B1\u03C0\u03B5\u03C1", 19, 1),
-    new Among("\u03C4\u03C1", 19, 1),
-    new Among("\u03BF\u03C5\u03C1", 19, 1),
-    new Among("\u03C4", -1, 1),
-    new Among("\u03B4\u03B9\u03B1\u03C4", 26, 1),
-    new Among("\u03B5\u03C0\u03B9\u03C4", 26, 1),
-    new Among("\u03C3\u03C5\u03BD\u03C4", 26, 1),
-    new Among("\u03BF\u03BC\u03BF\u03C4", 26, 1),
-    new Among("\u03BD\u03BF\u03BC\u03BF\u03C4", 30, 1),
-    new Among("\u03B1\u03C0\u03BF\u03C4", 26, 1),
-    new Among("\u03C5\u03C0\u03BF\u03C4", 26, 1),
-    new Among("\u03B1\u03B2\u03B1\u03C3\u03C4", 26, 1),
-    new Among("\u03B1\u03B9\u03BC\u03BF\u03C3\u03C4", 26, 1),
-    new Among("\u03C0\u03C1\u03BF\u03C3\u03C4", 26, 1),
-    new Among("\u03B1\u03BD\u03C5\u03C3\u03C4", 26, 1),
-    new Among("\u03BD\u03B1\u03C5", -1, 1),
-    new Among("\u03B1\u03C6", -1, 1),
-    new Among("\u03BE\u03B5\u03C6", -1, 1),
-    new Among("\u03B1\u03B4\u03B7\u03C6", -1, 1),
-    new Among("\u03C0\u03B1\u03BC\u03C6", -1, 1),
-    new Among("\u03C0\u03BF\u03BB\u03C5\u03C6", -1, 1)
-};
-
-private final static Among a_62[] = {
-    new Among("\u03B1\u03B3\u03B1", -1, 1),
-    new Among("\u03B1\u03B3\u03B5", -1, 1),
-    new Among("\u03B1\u03B3\u03B5\u03C3", -1, 1)
-};
-
-private final static Among a_63[] = {
-    new Among("\u03B7\u03C3\u03B1", -1, 1),
-    new Among("\u03B7\u03C3\u03B5", -1, 1),
-    new Among("\u03B7\u03C3\u03BF\u03C5", -1, 1)
-};
-
-private final static Among a_64[] = {
-    new Among("\u03BD", -1, 1),
-    new Among("\u03B4\u03C9\u03B4\u03B5\u03BA\u03B1\u03BD", 0, 1),
-    new Among("\u03B5\u03C0\u03C4\u03B1\u03BD", 0, 1),
-    new Among("\u03BC\u03B5\u03B3\u03B1\u03BB\u03BF\u03BD", 0, 1),
-    new Among("\u03B5\u03C1\u03B7\u03BC\u03BF\u03BD", 0, 1),
-    new Among("\u03C7\u03B5\u03C1\u03C3\u03BF\u03BD", 0, 1)
-};
-
-private final static Among a_65[] = {
-    new Among("\u03B7\u03C3\u03C4\u03B5", -1, 1)
-};
-
-private final static Among a_66[] = {
-    new Among("\u03C3\u03B2", -1, 1),
-    new Among("\u03B1\u03C3\u03B2", 0, 1),
-    new Among("\u03B1\u03C0\u03BB", -1, 1),
-    new Among("\u03B1\u03B5\u03B9\u03BC\u03BD", -1, 1),
-    new Among("\u03C7\u03C1", -1, 1),
-    new Among("\u03B1\u03C7\u03C1", 4, 1),
-    new Among("\u03BA\u03BF\u03B9\u03BD\u03BF\u03C7\u03C1", 4, 1),
-    new Among("\u03B4\u03C5\u03C3\u03C7\u03C1", 4, 1),
-    new Among("\u03B5\u03C5\u03C7\u03C1", 4, 1),
-    new Among("\u03C0\u03B1\u03BB\u03B9\u03BC\u03C8", -1, 1)
-};
-
-private final static Among a_67[] = {
-    new Among("\u03BF\u03C5\u03BD\u03B5", -1, 1),
-    new Among("\u03B7\u03B8\u03BF\u03C5\u03BD\u03B5", 0, 1),
-    new Among("\u03B7\u03C3\u03BF\u03C5\u03BD\u03B5", 0, 1)
-};
-
-private final static Among a_68[] = {
-    new Among("\u03C3\u03C0\u03B9", -1, 1),
-    new Among("\u03BD", -1, 1),
-    new Among("\u03B5\u03BE\u03C9\u03BD", 1, 1),
-    new Among("\u03C1", -1, 1),
-    new Among("\u03C3\u03C4\u03C1\u03B1\u03B2\u03BF\u03BC\u03BF\u03C5\u03C4\u03C3", -1, 1),
-    new Among("\u03BA\u03B1\u03BA\u03BF\u03BC\u03BF\u03C5\u03C4\u03C3", -1, 1)
-};
-
-private final static Among a_69[] = {
-    new Among("\u03BF\u03C5\u03BC\u03B5", -1, 1),
-    new Among("\u03B7\u03B8\u03BF\u03C5\u03BC\u03B5", 0, 1),
-    new Among("\u03B7\u03C3\u03BF\u03C5\u03BC\u03B5", 0, 1)
-};
-
-private final static Among a_70[] = {
-    new Among("\u03B1\u03B6", -1, 1),
-    new Among("\u03C9\u03C1\u03B9\u03BF\u03C0\u03BB", -1, 1),
-    new Among("\u03B1\u03C3\u03BF\u03C5\u03C3", -1, 1),
-    new Among("\u03C0\u03B1\u03C1\u03B1\u03C3\u03BF\u03C5\u03C3", 2, 1),
-    new Among("\u03B1\u03BB\u03BB\u03BF\u03C3\u03BF\u03C5\u03C3", -1, 1),
-    new Among("\u03C6", -1, 1),
-    new Among("\u03C7", -1, 1)
-};
-
-private final static Among a_71[] = {
-    new Among("\u03BC\u03B1\u03C4\u03B1", -1, 1),
-    new Among("\u03BC\u03B1\u03C4\u03C9\u03BD", -1, 1),
-    new Among("\u03BC\u03B1\u03C4\u03BF\u03C3", -1, 1)
-};
-
-private final static Among a_72[] = {
-    new Among("\u03B1", -1, 1),
-    new Among("\u03B9\u03BF\u03C5\u03BC\u03B1", 0, 1),
-    new Among("\u03BF\u03BC\u03BF\u03C5\u03BD\u03B1", 0, 1),
-    new Among("\u03B9\u03BF\u03BC\u03BF\u03C5\u03BD\u03B1", 2, 1),
-    new Among("\u03BF\u03C3\u03BF\u03C5\u03BD\u03B1", 0, 1),
-    new Among("\u03B9\u03BF\u03C3\u03BF\u03C5\u03BD\u03B1", 4, 1),
-    new Among("\u03B5", -1, 1),
-    new Among("\u03B1\u03B3\u03B1\u03C4\u03B5", 6, 1),
-    new Among("\u03B7\u03BA\u03B1\u03C4\u03B5", 6, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B1\u03C4\u03B5", 8, 1),
-    new Among("\u03B7\u03C3\u03B1\u03C4\u03B5", 6, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B1\u03C4\u03B5", 6, 1),
-    new Among("\u03B5\u03B9\u03C4\u03B5", 6, 1),
-    new Among("\u03B7\u03B8\u03B5\u03B9\u03C4\u03B5", 12, 1),
-    new Among("\u03B9\u03B5\u03BC\u03B1\u03C3\u03C4\u03B5", 6, 1),
-    new Among("\u03BF\u03C5\u03BC\u03B1\u03C3\u03C4\u03B5", 6, 1),
-    new Among("\u03B9\u03BF\u03C5\u03BC\u03B1\u03C3\u03C4\u03B5", 15, 1),
-    new Among("\u03B9\u03B5\u03C3\u03B1\u03C3\u03C4\u03B5", 6, 1),
-    new Among("\u03BF\u03C3\u03B1\u03C3\u03C4\u03B5", 6, 1),
-    new Among("\u03B9\u03BF\u03C3\u03B1\u03C3\u03C4\u03B5", 18, 1),
-    new Among("\u03B7", -1, 1),
-    new Among("\u03B9", -1, 1),
-    new Among("\u03B1\u03BC\u03B1\u03B9", 21, 1),
-    new Among("\u03B9\u03B5\u03BC\u03B1\u03B9", 21, 1),
-    new Among("\u03BF\u03BC\u03B1\u03B9", 21, 1),
-    new Among("\u03BF\u03C5\u03BC\u03B1\u03B9", 21, 1),
-    new Among("\u03B1\u03C3\u03B1\u03B9", 21, 1),
-    new Among("\u03B5\u03C3\u03B1\u03B9", 21, 1),
-    new Among("\u03B9\u03B5\u03C3\u03B1\u03B9", 27, 1),
-    new Among("\u03B1\u03C4\u03B1\u03B9", 21, 1),
-    new Among("\u03B5\u03C4\u03B1\u03B9", 21, 1),
-    new Among("\u03B9\u03B5\u03C4\u03B1\u03B9", 30, 1),
-    new Among("\u03BF\u03BD\u03C4\u03B1\u03B9", 21, 1),
-    new Among("\u03BF\u03C5\u03BD\u03C4\u03B1\u03B9", 21, 1),
-    new Among("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03B9", 33, 1),
-    new Among("\u03B5\u03B9", 21, 1),
-    new Among("\u03B1\u03B5\u03B9", 35, 1),
-    new Among("\u03B7\u03B8\u03B5\u03B9", 35, 1),
-    new Among("\u03B7\u03C3\u03B5\u03B9", 35, 1),
-    new Among("\u03BF\u03B9", 21, 1),
-    new Among("\u03B1\u03BD", -1, 1),
-    new Among("\u03B1\u03B3\u03B1\u03BD", 40, 1),
-    new Among("\u03B7\u03BA\u03B1\u03BD", 40, 1),
-    new Among("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BD", 42, 1),
-    new Among("\u03B7\u03C3\u03B1\u03BD", 40, 1),
-    new Among("\u03BF\u03C5\u03C3\u03B1\u03BD", 40, 1),
-    new Among("\u03BF\u03BD\u03C4\u03BF\u03C5\u03C3\u03B1\u03BD", 45, 1),
-    new Among("\u03B9\u03BF\u03BD\u03C4\u03BF\u03C5\u03C3\u03B1\u03BD", 46, 1),
-    new Among("\u03BF\u03BD\u03C4\u03B1\u03BD", 40, 1),
-    new Among("\u03B9\u03BF\u03BD\u03C4\u03B1\u03BD", 48, 1),
-    new Among("\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD", 40, 1),
-    new Among("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD", 50, 1),
-    new Among("\u03BF\u03C4\u03B1\u03BD", 40, 1),
-    new Among("\u03B9\u03BF\u03C4\u03B1\u03BD", 52, 1),
-    new Among("\u03BF\u03BC\u03B1\u03C3\u03C4\u03B1\u03BD", 40, 1),
-    new Among("\u03B9\u03BF\u03BC\u03B1\u03C3\u03C4\u03B1\u03BD", 54, 1),
-    new Among("\u03BF\u03C3\u03B1\u03C3\u03C4\u03B1\u03BD", 40, 1),
-    new Among("\u03B9\u03BF\u03C3\u03B1\u03C3\u03C4\u03B1\u03BD", 56, 1),
-    new Among("\u03BF\u03C5\u03BD", -1, 1),
-    new Among("\u03B7\u03B8\u03BF\u03C5\u03BD", 58, 1),
-    new Among("\u03BF\u03BC\u03BF\u03C5\u03BD", 58, 1),
-    new Among("\u03B9\u03BF\u03BC\u03BF\u03C5\u03BD", 60, 1),
-    new Among("\u03B7\u03C3\u03BF\u03C5\u03BD", 58, 1),
-    new Among("\u03BF\u03C3\u03BF\u03C5\u03BD", 58, 1),
-    new Among("\u03B9\u03BF\u03C3\u03BF\u03C5\u03BD", 63, 1),
-    new Among("\u03C9\u03BD", -1, 1),
-    new Among("\u03B7\u03B4\u03C9\u03BD", 65, 1),
-    new Among("\u03BF", -1, 1),
-    new Among("\u03B1\u03C3", -1, 1),
-    new Among("\u03B5\u03C3", -1, 1),
-    new Among("\u03B7\u03B4\u03B5\u03C3", 69, 1),
-    new Among("\u03B7\u03C3\u03B5\u03C3", 69, 1),
-    new Among("\u03B7\u03C3", -1, 1),
-    new Among("\u03B5\u03B9\u03C3", -1, 1),
-    new Among("\u03B7\u03B8\u03B5\u03B9\u03C3", 73, 1),
-    new Among("\u03BF\u03C3", -1, 1),
-    new Among("\u03C5\u03C3", -1, 1),
-    new Among("\u03BF\u03C5\u03C3", 76, 1),
-    new Among("\u03C5", -1, 1),
-    new Among("\u03BF\u03C5", 78, 1),
-    new Among("\u03C9", -1, 1),
-    new Among("\u03B1\u03C9", 80, 1),
-    new Among("\u03B7\u03B8\u03C9", 80, 1),
-    new Among("\u03B7\u03C3\u03C9", 80, 1)
-};
-
-private final static Among a_73[] = {
-    new Among("\u03BF\u03C4\u03B5\u03C1", -1, 1),
-    new Among("\u03B5\u03C3\u03C4\u03B5\u03C1", -1, 1),
-    new Among("\u03C5\u03C4\u03B5\u03C1", -1, 1),
-    new Among("\u03C9\u03C4\u03B5\u03C1", -1, 1),
-    new Among("\u03BF\u03C4\u03B1\u03C4", -1, 1),
-    new Among("\u03B5\u03C3\u03C4\u03B1\u03C4", -1, 1),
-    new Among("\u03C5\u03C4\u03B1\u03C4", -1, 1),
-    new Among("\u03C9\u03C4\u03B1\u03C4", -1, 1)
+private final static Among2 a_0[] = {
+    new Among2("", -1, 25),
+    new Among2("\u0386", 0, 1),
+    new Among2("\u0388", 0, 5),
+    new Among2("\u0389", 0, 7),
+    new Among2("\u038A", 0, 9),
+    new Among2("\u038C", 0, 15),
+    new Among2("\u038E", 0, 20),
+    new Among2("\u038F", 0, 24),
+    new Among2("\u0390", 0, 7),
+    new Among2("\u0391", 0, 1),
+    new Among2("\u0392", 0, 2),
+    new Among2("\u0393", 0, 3),
+    new Among2("\u0394", 0, 4),
+    new Among2("\u0395", 0, 5),
+    new Among2("\u0396", 0, 6),
+    new Among2("\u0397", 0, 7),
+    new Among2("\u0398", 0, 8),
+    new Among2("\u0399", 0, 9),
+    new Among2("\u039A", 0, 10),
+    new Among2("\u039B", 0, 11),
+    new Among2("\u039C", 0, 12),
+    new Among2("\u039D", 0, 13),
+    new Among2("\u039E", 0, 14),
+    new Among2("\u039F", 0, 15),
+    new Among2("\u03A0", 0, 16),
+    new Among2("\u03A1", 0, 17),
+    new Among2("\u03A3", 0, 18),
+    new Among2("\u03A4", 0, 19),
+    new Among2("\u03A5", 0, 20),
+    new Among2("\u03A6", 0, 21),
+    new Among2("\u03A7", 0, 22),
+    new Among2("\u03A8", 0, 23),
+    new Among2("\u03A9", 0, 24),
+    new Among2("\u03AA", 0, 9),
+    new Among2("\u03AB", 0, 20),
+    new Among2("\u03AC", 0, 1),
+    new Among2("\u03AD", 0, 5),
+    new Among2("\u03AE", 0, 7),
+    new Among2("\u03AF", 0, 9),
+    new Among2("\u03B0", 0, 20),
+    new Among2("\u03C2", 0, 18),
+    new Among2("\u03CA", 0, 7),
+    new Among2("\u03CB", 0, 20),
+    new Among2("\u03CC", 0, 15),
+    new Among2("\u03CD", 0, 20),
+    new Among2("\u03CE", 0, 24)
+};
+
+private final static Among2 a_1[] = {
+    new Among2("\u03C3\u03BA\u03B1\u03B3\u03B9\u03B1", -1, 2),
+    new Among2("\u03C6\u03B1\u03B3\u03B9\u03B1", -1, 1),
+    new Among2("\u03BF\u03BB\u03BF\u03B3\u03B9\u03B1", -1, 3),
+    new Among2("\u03C3\u03BF\u03B3\u03B9\u03B1", -1, 4),
+    new Among2("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03B1", -1, 5),
+    new Among2("\u03BA\u03C1\u03B5\u03B1\u03C4\u03B1", -1, 6),
+    new Among2("\u03C0\u03B5\u03C1\u03B1\u03C4\u03B1", -1, 7),
+    new Among2("\u03C4\u03B5\u03C1\u03B1\u03C4\u03B1", -1, 8),
+    new Among2("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03B1", -1, 11),
+    new Among2("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03B1", -1, 10),
+    new Among2("\u03C6\u03C9\u03C4\u03B1", -1, 9),
+    new Among2("\u03C0\u03B5\u03C1\u03B1\u03C4\u03B7", -1, 7),
+    new Among2("\u03C3\u03BA\u03B1\u03B3\u03B9\u03C9\u03BD", -1, 2),
+    new Among2("\u03C6\u03B1\u03B3\u03B9\u03C9\u03BD", -1, 1),
+    new Among2("\u03BF\u03BB\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 3),
+    new Among2("\u03C3\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 4),
+    new Among2("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03C9\u03BD", -1, 5),
+    new Among2("\u03BA\u03C1\u03B5\u03B1\u03C4\u03C9\u03BD", -1, 6),
+    new Among2("\u03C0\u03B5\u03C1\u03B1\u03C4\u03C9\u03BD", -1, 7),
+    new Among2("\u03C4\u03B5\u03C1\u03B1\u03C4\u03C9\u03BD", -1, 8),
+    new Among2("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03C9\u03BD", -1, 11),
+    new Among2("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03C9\u03BD", -1, 10),
+    new Among2("\u03C6\u03C9\u03C4\u03C9\u03BD", -1, 9),
+    new Among2("\u03BA\u03C1\u03B5\u03B1\u03C3", -1, 6),
+    new Among2("\u03C0\u03B5\u03C1\u03B1\u03C3", -1, 7),
+    new Among2("\u03C4\u03B5\u03C1\u03B1\u03C3", -1, 8),
+    new Among2("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C3", -1, 11),
+    new Among2("\u03BA\u03C1\u03B5\u03B1\u03C4\u03BF\u03C3", -1, 6),
+    new Among2("\u03C0\u03B5\u03C1\u03B1\u03C4\u03BF\u03C3", -1, 7),
+    new Among2("\u03C4\u03B5\u03C1\u03B1\u03C4\u03BF\u03C3", -1, 8),
+    new Among2("\u03B3\u03B5\u03B3\u03BF\u03BD\u03BF\u03C4\u03BF\u03C3", -1, 11),
+    new Among2("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C4\u03BF\u03C3", -1, 10),
+    new Among2("\u03C6\u03C9\u03C4\u03BF\u03C3", -1, 9),
+    new Among2("\u03BA\u03B1\u03B8\u03B5\u03C3\u03C4\u03C9\u03C3", -1, 10),
+    new Among2("\u03C6\u03C9\u03C3", -1, 9),
+    new Among2("\u03C3\u03BA\u03B1\u03B3\u03B9\u03BF\u03C5", -1, 2),
+    new Among2("\u03C6\u03B1\u03B3\u03B9\u03BF\u03C5", -1, 1),
+    new Among2("\u03BF\u03BB\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 3),
+    new Among2("\u03C3\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 4),
+    new Among2("\u03C4\u03B1\u03C4\u03BF\u03B3\u03B9\u03BF\u03C5", -1, 5)
+};
+
+private final static Among2 a_2[] = {
+    new Among2("\u03C0\u03B1", -1, 1),
+    new Among2("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", 0, 1),
+    new Among2("\u03B5\u03C0\u03B1", 0, 1),
+    new Among2("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", 0, 1),
+    new Among2("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", 0, 1),
+    new Among2("\u03B5\u03BC\u03C0\u03B1", 0, 1),
+    new Among2("\u03B4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B1\u03B8\u03C1\u03BF", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 7, 1)
+};
+
+private final static Among2 a_3[] = {
+    new Among2("\u03B2", -1, 1),
+    new Among2("\u03B2\u03B1\u03B8\u03C5\u03C1\u03B9", -1, 1),
+    new Among2("\u03B2\u03B1\u03C1\u03BA", -1, 1),
+    new Among2("\u03BC\u03B1\u03C1\u03BA", -1, 1),
+    new Among2("\u03BB", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03BA\u03BF\u03C1\u03BD", -1, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03B9\u03BC\u03C0", 7, 1),
+    new Among2("\u03C1", -1, 1),
+    new Among2("\u03BC\u03B1\u03C1", 9, 1),
+    new Among2("\u03B1\u03BC\u03C0\u03B1\u03C1", 9, 1),
+    new Among2("\u03B3\u03BA\u03C1", 9, 1),
+    new Among2("\u03B2\u03BF\u03BB\u03B2\u03BF\u03C1", 9, 1),
+    new Among2("\u03B3\u03BB\u03C5\u03BA\u03BF\u03C1", 9, 1),
+    new Among2("\u03C0\u03B9\u03C0\u03B5\u03C1\u03BF\u03C1", 9, 1),
+    new Among2("\u03C0\u03C1", 9, 1),
+    new Among2("\u03BC\u03C0\u03C1", 16, 1),
+    new Among2("\u03B1\u03C1\u03C1", 9, 1),
+    new Among2("\u03B3\u03BB\u03C5\u03BA\u03C5\u03C1", 9, 1),
+    new Among2("\u03C0\u03BF\u03BB\u03C5\u03C1", 9, 1),
+    new Among2("\u03BB\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_4[] = {
+    new Among2("\u03B9\u03B6\u03B1", -1, 1),
+    new Among2("\u03B9\u03B6\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03BF\u03C5\u03BC\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03BF\u03C5\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03B1\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03B5\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03B6\u03B5\u03B9", -1, 1),
+    new Among2("\u03B9\u03B6\u03B1\u03BD", -1, 1),
+    new Among2("\u03B9\u03B6\u03BF\u03C5\u03BD", -1, 1),
+    new Among2("\u03B9\u03B6\u03B5\u03C3", -1, 1),
+    new Among2("\u03B9\u03B6\u03B5\u03B9\u03C3", -1, 1),
+    new Among2("\u03B9\u03B6\u03C9", -1, 1)
+};
+
+private final static Among2 a_5[] = {
+    new Among2("\u03B2\u03B9", -1, 1),
+    new Among2("\u03BB\u03B9", -1, 1),
+    new Among2("\u03B1\u03BB", -1, 1),
+    new Among2("\u03B5\u03BD", -1, 1),
+    new Among2("\u03C3", -1, 1),
+    new Among2("\u03C7", -1, 1),
+    new Among2("\u03C5\u03C8", -1, 1),
+    new Among2("\u03B6\u03C9", -1, 1)
+};
+
+private final static Among2 a_6[] = {
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B1", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B5", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B1\u03C4\u03B5", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B1\u03BD", -1, 1),
+    new Among2("\u03C9\u03B8\u03B7\u03BA\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_7[] = {
+    new Among2("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03C0\u03B1", -1, 1),
+    new Among2("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", -1, 1),
+    new Among2("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03BC\u03C0\u03B1", -1, 1),
+    new Among2("\u03C7\u03B1\u03C1\u03C4\u03BF\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03BE\u03B1\u03C1\u03C7\u03B1", -1, 1),
+    new Among2("\u03BA\u03BB\u03B5", -1, 1),
+    new Among2("\u03B5\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B1\u03C0\u03B5\u03BA\u03BB\u03B5", 8, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03C0\u03B5", -1, 1),
+    new Among2("\u03B5\u03C0\u03B5", 13, 1),
+    new Among2("\u03BC\u03B5\u03C4\u03B5\u03C0\u03B5", 14, 1),
+    new Among2("\u03B5\u03C3\u03B5", -1, 1),
+    new Among2("\u03B1\u03B8\u03C1\u03BF", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 17, 1)
+};
+
+private final static Among2 a_8[] = {
+    new Among2("\u03B3\u03B5", -1, 1),
+    new Among2("\u03B3\u03BA\u03B5", -1, 1),
+    new Among2("\u03B3\u03BA", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03C0\u03BF\u03C5\u03BA\u03B1\u03BC", 3, 1),
+    new Among2("\u03BA\u03BF\u03BC", 3, 1),
+    new Among2("\u03B1\u03BD", -1, 1),
+    new Among2("\u03BF\u03BB\u03BF", -1, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03BB\u03B1\u03C1", -1, 1),
+    new Among2("\u03B4\u03B7\u03BC\u03BF\u03BA\u03C1\u03B1\u03C4", -1, 1),
+    new Among2("\u03B1\u03C6", -1, 1),
+    new Among2("\u03B3\u03B9\u03B3\u03B1\u03BD\u03C4\u03BF\u03B1\u03C6", 11, 1)
+};
+
+private final static Among2 a_9[] = {
+    new Among2("\u03B9\u03C3\u03B1", -1, 1),
+    new Among2("\u03B9\u03C3\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B1\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B1\u03BD", -1, 1),
+    new Among2("\u03B9\u03C3\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_10[] = {
+    new Among2("\u03BE\u03B1\u03BD\u03B1\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03C0\u03B1", -1, 1),
+    new Among2("\u03C0\u03B5\u03C1\u03B9\u03C0\u03B1", -1, 1),
+    new Among2("\u03B1\u03BD\u03B1\u03BC\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03BC\u03C0\u03B1", -1, 1),
+    new Among2("\u03C7\u03B1\u03C1\u03C4\u03BF\u03C0\u03B1", -1, 1),
+    new Among2("\u03B5\u03BE\u03B1\u03C1\u03C7\u03B1", -1, 1),
+    new Among2("\u03BA\u03BB\u03B5", -1, 1),
+    new Among2("\u03B5\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B1\u03C0\u03B5\u03BA\u03BB\u03B5", 8, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 7, 1),
+    new Among2("\u03B4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03C0\u03B5", -1, 1),
+    new Among2("\u03B5\u03C0\u03B5", 13, 1),
+    new Among2("\u03BC\u03B5\u03C4\u03B5\u03C0\u03B5", 14, 1),
+    new Among2("\u03B5\u03C3\u03B5", -1, 1),
+    new Among2("\u03B1\u03B8\u03C1\u03BF", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", 17, 1)
+};
+
+private final static Among2 a_11[] = {
+    new Among2("\u03B9\u03C3\u03BF\u03C5\u03BC\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03BF\u03C5\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B5\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03B5\u03B9", -1, 1),
+    new Among2("\u03B9\u03C3\u03BF\u03C5\u03BD", -1, 1),
+    new Among2("\u03B9\u03C3\u03B5\u03B9\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03C9", -1, 1)
+};
+
+private final static Among2 a_12[] = {
+    new Among2("\u03BA\u03BB\u03B5", -1, 1),
+    new Among2("\u03B5\u03C3\u03C9\u03BA\u03BB\u03B5", 0, 1),
+    new Among2("\u03C0\u03BB\u03B5", -1, 1),
+    new Among2("\u03B4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03C3\u03B5", -1, 1),
+    new Among2("\u03B1\u03C3\u03B5", 4, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B1\u03B8\u03C1\u03BF", -1, 1)
+};
+
+private final static Among2 a_13[] = {
+    new Among2("\u03B1\u03C4\u03B1", -1, 1),
+    new Among2("\u03C6\u03B1", -1, 1),
+    new Among2("\u03B7\u03C6\u03B1", 1, 1),
+    new Among2("\u03BC\u03B5\u03B3", -1, 1),
+    new Among2("\u03BB\u03C5\u03B3", -1, 1),
+    new Among2("\u03B7\u03B4", -1, 1),
+    new Among2("\u03BA\u03B1\u03B8", -1, 1),
+    new Among2("\u03B5\u03C7\u03B8", -1, 1),
+    new Among2("\u03BA\u03B1\u03BA", -1, 1),
+    new Among2("\u03BC\u03B1\u03BA", -1, 1),
+    new Among2("\u03C3\u03BA", -1, 1),
+    new Among2("\u03C6\u03B9\u03BB", -1, 1),
+    new Among2("\u03BA\u03C5\u03BB", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03B3\u03B5\u03BC", 13, 1),
+    new Among2("\u03B1\u03C7\u03BD", -1, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03B1\u03C0", 16, 1),
+    new Among2("\u03B5\u03BC\u03C0", 16, 1),
+    new Among2("\u03B5\u03C5\u03C0", 16, 1),
+    new Among2("\u03B1\u03C1", -1, 1),
+    new Among2("\u03B1\u03BF\u03C1", -1, 1),
+    new Among2("\u03B3\u03C5\u03C1", -1, 1),
+    new Among2("\u03C7\u03C1", -1, 1),
+    new Among2("\u03C7\u03C9\u03C1", -1, 1),
+    new Among2("\u03BA\u03C4", -1, 1),
+    new Among2("\u03B1\u03BA\u03C4", 25, 1),
+    new Among2("\u03C7\u03C4", -1, 1),
+    new Among2("\u03B1\u03C7\u03C4", 27, 1),
+    new Among2("\u03C4\u03B1\u03C7", -1, 1),
+    new Among2("\u03C3\u03C7", -1, 1),
+    new Among2("\u03B1\u03C3\u03C7", 30, 1),
+    new Among2("\u03C5\u03C8", -1, 1)
+};
+
+private final static Among2 a_14[] = {
+    new Among2("\u03B9\u03C3\u03C4\u03B1", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03B7", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03BF\u03B9", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03BF", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03B5\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03B7\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03BF\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03BF\u03C5\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03C4\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_15[] = {
+    new Among2("\u03B5\u03B3\u03BA\u03BB\u03B5", -1, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03BA\u03BB\u03B5", -1, 1),
+    new Among2("\u03C3\u03B5", -1, 1),
+    new Among2("\u03BC\u03B5\u03C4\u03B1\u03C3\u03B5", 2, 1),
+    new Among2("\u03BC\u03B9\u03BA\u03C1\u03BF\u03C3\u03B5", 2, 1)
+};
+
+private final static Among2 a_16[] = {
+    new Among2("\u03B4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B1\u03BD\u03C4\u03B9\u03B4\u03B1\u03BD\u03B5", 0, 1)
+};
+
+private final static Among2 a_17[] = {
+    new Among2("\u03B1\u03C4\u03BF\u03BC\u03B9\u03BA", -1, 2),
+    new Among2("\u03B5\u03B8\u03BD\u03B9\u03BA", -1, 4),
+    new Among2("\u03C4\u03BF\u03C0\u03B9\u03BA", -1, 7),
+    new Among2("\u03B5\u03BA\u03BB\u03B5\u03BA\u03C4\u03B9\u03BA", -1, 5),
+    new Among2("\u03C3\u03BA\u03B5\u03C0\u03C4\u03B9\u03BA", -1, 6),
+    new Among2("\u03B3\u03BD\u03C9\u03C3\u03C4\u03B9\u03BA", -1, 3),
+    new Among2("\u03B1\u03B3\u03BD\u03C9\u03C3\u03C4\u03B9\u03BA", 5, 1),
+    new Among2("\u03B1\u03BB\u03B5\u03BE\u03B1\u03BD\u03B4\u03C1\u03B9\u03BD", -1, 8),
+    new Among2("\u03B8\u03B5\u03B1\u03C4\u03C1\u03B9\u03BD", -1, 10),
+    new Among2("\u03B2\u03C5\u03B6\u03B1\u03BD\u03C4\u03B9\u03BD", -1, 9)
+};
+
+private final static Among2 a_18[] = {
+    new Among2("\u03B9\u03C3\u03BC\u03BF\u03B9", -1, 1),
+    new Among2("\u03B9\u03C3\u03BC\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03C3\u03BC\u03BF", -1, 1),
+    new Among2("\u03B9\u03C3\u03BC\u03BF\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03BC\u03BF\u03C5\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03BC\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_19[] = {
+    new Among2("\u03C3", -1, 1),
+    new Among2("\u03C7", -1, 1)
+};
+
+private final static Among2 a_20[] = {
+    new Among2("\u03BF\u03C5\u03B4\u03B1\u03BA\u03B9\u03B1", -1, 1),
+    new Among2("\u03B1\u03C1\u03B1\u03BA\u03B9\u03B1", -1, 1),
+    new Among2("\u03BF\u03C5\u03B4\u03B1\u03BA\u03B9", -1, 1),
+    new Among2("\u03B1\u03C1\u03B1\u03BA\u03B9", -1, 1)
+};
+
+private final static Among2 a_21[] = {
+    new Among2("\u03B2\u03B1\u03BC\u03B2", -1, 1),
+    new Among2("\u03C3\u03BB\u03BF\u03B2", -1, 1),
+    new Among2("\u03C4\u03C3\u03B5\u03C7\u03BF\u03C3\u03BB\u03BF\u03B2", 1, 1),
+    new Among2("\u03C4\u03B6", -1, 1),
+    new Among2("\u03BA", -1, 1),
+    new Among2("\u03BA\u03B1\u03C0\u03B1\u03BA", 4, 1),
+    new Among2("\u03C3\u03BF\u03BA", 4, 1),
+    new Among2("\u03C3\u03BA", 4, 1),
+    new Among2("\u03BC\u03B1\u03BB", -1, 1),
+    new Among2("\u03C0\u03BB", -1, 1),
+    new Among2("\u03BB\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03C6\u03C5\u03BB", -1, 1),
+    new Among2("\u03BA\u03B1\u03B9\u03BC", -1, 1),
+    new Among2("\u03BA\u03BB\u03B9\u03BC", -1, 1),
+    new Among2("\u03C6\u03B1\u03C1\u03BC", -1, 1),
+    new Among2("\u03C3\u03C0\u03B1\u03BD", -1, 1),
+    new Among2("\u03BA\u03BF\u03BD", -1, 1),
+    new Among2("\u03BA\u03B1\u03C4\u03C1\u03B1\u03C0", -1, 1),
+    new Among2("\u03C1", -1, 1),
+    new Among2("\u03B2\u03C1", 18, 1),
+    new Among2("\u03BB\u03B1\u03B2\u03C1", 19, 1),
+    new Among2("\u03B1\u03BC\u03B2\u03C1", 19, 1),
+    new Among2("\u03BC\u03B5\u03C1", 18, 1),
+    new Among2("\u03B1\u03BD\u03B8\u03C1", 18, 1),
+    new Among2("\u03BA\u03BF\u03C1", 18, 1),
+    new Among2("\u03C3", -1, 1),
+    new Among2("\u03BD\u03B1\u03B3\u03BA\u03B1\u03C3", 25, 1),
+    new Among2("\u03BC\u03BF\u03C5\u03C3\u03C4", -1, 1),
+    new Among2("\u03C1\u03C5", -1, 1),
+    new Among2("\u03C6", -1, 1),
+    new Among2("\u03C3\u03C6", 29, 1),
+    new Among2("\u03B1\u03BB\u03B9\u03C3\u03C6", 30, 1),
+    new Among2("\u03C7", -1, 1)
+};
+
+private final static Among2 a_22[] = {
+    new Among2("\u03B2", -1, 1),
+    new Among2("\u03BA\u03B1\u03C1\u03B4", -1, 1),
+    new Among2("\u03B6", -1, 1),
+    new Among2("\u03C3\u03BA", -1, 1),
+    new Among2("\u03B2\u03B1\u03BB", -1, 1),
+    new Among2("\u03B3\u03BB", -1, 1),
+    new Among2("\u03C4\u03C1\u03B9\u03C0\u03BF\u03BB", -1, 1),
+    new Among2("\u03B3\u03B9\u03B1\u03BD", -1, 1),
+    new Among2("\u03B7\u03B3\u03BF\u03C5\u03BC\u03B5\u03BD", -1, 1),
+    new Among2("\u03BA\u03BF\u03BD", -1, 1),
+    new Among2("\u03BC\u03B1\u03BA\u03C1\u03C5\u03BD", -1, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03C0\u03B1\u03C4\u03B5\u03C1", -1, 1),
+    new Among2("\u03C4\u03BF\u03C3", -1, 1),
+    new Among2("\u03BD\u03C5\u03C6", -1, 1)
+};
+
+private final static Among2 a_23[] = {
+    new Among2("\u03B1\u03BA\u03B9\u03B1", -1, 1),
+    new Among2("\u03B1\u03C1\u03B1\u03BA\u03B9\u03B1", 0, 1),
+    new Among2("\u03B9\u03C4\u03C3\u03B1", -1, 1),
+    new Among2("\u03B1\u03BA\u03B9", -1, 1),
+    new Among2("\u03B1\u03C1\u03B1\u03BA\u03B9", 3, 1),
+    new Among2("\u03B9\u03C4\u03C3\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03C4\u03C3\u03B1\u03C3", -1, 1),
+    new Among2("\u03B9\u03C4\u03C3\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_24[] = {
+    new Among2("\u03C8\u03B1\u03BB", -1, 1),
+    new Among2("\u03B1\u03B9\u03C6\u03BD", -1, 1),
+    new Among2("\u03BF\u03BB\u03BF", -1, 1),
+    new Among2("\u03B9\u03C1", -1, 1)
+};
+
+private final static Among2 a_25[] = {
+    new Among2("\u03B5", -1, 1),
+    new Among2("\u03C0\u03B1\u03B9\u03C7\u03BD", -1, 1)
+};
+
+private final static Among2 a_26[] = {
+    new Among2("\u03B9\u03B4\u03B9\u03B1", -1, 1),
+    new Among2("\u03B9\u03B4\u03B9\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03B4\u03B9\u03BF", -1, 1)
+};
+
+private final static Among2 a_27[] = {
+    new Among2("\u03B9\u03B2", -1, 1),
+    new Among2("\u03B4", -1, 1),
+    new Among2("\u03C6\u03C1\u03B1\u03B3\u03BA", -1, 1),
+    new Among2("\u03BB\u03C5\u03BA", -1, 1),
+    new Among2("\u03BF\u03B2\u03B5\u03BB", -1, 1),
+    new Among2("\u03BC\u03B7\u03BD", -1, 1),
+    new Among2("\u03C1", -1, 1)
+};
+
+private final static Among2 a_28[] = {
+    new Among2("\u03B9\u03C3\u03BA\u03B5", -1, 1),
+    new Among2("\u03B9\u03C3\u03BA\u03BF", -1, 1),
+    new Among2("\u03B9\u03C3\u03BA\u03BF\u03C3", -1, 1),
+    new Among2("\u03B9\u03C3\u03BA\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_29[] = {
+    new Among2("\u03B1\u03B4\u03C9\u03BD", -1, 1),
+    new Among2("\u03B1\u03B4\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_30[] = {
+    new Among2("\u03B3\u03B9\u03B1\u03B3\u03B9", -1, -1),
+    new Among2("\u03B8\u03B5\u03B9", -1, -1),
+    new Among2("\u03BF\u03BA", -1, -1),
+    new Among2("\u03BC\u03B1\u03BC", -1, -1),
+    new Among2("\u03BC\u03B1\u03BD", -1, -1),
+    new Among2("\u03BC\u03C0\u03B1\u03BC\u03C0", -1, -1),
+    new Among2("\u03C0\u03B5\u03B8\u03B5\u03C1", -1, -1),
+    new Among2("\u03C0\u03B1\u03C4\u03B5\u03C1", -1, -1),
+    new Among2("\u03BA\u03C5\u03C1", -1, -1),
+    new Among2("\u03BD\u03C4\u03B1\u03BD\u03C4", -1, -1)
+};
+
+private final static Among2 a_31[] = {
+    new Among2("\u03B5\u03B4\u03C9\u03BD", -1, 1),
+    new Among2("\u03B5\u03B4\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_32[] = {
+    new Among2("\u03BC\u03B9\u03BB", -1, 1),
+    new Among2("\u03B4\u03B1\u03C0", -1, 1),
+    new Among2("\u03B3\u03B7\u03C0", -1, 1),
+    new Among2("\u03B9\u03C0", -1, 1),
+    new Among2("\u03B5\u03BC\u03C0", -1, 1),
+    new Among2("\u03BF\u03C0", -1, 1),
+    new Among2("\u03BA\u03C1\u03B1\u03C3\u03C0", -1, 1),
+    new Among2("\u03C5\u03C0", -1, 1)
+};
+
+private final static Among2 a_33[] = {
+    new Among2("\u03BF\u03C5\u03B4\u03C9\u03BD", -1, 1),
+    new Among2("\u03BF\u03C5\u03B4\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_34[] = {
+    new Among2("\u03C4\u03C1\u03B1\u03B3", -1, 1),
+    new Among2("\u03C6\u03B5", -1, 1),
+    new Among2("\u03BA\u03B1\u03BB\u03B9\u03B1\u03BA", -1, 1),
+    new Among2("\u03B1\u03C1\u03BA", -1, 1),
+    new Among2("\u03C3\u03BA", -1, 1),
+    new Among2("\u03C0\u03B5\u03C4\u03B1\u03BB", -1, 1),
+    new Among2("\u03B2\u03B5\u03BB", -1, 1),
+    new Among2("\u03BB\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03C6\u03BB", -1, 1),
+    new Among2("\u03C7\u03BD", -1, 1),
+    new Among2("\u03C0\u03BB\u03B5\u03BE", -1, 1),
+    new Among2("\u03C3\u03C0", -1, 1),
+    new Among2("\u03C6\u03C1", -1, 1),
+    new Among2("\u03C3", -1, 1),
+    new Among2("\u03BB\u03B9\u03C7", -1, 1)
+};
+
+private final static Among2 a_35[] = {
+    new Among2("\u03B5\u03C9\u03BD", -1, 1),
+    new Among2("\u03B5\u03C9\u03C3", -1, 1)
+};
+
+private final static Among2 a_36[] = {
+    new Among2("\u03B4", -1, 1),
+    new Among2("\u03B9\u03B4", 0, 1),
+    new Among2("\u03B8", -1, 1),
+    new Among2("\u03B3\u03B1\u03BB", -1, 1),
+    new Among2("\u03B5\u03BB", -1, 1),
+    new Among2("\u03BD", -1, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03C0\u03B1\u03C1", -1, 1)
+};
+
+private final static Among2 a_37[] = {
+    new Among2("\u03B9\u03B1", -1, 1),
+    new Among2("\u03B9\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_38[] = {
+    new Among2("\u03B9\u03BA\u03B1", -1, 1),
+    new Among2("\u03B9\u03BA\u03C9\u03BD", -1, 1),
+    new Among2("\u03B9\u03BA\u03BF", -1, 1),
+    new Among2("\u03B9\u03BA\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_39[] = {
+    new Among2("\u03B1\u03B4", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B1\u03B4", 0, 1),
+    new Among2("\u03BA\u03B1\u03C4\u03B1\u03B4", 0, 1),
+    new Among2("\u03B1\u03BD\u03C4\u03B9\u03B4", -1, 1),
+    new Among2("\u03B5\u03BD\u03B4", -1, 1),
+    new Among2("\u03C6\u03C5\u03BB\u03BF\u03B4", -1, 1),
+    new Among2("\u03C5\u03C0\u03BF\u03B4", -1, 1),
+    new Among2("\u03C0\u03C1\u03C9\u03C4\u03BF\u03B4", -1, 1),
+    new Among2("\u03B5\u03BE\u03C9\u03B4", -1, 1),
+    new Among2("\u03B7\u03B8", -1, 1),
+    new Among2("\u03B1\u03BD\u03B7\u03B8", 9, 1),
+    new Among2("\u03BE\u03B9\u03BA", -1, 1),
+    new Among2("\u03B1\u03BB", -1, 1),
+    new Among2("\u03B1\u03BC\u03BC\u03BF\u03C7\u03B1\u03BB", 12, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03BF\u03BC\u03B7\u03BB", -1, 1),
+    new Among2("\u03BC\u03C0\u03BF\u03BB", -1, 1),
+    new Among2("\u03BC\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03C4\u03C3\u03B1\u03BC", -1, 1),
+    new Among2("\u03B2\u03C1\u03C9\u03BC", -1, 1),
+    new Among2("\u03B1\u03BC\u03B1\u03BD", -1, 1),
+    new Among2("\u03BC\u03C0\u03B1\u03BD", -1, 1),
+    new Among2("\u03BA\u03B1\u03BB\u03BB\u03B9\u03BD", -1, 1),
+    new Among2("\u03C0\u03BF\u03C3\u03C4\u03B5\u03BB\u03BD", -1, 1),
+    new Among2("\u03C6\u03B9\u03BB\u03BF\u03BD", -1, 1),
+    new Among2("\u03BA\u03B1\u03BB\u03C0", -1, 1),
+    new Among2("\u03B3\u03B5\u03C1", -1, 1),
+    new Among2("\u03C7\u03B1\u03C3", -1, 1),
+    new Among2("\u03BC\u03C0\u03BF\u03C3", -1, 1),
+    new Among2("\u03C0\u03BB\u03B9\u03B1\u03C4\u03C3", -1, 1),
+    new Among2("\u03C0\u03B5\u03C4\u03C3", -1, 1),
+    new Among2("\u03C0\u03B9\u03C4\u03C3", -1, 1),
+    new Among2("\u03C6\u03C5\u03C3", -1, 1),
+    new Among2("\u03BC\u03C0\u03B1\u03B3\u03B9\u03B1\u03C4", -1, 1),
+    new Among2("\u03BD\u03B9\u03C4", -1, 1),
+    new Among2("\u03C0\u03B9\u03BA\u03B1\u03BD\u03C4", -1, 1),
+    new Among2("\u03C3\u03B5\u03C1\u03C4", -1, 1)
+};
+
+private final static Among2 a_40[] = {
+    new Among2("\u03B1\u03B3\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03B7\u03BA\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BC\u03B5", 1, 1),
+    new Among2("\u03B7\u03C3\u03B1\u03BC\u03B5", -1, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B1\u03BC\u03B5", -1, 1)
+};
+
+private final static Among2 a_41[] = {
+    new Among2("\u03B2\u03BF\u03C5\u03B2", -1, 1),
+    new Among2("\u03BE\u03B5\u03B8", -1, 1),
+    new Among2("\u03C0\u03B5\u03B8", -1, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03B8", -1, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03BA", -1, 1),
+    new Among2("\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03B1\u03BD\u03B1\u03C0", -1, 1),
+    new Among2("\u03C0\u03B9\u03BA\u03C1", -1, 1),
+    new Among2("\u03C0\u03BF\u03C4", -1, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03C3\u03C4", -1, 1),
+    new Among2("\u03C7", -1, 1),
+    new Among2("\u03C3\u03B9\u03C7", 10, 1)
+};
+
+private final static Among2 a_42[] = {
+    new Among2("\u03C4\u03C1", -1, 1),
+    new Among2("\u03C4\u03C3", -1, 1)
+};
+
+private final static Among2 a_43[] = {
+    new Among2("\u03B1\u03B3\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B7\u03BA\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BD\u03B5", 1, 1),
+    new Among2("\u03B7\u03C3\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03BF\u03BD\u03C4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03BF\u03BD\u03C4\u03B1\u03BD\u03B5", 5, 1),
+    new Among2("\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD\u03B5", 7, 1),
+    new Among2("\u03BF\u03C4\u03B1\u03BD\u03B5", -1, 1),
+    new Among2("\u03B9\u03BF\u03C4\u03B1\u03BD\u03B5", 9, 1)
+};
+
+private final static Among2 a_44[] = {
+    new Among2("\u03C4\u03B1\u03B2", -1, 1),
+    new Among2("\u03BD\u03C4\u03B1\u03B2", 0, 1),
+    new Among2("\u03C8\u03B7\u03BB\u03BF\u03C4\u03B1\u03B2", 0, 1),
+    new Among2("\u03BB\u03B9\u03B2", -1, 1),
+    new Among2("\u03BA\u03BB\u03B9\u03B2", 3, 1),
+    new Among2("\u03BE\u03B7\u03C1\u03BF\u03BA\u03BB\u03B9\u03B2", 4, 1),
+    new Among2("\u03B3", -1, 1),
+    new Among2("\u03B1\u03B3", 6, 1),
+    new Among2("\u03C4\u03C1\u03B1\u03B3", 7, 1),
+    new Among2("\u03C4\u03C3\u03B1\u03B3", 7, 1),
+    new Among2("\u03B1\u03B8\u03B9\u03B3\u03B3", 6, 1),
+    new Among2("\u03C4\u03C3\u03B9\u03B3\u03B3", 6, 1),
+    new Among2("\u03B1\u03C4\u03C3\u03B9\u03B3\u03B3", 11, 1),
+    new Among2("\u03C3\u03C4\u03B5\u03B3", 6, 1),
+    new Among2("\u03B1\u03C0\u03B7\u03B3", 6, 1),
+    new Among2("\u03C3\u03B9\u03B3", 6, 1),
+    new Among2("\u03B1\u03BD\u03BF\u03C1\u03B3", 6, 1),
+    new Among2("\u03B5\u03BD\u03BF\u03C1\u03B3", 6, 1),
+    new Among2("\u03BA\u03B1\u03BB\u03C0\u03BF\u03C5\u03B6", -1, 1),
+    new Among2("\u03B8", -1, 1),
+    new Among2("\u03BC\u03C9\u03B1\u03BC\u03B5\u03B8", 19, 1),
+    new Among2("\u03C0\u03B9\u03B8", 19, 1),
+    new Among2("\u03B1\u03C0\u03B9\u03B8", 21, 1),
+    new Among2("\u03B4\u03B5\u03BA", -1, 1),
+    new Among2("\u03C0\u03B5\u03BB\u03B5\u03BA", -1, 1),
+    new Among2("\u03B9\u03BA", -1, 1),
+    new Among2("\u03B1\u03BD\u03B9\u03BA", 25, 1),
+    new Among2("\u03B2\u03BF\u03C5\u03BB\u03BA", -1, 1),
+    new Among2("\u03B2\u03B1\u03C3\u03BA", -1, 1),
+    new Among2("\u03B2\u03C1\u03B1\u03C7\u03C5\u03BA", -1, 1),
+    new Among2("\u03B3\u03B1\u03BB", -1, 1),
+    new Among2("\u03BA\u03B1\u03C4\u03B1\u03B3\u03B1\u03BB", 30, 1),
+    new Among2("\u03BF\u03BB\u03BF\u03B3\u03B1\u03BB", 30, 1),
+    new Among2("\u03B2\u03B1\u03B8\u03C5\u03B3\u03B1\u03BB", 30, 1),
+    new Among2("\u03BC\u03B5\u03BB", -1, 1),
+    new Among2("\u03BA\u03B1\u03C3\u03C4\u03B5\u03BB", -1, 1),
+    new Among2("\u03C0\u03BF\u03C1\u03C4\u03BF\u03BB", -1, 1),
+    new Among2("\u03C0\u03BB", -1, 1),
+    new Among2("\u03B4\u03B9\u03C0\u03BB", 37, 1),
+    new Among2("\u03BB\u03B1\u03BF\u03C0\u03BB", 37, 1),
+    new Among2("\u03C8\u03C5\u03C7\u03BF\u03C0\u03BB", 37, 1),
+    new Among2("\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03BF\u03BB\u03B9\u03B3\u03BF\u03B4\u03B1\u03BC", 42, 1),
+    new Among2("\u03BC\u03BF\u03C5\u03C3\u03BF\u03C5\u03BB\u03BC", 42, 1),
+    new Among2("\u03B4\u03C1\u03B1\u03B4\u03BF\u03C5\u03BC", 42, 1),
+    new Among2("\u03B2\u03C1\u03B1\u03C7\u03BC", 42, 1),
+    new Among2("\u03BD", -1, 1),
+    new Among2("\u03B1\u03BC\u03B5\u03C1\u03B9\u03BA\u03B1\u03BD", 47, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03B1\u03B4\u03B1\u03C0", 49, 1),
+    new Among2("\u03C7\u03B1\u03BC\u03B7\u03BB\u03BF\u03B4\u03B1\u03C0", 49, 1),
+    new Among2("\u03C0\u03BF\u03BB\u03C5\u03B4\u03B1\u03C0", 49, 1),
+    new Among2("\u03BA\u03BF\u03C0", 49, 1),
+    new Among2("\u03C5\u03C0\u03BF\u03BA\u03BF\u03C0", 53, 1),
+    new Among2("\u03C4\u03C3\u03BF\u03C0", 49, 1),
+    new Among2("\u03C3\u03C0", 49, 1),
+    new Among2("\u03B5\u03C1", -1, 1),
+    new Among2("\u03B3\u03B5\u03C1", 57, 1),
+    new Among2("\u03B2\u03B5\u03C4\u03B5\u03C1", 57, 1),
+    new Among2("\u03BB\u03BF\u03C5\u03B8\u03B7\u03C1", -1, 1),
+    new Among2("\u03BA\u03BF\u03C1\u03BC\u03BF\u03C1", -1, 1),
+    new Among2("\u03C0\u03B5\u03C1\u03B9\u03C4\u03C1", -1, 1),
+    new Among2("\u03BF\u03C5\u03C1", -1, 1),
+    new Among2("\u03C3", -1, 1),
+    new Among2("\u03B2\u03B1\u03C3", 64, 1),
+    new Among2("\u03C0\u03BF\u03BB\u03B9\u03C3", 64, 1),
+    new Among2("\u03C3\u03B1\u03C1\u03B1\u03BA\u03B1\u03C4\u03C3", 64, 1),
+    new Among2("\u03B8\u03C5\u03C3", 64, 1),
+    new Among2("\u03B4\u03B9\u03B1\u03C4", -1, 1),
+    new Among2("\u03C0\u03BB\u03B1\u03C4", -1, 1),
+    new Among2("\u03C4\u03C3\u03B1\u03C1\u03BB\u03B1\u03C4", -1, 1),
+    new Among2("\u03C4\u03B5\u03C4", -1, 1),
+    new Among2("\u03C0\u03BF\u03C5\u03C1\u03B9\u03C4", -1, 1),
+    new Among2("\u03C3\u03BF\u03C5\u03BB\u03C4", -1, 1),
+    new Among2("\u03BC\u03B1\u03B9\u03BD\u03C4", -1, 1),
+    new Among2("\u03B6\u03C9\u03BD\u03C4", -1, 1),
+    new Among2("\u03BA\u03B1\u03C3\u03C4", -1, 1),
+    new Among2("\u03C6", -1, 1),
+    new Among2("\u03B4\u03B9\u03B1\u03C6", 78, 1),
+    new Among2("\u03C3\u03C4\u03B5\u03C6", 78, 1),
+    new Among2("\u03C6\u03C9\u03C4\u03BF\u03C3\u03C4\u03B5\u03C6", 80, 1),
+    new Among2("\u03C0\u03B5\u03C1\u03B7\u03C6", 78, 1),
+    new Among2("\u03C5\u03C0\u03B5\u03C1\u03B7\u03C6", 82, 1),
+    new Among2("\u03BA\u03BF\u03B9\u03BB\u03B1\u03C1\u03C6", 78, 1),
+    new Among2("\u03C0\u03B5\u03BD\u03C4\u03B1\u03C1\u03C6", 78, 1),
+    new Among2("\u03BF\u03C1\u03C6", 78, 1),
+    new Among2("\u03C7", -1, 1),
+    new Among2("\u03B1\u03BC\u03B7\u03C7", 87, 1),
+    new Among2("\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 87, 1),
+    new Among2("\u03BC\u03B5\u03B3\u03BB\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
+    new Among2("\u03BA\u03B1\u03C0\u03BD\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
+    new Among2("\u03BC\u03B9\u03BA\u03C1\u03BF\u03B2\u03B9\u03BF\u03BC\u03B7\u03C7", 89, 1),
+    new Among2("\u03C0\u03BF\u03BB\u03C5\u03BC\u03B7\u03C7", 87, 1),
+    new Among2("\u03BB\u03B9\u03C7", 87, 1)
+};
+
+private final static Among2 a_45[] = {
+    new Among2("\u03B7\u03C3\u03B5\u03C4\u03B5", -1, 1)
+};
+
+private final static Among2 a_46[] = {
+    new Among2("\u03B5\u03BD\u03B4", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B4", -1, 1),
+    new Among2("\u03BF\u03B4", -1, 1),
+    new Among2("\u03B4\u03B9\u03B1\u03B8", -1, 1),
+    new Among2("\u03BA\u03B1\u03B8", -1, 1),
+    new Among2("\u03C1\u03B1\u03B8", -1, 1),
+    new Among2("\u03C4\u03B1\u03B8", -1, 1),
+    new Among2("\u03C4\u03B9\u03B8", -1, 1),
+    new Among2("\u03B5\u03BA\u03B8", -1, 1),
+    new Among2("\u03B5\u03BD\u03B8", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B8", -1, 1),
+    new Among2("\u03C1\u03BF\u03B8", -1, 1),
+    new Among2("\u03C5\u03C0\u03B5\u03C1\u03B8", -1, 1),
+    new Among2("\u03C3\u03B8", -1, 1),
+    new Among2("\u03B5\u03C5\u03B8", -1, 1),
+    new Among2("\u03B1\u03C1\u03BA", -1, 1),
+    new Among2("\u03C9\u03C6\u03B5\u03BB", -1, 1),
+    new Among2("\u03B2\u03BF\u03BB", -1, 1),
+    new Among2("\u03B1\u03B9\u03BD", -1, 1),
+    new Among2("\u03C0\u03BF\u03BD", -1, 1),
+    new Among2("\u03C1\u03BF\u03BD", -1, 1),
+    new Among2("\u03C3\u03C5\u03BD", -1, 1),
+    new Among2("\u03B2\u03B1\u03C1", -1, 1),
+    new Among2("\u03B2\u03C1", -1, 1),
+    new Among2("\u03B1\u03B9\u03C1", -1, 1),
+    new Among2("\u03C6\u03BF\u03C1", -1, 1),
+    new Among2("\u03B5\u03C5\u03C1", -1, 1),
+    new Among2("\u03C0\u03C5\u03C1", -1, 1),
+    new Among2("\u03C7\u03C9\u03C1", -1, 1),
+    new Among2("\u03BD\u03B5\u03C4", -1, 1),
+    new Among2("\u03C3\u03C7", -1, 1)
+};
+
+private final static Among2 a_47[] = {
+    new Among2("\u03C0\u03B1\u03B3", -1, 1),
+    new Among2("\u03B4", -1, 1),
+    new Among2("\u03B1\u03B4", 1, 1),
+    new Among2("\u03B8", -1, 1),
+    new Among2("\u03B1\u03B8", 3, 1),
+    new Among2("\u03C4\u03BF\u03BA", -1, 1),
+    new Among2("\u03C3\u03BA", -1, 1),
+    new Among2("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB", -1, 1),
+    new Among2("\u03C3\u03BA\u03B5\u03BB", -1, 1),
+    new Among2("\u03B1\u03C0\u03BB", -1, 1),
+    new Among2("\u03B5\u03BC", -1, 1),
+    new Among2("\u03B1\u03BD", -1, 1),
+    new Among2("\u03B2\u03B5\u03BD", -1, 1),
+    new Among2("\u03B2\u03B1\u03C1\u03BF\u03BD", -1, 1),
+    new Among2("\u03BA\u03BF\u03C0", -1, 1),
+    new Among2("\u03C3\u03B5\u03C1\u03C0", -1, 1),
+    new Among2("\u03B1\u03B2\u03B1\u03C1", -1, 1),
+    new Among2("\u03B5\u03BD\u03B1\u03C1", -1, 1),
+    new Among2("\u03B1\u03B2\u03C1", -1, 1),
+    new Among2("\u03BC\u03C0\u03BF\u03C1", -1, 1),
+    new Among2("\u03B8\u03B1\u03C1\u03C1", -1, 1),
+    new Among2("\u03BD\u03C4\u03C1", -1, 1),
+    new Among2("\u03C5", -1, 1),
+    new Among2("\u03BD\u03B9\u03C6", -1, 1),
+    new Among2("\u03C3\u03C5\u03C1\u03C6", -1, 1)
+};
+
+private final static Among2 a_48[] = {
+    new Among2("\u03BF\u03BD\u03C4\u03B1\u03C3", -1, 1),
+    new Among2("\u03C9\u03BD\u03C4\u03B1\u03C3", -1, 1)
+};
+
+private final static Among2 a_49[] = {
+    new Among2("\u03BF\u03BC\u03B1\u03C3\u03C4\u03B5", -1, 1),
+    new Among2("\u03B9\u03BF\u03BC\u03B1\u03C3\u03C4\u03B5", 0, 1)
+};
+
+private final static Among2 a_50[] = {
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03B1\u03C0", 0, 1),
+    new Among2("\u03B1\u03BA\u03B1\u03C4\u03B1\u03C0", 1, 1),
+    new Among2("\u03C3\u03C5\u03BC\u03C0", 0, 1),
+    new Among2("\u03B1\u03C3\u03C5\u03BC\u03C0", 3, 1),
+    new Among2("\u03B1\u03BC\u03B5\u03C4\u03B1\u03BC\u03C6", -1, 1)
+};
+
+private final static Among2 a_51[] = {
+    new Among2("\u03B6", -1, 1),
+    new Among2("\u03B1\u03BB", -1, 1),
+    new Among2("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB", 1, 1),
+    new Among2("\u03B5\u03BA\u03C4\u03B5\u03BB", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03BE", -1, 1),
+    new Among2("\u03C0\u03C1\u03BF", -1, 1),
+    new Among2("\u03B1\u03C1", -1, 1),
+    new Among2("\u03BD\u03B9\u03C3", -1, 1)
+};
+
+private final static Among2 a_52[] = {
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B1", -1, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B5", -1, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_53[] = {
+    new Among2("\u03C0\u03B9\u03B8", -1, 1),
+    new Among2("\u03BF\u03B8", -1, 1),
+    new Among2("\u03BD\u03B1\u03C1\u03B8", -1, 1),
+    new Among2("\u03C3\u03BA\u03BF\u03C5\u03BB", -1, 1),
+    new Among2("\u03C3\u03BA\u03C9\u03BB", -1, 1),
+    new Among2("\u03C3\u03C6", -1, 1)
+};
+
+private final static Among2 a_54[] = {
+    new Among2("\u03B8", -1, 1),
+    new Among2("\u03B4\u03B9\u03B1\u03B8", 0, 1),
+    new Among2("\u03C0\u03B1\u03C1\u03B1\u03BA\u03B1\u03C4\u03B1\u03B8", 0, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03B8", 0, 1),
+    new Among2("\u03C0\u03C1\u03BF\u03C3\u03B8", 0, 1)
+};
+
+private final static Among2 a_55[] = {
+    new Among2("\u03B7\u03BA\u03B1", -1, 1),
+    new Among2("\u03B7\u03BA\u03B5", -1, 1),
+    new Among2("\u03B7\u03BA\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_56[] = {
+    new Among2("\u03C6\u03B1\u03B3", -1, 1),
+    new Among2("\u03BB\u03B7\u03B3", -1, 1),
+    new Among2("\u03C6\u03C1\u03C5\u03B4", -1, 1),
+    new Among2("\u03BC\u03B1\u03BD\u03C4\u03B9\u03BB", -1, 1),
+    new Among2("\u03BC\u03B1\u03BB\u03BB", -1, 1),
+    new Among2("\u03BF\u03BC", -1, 1),
+    new Among2("\u03B2\u03BB\u03B5\u03C0", -1, 1),
+    new Among2("\u03C0\u03BF\u03B4\u03B1\u03C1", -1, 1),
+    new Among2("\u03BA\u03C5\u03BC\u03B1\u03C4", -1, 1),
+    new Among2("\u03C0\u03C1\u03C9\u03C4", -1, 1),
+    new Among2("\u03BB\u03B1\u03C7", -1, 1),
+    new Among2("\u03C0\u03B1\u03BD\u03C4\u03B1\u03C7", -1, 1)
+};
+
+private final static Among2 a_57[] = {
+    new Among2("\u03C4\u03C3\u03B1", -1, 1),
+    new Among2("\u03C7\u03B1\u03B4", -1, 1),
+    new Among2("\u03BC\u03B5\u03B4", -1, 1),
+    new Among2("\u03BB\u03B1\u03BC\u03C0\u03B9\u03B4", -1, 1),
+    new Among2("\u03B4\u03B5", -1, 1),
+    new Among2("\u03C0\u03BB\u03B5", -1, 1),
+    new Among2("\u03BC\u03B5\u03C3\u03B1\u03B6", -1, 1),
+    new Among2("\u03B4\u03B5\u03C3\u03C0\u03BF\u03B6", -1, 1),
+    new Among2("\u03B1\u03B9\u03B8", -1, 1),
+    new Among2("\u03C6\u03B1\u03C1\u03BC\u03B1\u03BA", -1, 1),
+    new Among2("\u03B1\u03B3\u03BA", -1, 1),
+    new Among2("\u03B1\u03BD\u03B7\u03BA", -1, 1),
+    new Among2("\u03BB", -1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03B1\u03BC", 13, 1),
+    new Among2("\u03B2\u03C1\u03BF\u03BC", 13, 1),
+    new Among2("\u03C5\u03C0\u03BF\u03C4\u03B5\u03B9\u03BD", -1, 1),
+    new Among2("\u03B5\u03BA\u03BB\u03B9\u03C0", -1, 1),
+    new Among2("\u03C1", -1, 1),
+    new Among2("\u03B5\u03BD\u03B4\u03B9\u03B1\u03C6\u03B5\u03C1", 18, 1),
+    new Among2("\u03B1\u03BD\u03B1\u03C1\u03C1", 18, 1),
+    new Among2("\u03C0\u03B1\u03C4", -1, 1),
+    new Among2("\u03BA\u03B1\u03B8\u03B1\u03C1\u03B5\u03C5", -1, 1),
+    new Among2("\u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03B5\u03C5", -1, 1),
+    new Among2("\u03BB\u03B5\u03C7", -1, 1)
+};
+
+private final static Among2 a_58[] = {
+    new Among2("\u03BF\u03C5\u03C3\u03B1", -1, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B5", -1, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_59[] = {
+    new Among2("\u03C8\u03BF\u03C6", -1, -1),
+    new Among2("\u03BD\u03B1\u03C5\u03BB\u03BF\u03C7", -1, -1)
+};
+
+private final static Among2 a_60[] = {
+    new Among2("\u03C0\u03B5\u03BB", -1, 1),
+    new Among2("\u03BB\u03BB", -1, 1),
+    new Among2("\u03C3\u03BC\u03B7\u03BD", -1, 1),
+    new Among2("\u03C1\u03C0", -1, 1),
+    new Among2("\u03C0\u03C1", -1, 1),
+    new Among2("\u03C6\u03C1", -1, 1),
+    new Among2("\u03C7\u03BF\u03C1\u03C4", -1, 1),
+    new Among2("\u03BF\u03C6", -1, 1),
+    new Among2("\u03C3\u03C6", -1, 1),
+    new Among2("\u03BB\u03BF\u03C7", -1, 1)
+};
+
+private final static Among2 a_61[] = {
+    new Among2("\u03B1\u03BC\u03B1\u03BB\u03BB\u03B9", -1, 1),
+    new Among2("\u03BB", -1, 1),
+    new Among2("\u03B1\u03BC\u03B1\u03BB", 1, 1),
+    new Among2("\u03BC", -1, 1),
+    new Among2("\u03BF\u03C5\u03BB\u03B1\u03BC", 3, 1),
+    new Among2("\u03B5\u03BD", -1, 1),
+    new Among2("\u03B4\u03B5\u03C1\u03B2\u03B5\u03BD", 5, 1),
+    new Among2("\u03C0", -1, 1),
+    new Among2("\u03B1\u03B5\u03B9\u03C0", 7, 1),
+    new Among2("\u03B1\u03C1\u03C4\u03B9\u03C0", 7, 1),
+    new Among2("\u03C3\u03C5\u03BC\u03C0", 7, 1),
+    new Among2("\u03BD\u03B5\u03BF\u03C0", 7, 1),
+    new Among2("\u03BA\u03C1\u03BF\u03BA\u03B1\u03BB\u03BF\u03C0", 7, 1),
+    new Among2("\u03BF\u03BB\u03BF\u03C0", 7, 1),
+    new Among2("\u03C0\u03C1\u03BF\u03C3\u03C9\u03C0\u03BF\u03C0", 7, 1),
+    new Among2("\u03C3\u03B9\u03B4\u03B7\u03C1\u03BF\u03C0", 7, 1),
+    new Among2("\u03B4\u03C1\u03BF\u03C3\u03BF\u03C0", 7, 1),
+    new Among2("\u03B1\u03C3\u03C0", 7, 1),
+    new Among2("\u03B1\u03BD\u03C5\u03C0", 7, 1),
+    new Among2("\u03C1", -1, 1),
+    new Among2("\u03B1\u03C3\u03C0\u03B1\u03C1", 19, 1),
+    new Among2("\u03C7\u03B1\u03C1", 19, 1),
+    new Among2("\u03B1\u03C7\u03B1\u03C1", 21, 1),
+    new Among2("\u03B1\u03C0\u03B5\u03C1", 19, 1),
+    new Among2("\u03C4\u03C1", 19, 1),
+    new Among2("\u03BF\u03C5\u03C1", 19, 1),
+    new Among2("\u03C4", -1, 1),
+    new Among2("\u03B4\u03B9\u03B1\u03C4", 26, 1),
+    new Among2("\u03B5\u03C0\u03B9\u03C4", 26, 1),
+    new Among2("\u03C3\u03C5\u03BD\u03C4", 26, 1),
+    new Among2("\u03BF\u03BC\u03BF\u03C4", 26, 1),
+    new Among2("\u03BD\u03BF\u03BC\u03BF\u03C4", 30, 1),
+    new Among2("\u03B1\u03C0\u03BF\u03C4", 26, 1),
+    new Among2("\u03C5\u03C0\u03BF\u03C4", 26, 1),
+    new Among2("\u03B1\u03B2\u03B1\u03C3\u03C4", 26, 1),
+    new Among2("\u03B1\u03B9\u03BC\u03BF\u03C3\u03C4", 26, 1),
+    new Among2("\u03C0\u03C1\u03BF\u03C3\u03C4", 26, 1),
+    new Among2("\u03B1\u03BD\u03C5\u03C3\u03C4", 26, 1),
+    new Among2("\u03BD\u03B1\u03C5", -1, 1),
+    new Among2("\u03B1\u03C6", -1, 1),
+    new Among2("\u03BE\u03B5\u03C6", -1, 1),
+    new Among2("\u03B1\u03B4\u03B7\u03C6", -1, 1),
+    new Among2("\u03C0\u03B1\u03BC\u03C6", -1, 1),
+    new Among2("\u03C0\u03BF\u03BB\u03C5\u03C6", -1, 1)
+};
+
+private final static Among2 a_62[] = {
+    new Among2("\u03B1\u03B3\u03B1", -1, 1),
+    new Among2("\u03B1\u03B3\u03B5", -1, 1),
+    new Among2("\u03B1\u03B3\u03B5\u03C3", -1, 1)
+};
+
+private final static Among2 a_63[] = {
+    new Among2("\u03B7\u03C3\u03B1", -1, 1),
+    new Among2("\u03B7\u03C3\u03B5", -1, 1),
+    new Among2("\u03B7\u03C3\u03BF\u03C5", -1, 1)
+};
+
+private final static Among2 a_64[] = {
+    new Among2("\u03BD", -1, 1),
+    new Among2("\u03B4\u03C9\u03B4\u03B5\u03BA\u03B1\u03BD", 0, 1),
+    new Among2("\u03B5\u03C0\u03C4\u03B1\u03BD", 0, 1),
+    new Among2("\u03BC\u03B5\u03B3\u03B1\u03BB\u03BF\u03BD", 0, 1),
+    new Among2("\u03B5\u03C1\u03B7\u03BC\u03BF\u03BD", 0, 1),
+    new Among2("\u03C7\u03B5\u03C1\u03C3\u03BF\u03BD", 0, 1)
+};
+
+private final static Among2 a_65[] = {
+    new Among2("\u03B7\u03C3\u03C4\u03B5", -1, 1)
+};
+
+private final static Among2 a_66[] = {
+    new Among2("\u03C3\u03B2", -1, 1),
+    new Among2("\u03B1\u03C3\u03B2", 0, 1),
+    new Among2("\u03B1\u03C0\u03BB", -1, 1),
+    new Among2("\u03B1\u03B5\u03B9\u03BC\u03BD", -1, 1),
+    new Among2("\u03C7\u03C1", -1, 1),
+    new Among2("\u03B1\u03C7\u03C1", 4, 1),
+    new Among2("\u03BA\u03BF\u03B9\u03BD\u03BF\u03C7\u03C1", 4, 1),
+    new Among2("\u03B4\u03C5\u03C3\u03C7\u03C1", 4, 1),
+    new Among2("\u03B5\u03C5\u03C7\u03C1", 4, 1),
+    new Among2("\u03C0\u03B1\u03BB\u03B9\u03BC\u03C8", -1, 1)
+};
+
+private final static Among2 a_67[] = {
+    new Among2("\u03BF\u03C5\u03BD\u03B5", -1, 1),
+    new Among2("\u03B7\u03B8\u03BF\u03C5\u03BD\u03B5", 0, 1),
+    new Among2("\u03B7\u03C3\u03BF\u03C5\u03BD\u03B5", 0, 1)
+};
+
+private final static Among2 a_68[] = {
+    new Among2("\u03C3\u03C0\u03B9", -1, 1),
+    new Among2("\u03BD", -1, 1),
+    new Among2("\u03B5\u03BE\u03C9\u03BD", 1, 1),
+    new Among2("\u03C1", -1, 1),
+    new Among2("\u03C3\u03C4\u03C1\u03B1\u03B2\u03BF\u03BC\u03BF\u03C5\u03C4\u03C3", -1, 1),
+    new Among2("\u03BA\u03B1\u03BA\u03BF\u03BC\u03BF\u03C5\u03C4\u03C3", -1, 1)
+};
+
+private final static Among2 a_69[] = {
+    new Among2("\u03BF\u03C5\u03BC\u03B5", -1, 1),
+    new Among2("\u03B7\u03B8\u03BF\u03C5\u03BC\u03B5", 0, 1),
+    new Among2("\u03B7\u03C3\u03BF\u03C5\u03BC\u03B5", 0, 1)
+};
+
+private final static Among2 a_70[] = {
+    new Among2("\u03B1\u03B6", -1, 1),
+    new Among2("\u03C9\u03C1\u03B9\u03BF\u03C0\u03BB", -1, 1),
+    new Among2("\u03B1\u03C3\u03BF\u03C5\u03C3", -1, 1),
+    new Among2("\u03C0\u03B1\u03C1\u03B1\u03C3\u03BF\u03C5\u03C3", 2, 1),
+    new Among2("\u03B1\u03BB\u03BB\u03BF\u03C3\u03BF\u03C5\u03C3", -1, 1),
+    new Among2("\u03C6", -1, 1),
+    new Among2("\u03C7", -1, 1)
+};
+
+private final static Among2 a_71[] = {
+    new Among2("\u03BC\u03B1\u03C4\u03B1", -1, 1),
+    new Among2("\u03BC\u03B1\u03C4\u03C9\u03BD", -1, 1),
+    new Among2("\u03BC\u03B1\u03C4\u03BF\u03C3", -1, 1)
+};
+
+private final static Among2 a_72[] = {
+    new Among2("\u03B1", -1, 1),
+    new Among2("\u03B9\u03BF\u03C5\u03BC\u03B1", 0, 1),
+    new Among2("\u03BF\u03BC\u03BF\u03C5\u03BD\u03B1", 0, 1),
+    new Among2("\u03B9\u03BF\u03BC\u03BF\u03C5\u03BD\u03B1", 2, 1),
+    new Among2("\u03BF\u03C3\u03BF\u03C5\u03BD\u03B1", 0, 1),
+    new Among2("\u03B9\u03BF\u03C3\u03BF\u03C5\u03BD\u03B1", 4, 1),
+    new Among2("\u03B5", -1, 1),
+    new Among2("\u03B1\u03B3\u03B1\u03C4\u03B5", 6, 1),
+    new Among2("\u03B7\u03BA\u03B1\u03C4\u03B5", 6, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B1\u03C4\u03B5", 8, 1),
+    new Among2("\u03B7\u03C3\u03B1\u03C4\u03B5", 6, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B1\u03C4\u03B5", 6, 1),
+    new Among2("\u03B5\u03B9\u03C4\u03B5", 6, 1),
+    new Among2("\u03B7\u03B8\u03B5\u03B9\u03C4\u03B5", 12, 1),
+    new Among2("\u03B9\u03B5\u03BC\u03B1\u03C3\u03C4\u03B5", 6, 1),
+    new Among2("\u03BF\u03C5\u03BC\u03B1\u03C3\u03C4\u03B5", 6, 1),
+    new Among2("\u03B9\u03BF\u03C5\u03BC\u03B1\u03C3\u03C4\u03B5", 15, 1),
+    new Among2("\u03B9\u03B5\u03C3\u03B1\u03C3\u03C4\u03B5", 6, 1),
+    new Among2("\u03BF\u03C3\u03B1\u03C3\u03C4\u03B5", 6, 1),
+    new Among2("\u03B9\u03BF\u03C3\u03B1\u03C3\u03C4\u03B5", 18, 1),
+    new Among2("\u03B7", -1, 1),
+    new Among2("\u03B9", -1, 1),
+    new Among2("\u03B1\u03BC\u03B1\u03B9", 21, 1),
+    new Among2("\u03B9\u03B5\u03BC\u03B1\u03B9", 21, 1),
+    new Among2("\u03BF\u03BC\u03B1\u03B9", 21, 1),
+    new Among2("\u03BF\u03C5\u03BC\u03B1\u03B9", 21, 1),
+    new Among2("\u03B1\u03C3\u03B1\u03B9", 21, 1),
+    new Among2("\u03B5\u03C3\u03B1\u03B9", 21, 1),
+    new Among2("\u03B9\u03B5\u03C3\u03B1\u03B9", 27, 1),
+    new Among2("\u03B1\u03C4\u03B1\u03B9", 21, 1),
+    new Among2("\u03B5\u03C4\u03B1\u03B9", 21, 1),
+    new Among2("\u03B9\u03B5\u03C4\u03B1\u03B9", 30, 1),
+    new Among2("\u03BF\u03BD\u03C4\u03B1\u03B9", 21, 1),
+    new Among2("\u03BF\u03C5\u03BD\u03C4\u03B1\u03B9", 21, 1),
+    new Among2("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03B9", 33, 1),
+    new Among2("\u03B5\u03B9", 21, 1),
+    new Among2("\u03B1\u03B5\u03B9", 35, 1),
+    new Among2("\u03B7\u03B8\u03B5\u03B9", 35, 1),
+    new Among2("\u03B7\u03C3\u03B5\u03B9", 35, 1),
+    new Among2("\u03BF\u03B9", 21, 1),
+    new Among2("\u03B1\u03BD", -1, 1),
+    new Among2("\u03B1\u03B3\u03B1\u03BD", 40, 1),
+    new Among2("\u03B7\u03BA\u03B1\u03BD", 40, 1),
+    new Among2("\u03B7\u03B8\u03B7\u03BA\u03B1\u03BD", 42, 1),
+    new Among2("\u03B7\u03C3\u03B1\u03BD", 40, 1),
+    new Among2("\u03BF\u03C5\u03C3\u03B1\u03BD", 40, 1),
+    new Among2("\u03BF\u03BD\u03C4\u03BF\u03C5\u03C3\u03B1\u03BD", 45, 1),
+    new Among2("\u03B9\u03BF\u03BD\u03C4\u03BF\u03C5\u03C3\u03B1\u03BD", 46, 1),
+    new Among2("\u03BF\u03BD\u03C4\u03B1\u03BD", 40, 1),
+    new Among2("\u03B9\u03BF\u03BD\u03C4\u03B1\u03BD", 48, 1),
+    new Among2("\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD", 40, 1),
+    new Among2("\u03B9\u03BF\u03C5\u03BD\u03C4\u03B1\u03BD", 50, 1),
+    new Among2("\u03BF\u03C4\u03B1\u03BD", 40, 1),
+    new Among2("\u03B9\u03BF\u03C4\u03B1\u03BD", 52, 1),
+    new Among2("\u03BF\u03BC\u03B1\u03C3\u03C4\u03B1\u03BD", 40, 1),
+    new Among2("\u03B9\u03BF\u03BC\u03B1\u03C3\u03C4\u03B1\u03BD", 54, 1),
+    new Among2("\u03BF\u03C3\u03B1\u03C3\u03C4\u03B1\u03BD", 40, 1),
+    new Among2("\u03B9\u03BF\u03C3\u03B1\u03C3\u03C4\u03B1\u03BD", 56, 1),
+    new Among2("\u03BF\u03C5\u03BD", -1, 1),
+    new Among2("\u03B7\u03B8\u03BF\u03C5\u03BD", 58, 1),
+    new Among2("\u03BF\u03BC\u03BF\u03C5\u03BD", 58, 1),
+    new Among2("\u03B9\u03BF\u03BC\u03BF\u03C5\u03BD", 60, 1),
+    new Among2("\u03B7\u03C3\u03BF\u03C5\u03BD", 58, 1),
+    new Among2("\u03BF\u03C3\u03BF\u03C5\u03BD", 58, 1),
+    new Among2("\u03B9\u03BF\u03C3\u03BF\u03C5\u03BD", 63, 1),
+    new Among2("\u03C9\u03BD", -1, 1),
+    new Among2("\u03B7\u03B4\u03C9\u03BD", 65, 1),
+    new Among2("\u03BF", -1, 1),
+    new Among2("\u03B1\u03C3", -1, 1),
+    new Among2("\u03B5\u03C3", -1, 1),
+    new Among2("\u03B7\u03B4\u03B5\u03C3", 69, 1),
+    new Among2("\u03B7\u03C3\u03B5\u03C3", 69, 1),
+    new Among2("\u03B7\u03C3", -1, 1),
+    new Among2("\u03B5\u03B9\u03C3", -1, 1),
+    new Among2("\u03B7\u03B8\u03B5\u03B9\u03C3", 73, 1),
+    new Among2("\u03BF\u03C3", -1, 1),
+    new Among2("\u03C5\u03C3", -1, 1),
+    new Among2("\u03BF\u03C5\u03C3", 76, 1),
+    new Among2("\u03C5", -1, 1),
+    new Among2("\u03BF\u03C5", 78, 1),
+    new Among2("\u03C9", -1, 1),
+    new Among2("\u03B1\u03C9", 80, 1),
+    new Among2("\u03B7\u03B8\u03C9", 80, 1),
+    new Among2("\u03B7\u03C3\u03C9", 80, 1)
+};
+
+private final static Among2 a_73[] = {
+    new Among2("\u03BF\u03C4\u03B5\u03C1", -1, 1),
+    new Among2("\u03B5\u03C3\u03C4\u03B5\u03C1", -1, 1),
+    new Among2("\u03C5\u03C4\u03B5\u03C1", -1, 1),
+    new Among2("\u03C9\u03C4\u03B5\u03C1", -1, 1),
+    new Among2("\u03BF\u03C4\u03B1\u03C4", -1, 1),
+    new Among2("\u03B5\u03C3\u03C4\u03B1\u03C4", -1, 1),
+    new Among2("\u03C5\u03C4\u03B1\u03C4", -1, 1),
+    new Among2("\u03C9\u03C4\u03B1\u03C4", -1, 1)
 };
 
 private static final char g_v[] = {81, 65, 16, 1 };

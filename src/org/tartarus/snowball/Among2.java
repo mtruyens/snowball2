@@ -2,15 +2,15 @@ package org.tartarus.snowball;
 
 import java.lang.reflect.Method;
 
-public class Among {
-    public Among (String s, int substring_i, int result) {
+public class Among2 {
+    public Among2 (String s, int substring_i, int result) {
         this.s = s.toCharArray();
         this.substring_i = substring_i;
 	this.result = result;
 	this.method = null;
     }
 
-    public Among (String s, int substring_i, int result, String methodname,
+    public Among2 (String s, int substring_i, int result, String methodname,
 		  Class<? extends SnowballProgram> programclass) {
         this.s = s.toCharArray();
         this.substring_i = substring_i;

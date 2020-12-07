@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,46 +15,46 @@ public class indonesianStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("kah", -1, 1),
-    new Among("lah", -1, 1),
-    new Among("pun", -1, 1)
+private final static Among2 a_0[] = {
+    new Among2("kah", -1, 1),
+    new Among2("lah", -1, 1),
+    new Among2("pun", -1, 1)
 };
 
-private final static Among a_1[] = {
-    new Among("nya", -1, 1),
-    new Among("ku", -1, 1),
-    new Among("mu", -1, 1)
+private final static Among2 a_1[] = {
+    new Among2("nya", -1, 1),
+    new Among2("ku", -1, 1),
+    new Among2("mu", -1, 1)
 };
 
-private final static Among a_2[] = {
-    new Among("i", -1, 1, "r_SUFFIX_I_OK", indonesianStemmer.class),
-    new Among("an", -1, 1, "r_SUFFIX_AN_OK", indonesianStemmer.class),
-    new Among("kan", 1, 1, "r_SUFFIX_KAN_OK", indonesianStemmer.class)
+private final static Among2 a_2[] = {
+    new Among2("i", -1, 1, "r_SUFFIX_I_OK", indonesianStemmer.class),
+    new Among2("an", -1, 1, "r_SUFFIX_AN_OK", indonesianStemmer.class),
+    new Among2("kan", 1, 1, "r_SUFFIX_KAN_OK", indonesianStemmer.class)
 };
 
-private final static Among a_3[] = {
-    new Among("di", -1, 1),
-    new Among("ke", -1, 2),
-    new Among("me", -1, 1),
-    new Among("mem", 2, 5),
-    new Among("men", 2, 1),
-    new Among("meng", 4, 1),
-    new Among("meny", 4, 3, "r_VOWEL", indonesianStemmer.class),
-    new Among("pem", -1, 6),
-    new Among("pen", -1, 2),
-    new Among("peng", 8, 2),
-    new Among("peny", 8, 4, "r_VOWEL", indonesianStemmer.class),
-    new Among("ter", -1, 1)
+private final static Among2 a_3[] = {
+    new Among2("di", -1, 1),
+    new Among2("ke", -1, 2),
+    new Among2("me", -1, 1),
+    new Among2("mem", 2, 5),
+    new Among2("men", 2, 1),
+    new Among2("meng", 4, 1),
+    new Among2("meny", 4, 3, "r_VOWEL", indonesianStemmer.class),
+    new Among2("pem", -1, 6),
+    new Among2("pen", -1, 2),
+    new Among2("peng", 8, 2),
+    new Among2("peny", 8, 4, "r_VOWEL", indonesianStemmer.class),
+    new Among2("ter", -1, 1)
 };
 
-private final static Among a_4[] = {
-    new Among("be", -1, 3, "r_KER", indonesianStemmer.class),
-    new Among("belajar", 0, 4),
-    new Among("ber", 0, 3),
-    new Among("pe", -1, 1),
-    new Among("pelajar", 3, 2),
-    new Among("per", 3, 1)
+private final static Among2 a_4[] = {
+    new Among2("be", -1, 3, "r_KER", indonesianStemmer.class),
+    new Among2("belajar", 0, 4),
+    new Among2("ber", 0, 3),
+    new Among2("pe", -1, 1),
+    new Among2("pelajar", 3, 2),
+    new Among2("per", 3, 1)
 };
 
 private static final char g_vowel[] = {17, 65, 16 };

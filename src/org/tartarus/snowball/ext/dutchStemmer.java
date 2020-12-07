@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,54 +15,54 @@ public class dutchStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("", -1, 6),
-    new Among("\u00E1", 0, 1),
-    new Among("\u00E4", 0, 1),
-    new Among("\u00E9", 0, 2),
-    new Among("\u00EB", 0, 2),
-    new Among("\u00ED", 0, 3),
-    new Among("\u00EF", 0, 3),
-    new Among("\u00F3", 0, 4),
-    new Among("\u00F6", 0, 4),
-    new Among("\u00FA", 0, 5),
-    new Among("\u00FC", 0, 5)
+private final static Among2 a_0[] = {
+    new Among2("", -1, 6),
+    new Among2("\u00E1", 0, 1),
+    new Among2("\u00E4", 0, 1),
+    new Among2("\u00E9", 0, 2),
+    new Among2("\u00EB", 0, 2),
+    new Among2("\u00ED", 0, 3),
+    new Among2("\u00EF", 0, 3),
+    new Among2("\u00F3", 0, 4),
+    new Among2("\u00F6", 0, 4),
+    new Among2("\u00FA", 0, 5),
+    new Among2("\u00FC", 0, 5)
 };
 
-private final static Among a_1[] = {
-    new Among("", -1, 3),
-    new Among("I", 0, 2),
-    new Among("Y", 0, 1)
+private final static Among2 a_1[] = {
+    new Among2("", -1, 3),
+    new Among2("I", 0, 2),
+    new Among2("Y", 0, 1)
 };
 
-private final static Among a_2[] = {
-    new Among("dd", -1, -1),
-    new Among("kk", -1, -1),
-    new Among("tt", -1, -1)
+private final static Among2 a_2[] = {
+    new Among2("dd", -1, -1),
+    new Among2("kk", -1, -1),
+    new Among2("tt", -1, -1)
 };
 
-private final static Among a_3[] = {
-    new Among("ene", -1, 2),
-    new Among("se", -1, 3),
-    new Among("en", -1, 2),
-    new Among("heden", 2, 1),
-    new Among("s", -1, 3)
+private final static Among2 a_3[] = {
+    new Among2("ene", -1, 2),
+    new Among2("se", -1, 3),
+    new Among2("en", -1, 2),
+    new Among2("heden", 2, 1),
+    new Among2("s", -1, 3)
 };
 
-private final static Among a_4[] = {
-    new Among("end", -1, 1),
-    new Among("ig", -1, 2),
-    new Among("ing", -1, 1),
-    new Among("lijk", -1, 3),
-    new Among("baar", -1, 4),
-    new Among("bar", -1, 5)
+private final static Among2 a_4[] = {
+    new Among2("end", -1, 1),
+    new Among2("ig", -1, 2),
+    new Among2("ing", -1, 1),
+    new Among2("lijk", -1, 3),
+    new Among2("baar", -1, 4),
+    new Among2("bar", -1, 5)
 };
 
-private final static Among a_5[] = {
-    new Among("aa", -1, -1),
-    new Among("ee", -1, -1),
-    new Among("oo", -1, -1),
-    new Among("uu", -1, -1)
+private final static Among2 a_5[] = {
+    new Among2("aa", -1, -1),
+    new Among2("ee", -1, -1),
+    new Among2("oo", -1, -1),
+    new Among2("uu", -1, -1)
 };
 
 private static final char g_v[] = {17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128 };
@@ -374,7 +374,7 @@ private boolean r_undouble() {
     // (, line 90
     // test, line 91
     int v_1 = limit - cursor;
-    // among, line 91
+    // Among2, line 91
     if (find_among_b(a_2) == 0)
     {
         return false;
@@ -721,7 +721,7 @@ private boolean r_standard_suffix() {
         // test, line 148
         int v_10 = limit - cursor;
         // (, line 148
-        // among, line 149
+        // Among2, line 149
         if (find_among_b(a_5) == 0)
         {
             break lab8;

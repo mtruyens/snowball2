@@ -147,7 +147,7 @@ public class SnowballProgram implements Serializable {
 	return true;
     }
 
-    protected int find_among(Among v[])
+    protected int find_among(Among2 v[])
     {
 	int i = 0;
 	int j = v.length;
@@ -164,7 +164,7 @@ public class SnowballProgram implements Serializable {
 	    int k = i + ((j - i) >> 1);
 	    int diff = 0;
 	    int common = common_i < common_j ? common_i : common_j; // smaller
-	    Among w = v[k];
+	    Among2 w = v[k];
 	    int i2;
 	    for (i2 = common; i2 < w.s.length; i2++) {
 		if (c + common == l) {
@@ -195,7 +195,7 @@ public class SnowballProgram implements Serializable {
 	    }
 	}
 	while (true) {
-	    Among w = v[i];
+	    Among2 w = v[i];
 	    if (common_i >= w.s.length) {
 		cursor = c + w.s.length;
 		if (w.method == null) return w.result;
@@ -236,7 +236,7 @@ public class SnowballProgram implements Serializable {
 	    int k = i + ((j - i) >> 1);
 	    int diff = 0;
 	    int common = common_i < common_j ? common_i : common_j;
-	    Among w = v[k];
+	    Among2 w = v[k];
 	    int i2;
 	    for (i2 = w.s.length - 1 - common; i2 >= 0; i2--) {
 		if (c - common == lb) {
@@ -262,7 +262,7 @@ public class SnowballProgram implements Serializable {
 	    }
 	}
 	while (true) {
-	    Among w = v[i];
+	    Among2 w = v[i];
 	    if (common_i >= w.s.length) {
 		cursor = c - w.s.length;
 		if (w.method == null) return w.result;

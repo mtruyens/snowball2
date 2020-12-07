@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,248 +15,248 @@ public class tamilStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B99", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9E", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BA8", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BAE", -1, -1),
-    new Among("\u0BAF", -1, -1),
-    new Among("\u0BB5", -1, -1)
+private final static Among2 a_0[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B99", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9E", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BA8", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BAE", -1, -1),
+    new Among2("\u0BAF", -1, -1),
+    new Among2("\u0BB5", -1, -1)
 };
 
-private final static Among a_1[] = {
-    new Among("\u0BA8\u0BCD\u0BA4", -1, -1),
-    new Among("\u0BA8\u0BCD\u0BA4\u0BCD", -1, -1),
-    new Among("\u0BA8\u0BCD", -1, -1)
+private final static Among2 a_1[] = {
+    new Among2("\u0BA8\u0BCD\u0BA4", -1, -1),
+    new Among2("\u0BA8\u0BCD\u0BA4\u0BCD", -1, -1),
+    new Among2("\u0BA8\u0BCD", -1, -1)
 };
 
-private final static Among a_2[] = {
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_2[] = {
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_3[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_3[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_4[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_4[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_5[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_5[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_6[] = {
-    new Among("\u0BAF", -1, -1),
-    new Among("\u0BB0", -1, -1),
-    new Among("\u0BB2", -1, -1),
-    new Among("\u0BB3", -1, -1),
-    new Among("\u0BB4", -1, -1),
-    new Among("\u0BB5", -1, -1)
+private final static Among2 a_6[] = {
+    new Among2("\u0BAF", -1, -1),
+    new Among2("\u0BB0", -1, -1),
+    new Among2("\u0BB2", -1, -1),
+    new Among2("\u0BB3", -1, -1),
+    new Among2("\u0BB4", -1, -1),
+    new Among2("\u0BB5", -1, -1)
 };
 
-private final static Among a_7[] = {
-    new Among("\u0B99", -1, -1),
-    new Among("\u0B9E", -1, -1),
-    new Among("\u0BA3", -1, -1),
-    new Among("\u0BA8", -1, -1),
-    new Among("\u0BA9", -1, -1),
-    new Among("\u0BAE", -1, -1)
+private final static Among2 a_7[] = {
+    new Among2("\u0B99", -1, -1),
+    new Among2("\u0B9E", -1, -1),
+    new Among2("\u0BA3", -1, -1),
+    new Among2("\u0BA8", -1, -1),
+    new Among2("\u0BA9", -1, -1),
+    new Among2("\u0BAE", -1, -1)
 };
 
-private final static Among a_8[] = {
-    new Among("\u0BAF", -1, -1),
-    new Among("\u0BB5", -1, -1),
-    new Among("\u0BB5\u0BCD", -1, -1)
+private final static Among2 a_8[] = {
+    new Among2("\u0BAF", -1, -1),
+    new Among2("\u0BB5", -1, -1),
+    new Among2("\u0BB5\u0BCD", -1, -1)
 };
 
-private final static Among a_9[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_9[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_10[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_10[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_11[] = {
-    new Among("\u0B85", -1, -1),
-    new Among("\u0B87", -1, -1),
-    new Among("\u0B89", -1, -1)
+private final static Among2 a_11[] = {
+    new Among2("\u0B85", -1, -1),
+    new Among2("\u0B87", -1, -1),
+    new Among2("\u0B89", -1, -1)
 };
 
-private final static Among a_12[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B99", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9E", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BA8", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BAE", -1, -1),
-    new Among("\u0BAF", -1, -1),
-    new Among("\u0BB5", -1, -1)
+private final static Among2 a_12[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B99", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9E", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BA8", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BAE", -1, -1),
+    new Among2("\u0BAF", -1, -1),
+    new Among2("\u0BB5", -1, -1)
 };
 
-private final static Among a_13[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_13[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_14[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BCB", -1, -1)
+private final static Among2 a_14[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BCB", -1, -1)
 };
 
-private final static Among a_15[] = {
-    new Among("\u0BAA\u0BBF", -1, -1),
-    new Among("\u0BB5\u0BBF", -1, -1)
+private final static Among2 a_15[] = {
+    new Among2("\u0BAA\u0BBF", -1, -1),
+    new Among2("\u0BB5\u0BBF", -1, -1)
 };
 
-private final static Among a_16[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_16[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_17[] = {
-    new Among("\u0BAA\u0B9F\u0BCD\u0B9F", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA3", -1, -1),
-    new Among("\u0BA4\u0BBE\u0BA9", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BBF\u0BA4\u0BBE\u0BA9", 2, -1),
-    new Among("\u0B95\u0BC1\u0BB0\u0BBF\u0BAF", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BBF", -1, -1),
-    new Among("\u0BAA\u0BB1\u0BCD\u0BB1\u0BBF", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BC1", -1, -1),
-    new Among("\u0BB5\u0BBF\u0B9F\u0BC1", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
-    new Among("\u0BB5\u0BBF\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
-    new Among("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1", -1, -1),
-    new Among("\u0BC6\u0BB2\u0BCD\u0BB2\u0BBE\u0BAE\u0BCD", -1, -1)
+private final static Among2 a_17[] = {
+    new Among2("\u0BAA\u0B9F\u0BCD\u0B9F", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA3", -1, -1),
+    new Among2("\u0BA4\u0BBE\u0BA9", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BBF\u0BA4\u0BBE\u0BA9", 2, -1),
+    new Among2("\u0B95\u0BC1\u0BB0\u0BBF\u0BAF", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BBF", -1, -1),
+    new Among2("\u0BAA\u0BB1\u0BCD\u0BB1\u0BBF", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BC1", -1, -1),
+    new Among2("\u0BB5\u0BBF\u0B9F\u0BC1", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
+    new Among2("\u0BB5\u0BBF\u0B9F\u0BCD\u0B9F\u0BC1", -1, -1),
+    new Among2("\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1", -1, -1),
+    new Among2("\u0BC6\u0BB2\u0BCD\u0BB2\u0BBE\u0BAE\u0BCD", -1, -1)
 };
 
-private final static Among a_18[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_18[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_19[] = {
-    new Among("\u0B95", -1, -1),
-    new Among("\u0B9A", -1, -1),
-    new Among("\u0B9F", -1, -1),
-    new Among("\u0BA4", -1, -1),
-    new Among("\u0BAA", -1, -1),
-    new Among("\u0BB1", -1, -1)
+private final static Among2 a_19[] = {
+    new Among2("\u0B95", -1, -1),
+    new Among2("\u0B9A", -1, -1),
+    new Among2("\u0B9F", -1, -1),
+    new Among2("\u0BA4", -1, -1),
+    new Among2("\u0BAA", -1, -1),
+    new Among2("\u0BB1", -1, -1)
 };
 
-private final static Among a_20[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_20[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_21[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_21[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_22[] = {
-    new Among("\u0BAA\u0B9F\u0BC1", -1, -1),
-    new Among("\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BCD", -1, -1)
+private final static Among2 a_22[] = {
+    new Among2("\u0BAA\u0B9F\u0BC1", -1, -1),
+    new Among2("\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BCD", -1, -1)
 };
 
-private final static Among a_23[] = {
-    new Among("\u0B85", -1, -1),
-    new Among("\u0B86", -1, -1),
-    new Among("\u0B87", -1, -1),
-    new Among("\u0B88", -1, -1),
-    new Among("\u0B89", -1, -1),
-    new Among("\u0B8A", -1, -1),
-    new Among("\u0B8E", -1, -1),
-    new Among("\u0B8F", -1, -1),
-    new Among("\u0B90", -1, -1),
-    new Among("\u0B92", -1, -1),
-    new Among("\u0B93", -1, -1),
-    new Among("\u0B94", -1, -1)
+private final static Among2 a_23[] = {
+    new Among2("\u0B85", -1, -1),
+    new Among2("\u0B86", -1, -1),
+    new Among2("\u0B87", -1, -1),
+    new Among2("\u0B88", -1, -1),
+    new Among2("\u0B89", -1, -1),
+    new Among2("\u0B8A", -1, -1),
+    new Among2("\u0B8E", -1, -1),
+    new Among2("\u0B8F", -1, -1),
+    new Among2("\u0B90", -1, -1),
+    new Among2("\u0B92", -1, -1),
+    new Among2("\u0B93", -1, -1),
+    new Among2("\u0B94", -1, -1)
 };
 
-private final static Among a_24[] = {
-    new Among("\u0BBE", -1, -1),
-    new Among("\u0BBF", -1, -1),
-    new Among("\u0BC0", -1, -1),
-    new Among("\u0BC1", -1, -1),
-    new Among("\u0BC2", -1, -1),
-    new Among("\u0BC6", -1, -1),
-    new Among("\u0BC7", -1, -1),
-    new Among("\u0BC8", -1, -1)
+private final static Among2 a_24[] = {
+    new Among2("\u0BBE", -1, -1),
+    new Among2("\u0BBF", -1, -1),
+    new Among2("\u0BC0", -1, -1),
+    new Among2("\u0BC1", -1, -1),
+    new Among2("\u0BC2", -1, -1),
+    new Among2("\u0BC6", -1, -1),
+    new Among2("\u0BC7", -1, -1),
+    new Among2("\u0BC8", -1, -1)
 };
 
-private final static Among a_25[] = {
-    new Among("\u0B95\u0BBF\u0BB1", -1, -1),
-    new Among("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
-    new Among("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
-    new Among("\u0B95\u0BBF\u0BB1\u0BCD", -1, -1),
-    new Among("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1),
-    new Among("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1)
+private final static Among2 a_25[] = {
+    new Among2("\u0B95\u0BBF\u0BB1", -1, -1),
+    new Among2("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
+    new Among2("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1", -1, -1),
+    new Among2("\u0B95\u0BBF\u0BB1\u0BCD", -1, -1),
+    new Among2("\u0B95\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1),
+    new Among2("\u0BBE\u0BA8\u0BBF\u0BA9\u0BCD\u0BB1\u0BCD", -1, -1)
 };
 
 private boolean B_found_vetrumai_urupu;
@@ -428,7 +428,7 @@ private boolean r_remove_question_prefixes() {
     {
         return false;
     }
-    // among, line 115
+    // Among2, line 115
     if (find_among(a_0) == 0)
     {
         return false;
@@ -467,7 +467,7 @@ private boolean r_fix_ending() {
             // (, line 123
             // [, line 123
             ket = cursor;
-            // among, line 123
+            // Among2, line 123
             if (find_among_b(a_1) == 0)
             {
                 break lab1;
@@ -490,7 +490,7 @@ private boolean r_fix_ending() {
             }
             // test, line 125
             int v_2 = limit - cursor;
-            // among, line 125
+            // Among2, line 125
             if (find_among_b(a_2) == 0)
             {
                 break lab2;
@@ -658,7 +658,7 @@ private boolean r_fix_ending() {
             {
                 break lab14;
             }
-            // among, line 140
+            // Among2, line 140
             if (find_among_b(a_3) == 0)
             {
                 break lab14;
@@ -668,7 +668,7 @@ private boolean r_fix_ending() {
             {
                 break lab14;
             }
-            // among, line 140
+            // Among2, line 140
             if (find_among_b(a_4) == 0)
             {
                 break lab14;
@@ -705,7 +705,7 @@ private boolean r_fix_ending() {
             {
                 break lab16;
             }
-            // among, line 144
+            // Among2, line 144
             if (find_among_b(a_5) == 0)
             {
                 break lab16;
@@ -731,7 +731,7 @@ private boolean r_fix_ending() {
             lab18: {
                 int v_7 = limit - cursor;
                 lab19: {
-                    // among, line 146
+                    // Among2, line 146
                     if (find_among_b(a_6) == 0)
                     {
                         break lab19;
@@ -739,7 +739,7 @@ private boolean r_fix_ending() {
                     break lab18;
                 }
                 cursor = limit - v_7;
-                // among, line 146
+                // Among2, line 146
                 if (find_among_b(a_7) == 0)
                 {
                     break lab17;
@@ -761,7 +761,7 @@ private boolean r_fix_ending() {
             // (, line 148
             // [, line 148
             ket = cursor;
-            // among, line 148
+            // Among2, line 148
             if (find_among_b(a_8) == 0)
             {
                 break lab20;
@@ -789,7 +789,7 @@ private boolean r_fix_ending() {
             {
                 int v_9 = limit - cursor;
                 lab22: {
-                    // among, line 150
+                    // Among2, line 150
                     if (find_among_b(a_9) == 0)
                     {
                         break lab22;
@@ -871,7 +871,7 @@ private boolean r_fix_ending() {
         lab26: {
             int v_13 = limit - cursor;
             lab27: {
-                // among, line 156
+                // Among2, line 156
                 if (find_among_b(a_10) == 0)
                 {
                     break lab27;
@@ -901,12 +901,12 @@ private boolean r_remove_pronoun_prefixes() {
     B_found_a_match = false;
     // [, line 162
     bra = cursor;
-    // among, line 162
+    // Among2, line 162
     if (find_among(a_11) == 0)
     {
         return false;
     }
-    // among, line 162
+    // Among2, line 162
     if (find_among(a_12) == 0)
     {
         return false;
@@ -958,7 +958,7 @@ private boolean r_remove_plural_suffix() {
             {
                 int v_3 = limit - cursor;
                 lab2: {
-                    // among, line 170
+                    // Among2, line 170
                     if (find_among_b(a_13) == 0)
                     {
                         break lab2;
@@ -1046,7 +1046,7 @@ private boolean r_remove_question_suffixes() {
         // (, line 182
         // [, line 183
         ket = cursor;
-        // among, line 183
+        // Among2, line 183
         if (find_among_b(a_14) == 0)
         {
             break lab0;
@@ -1082,7 +1082,7 @@ private boolean r_remove_command_suffixes() {
     // (, line 193
     // [, line 194
     ket = cursor;
-    // among, line 194
+    // Among2, line 194
     if (find_among_b(a_15) == 0)
     {
         return false;
@@ -1272,7 +1272,7 @@ private boolean r_remove_common_word_endings() {
                     {
                         int v_5 = limit - cursor;
                         lab15: {
-                            // among, line 226
+                            // Among2, line 226
                             if (find_among_b(a_16) == 0)
                             {
                                 break lab15;
@@ -1316,7 +1316,7 @@ private boolean r_remove_common_word_endings() {
         // (, line 232
         // [, line 232
         ket = cursor;
-        // among, line 232
+        // Among2, line 232
         if (find_among_b(a_17) == 0)
         {
             return false;
@@ -1411,7 +1411,7 @@ private boolean r_remove_vetrumai_urupukal() {
                     {
                         int v_7 = limit - cursor;
                         lab7: {
-                            // among, line 261
+                            // Among2, line 261
                             if (find_among_b(a_18) == 0)
                             {
                                 break lab7;
@@ -1434,7 +1434,7 @@ private boolean r_remove_vetrumai_urupukal() {
                 // test, line 262
                 int v_8 = limit - cursor;
                 // (, line 262
-                // among, line 262
+                // Among2, line 262
                 if (find_among_b(a_19) == 0)
                 {
                     break lab2;
@@ -1608,7 +1608,7 @@ private boolean r_remove_vetrumai_urupukal() {
                     {
                         int v_14 = limit - cursor;
                         lab24: {
-                            // among, line 279
+                            // Among2, line 279
                             if (find_among_b(a_20) == 0)
                             {
                                 break lab24;
@@ -1711,7 +1711,7 @@ private boolean r_remove_vetrumai_urupukal() {
                 {
                     int v_18 = limit - cursor;
                     lab33: {
-                        // among, line 291
+                        // Among2, line 291
                         if (find_among_b(a_21) == 0)
                         {
                             break lab33;
@@ -1831,7 +1831,7 @@ private boolean r_remove_tense_suffix() {
                 // (, line 314
                 // [, line 314
                 ket = cursor;
-                // among, line 314
+                // Among2, line 314
                 if (find_among_b(a_22) == 0)
                 {
                     break lab2;
@@ -1924,7 +1924,7 @@ private boolean r_remove_tense_suffix() {
                         {
                             int v_7 = limit - cursor;
                             lab12: {
-                                // among, line 328
+                                // Among2, line 328
                                 if (find_among_b(a_23) == 0)
                                 {
                                     break lab12;
@@ -2059,7 +2059,7 @@ private boolean r_remove_tense_suffix() {
                         {
                             int v_9 = limit - cursor;
                             lab26: {
-                                // among, line 337
+                                // Among2, line 337
                                 if (find_among_b(a_24) == 0)
                                 {
                                     break lab26;
@@ -2408,7 +2408,7 @@ private boolean r_remove_tense_suffix() {
         // (, line 378
         // [, line 378
         ket = cursor;
-        // among, line 378
+        // Among2, line 378
         if (find_among_b(a_25) == 0)
         {
             break lab57;

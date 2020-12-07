@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,122 +15,122 @@ public class finnishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("pa", -1, 1),
-    new Among("sti", -1, 2),
-    new Among("kaan", -1, 1),
-    new Among("han", -1, 1),
-    new Among("kin", -1, 1),
-    new Among("h\u00E4n", -1, 1),
-    new Among("k\u00E4\u00E4n", -1, 1),
-    new Among("ko", -1, 1),
-    new Among("p\u00E4", -1, 1),
-    new Among("k\u00F6", -1, 1)
+private final static Among2 a_0[] = {
+    new Among2("pa", -1, 1),
+    new Among2("sti", -1, 2),
+    new Among2("kaan", -1, 1),
+    new Among2("han", -1, 1),
+    new Among2("kin", -1, 1),
+    new Among2("h\u00E4n", -1, 1),
+    new Among2("k\u00E4\u00E4n", -1, 1),
+    new Among2("ko", -1, 1),
+    new Among2("p\u00E4", -1, 1),
+    new Among2("k\u00F6", -1, 1)
 };
 
-private final static Among a_1[] = {
-    new Among("lla", -1, -1),
-    new Among("na", -1, -1),
-    new Among("ssa", -1, -1),
-    new Among("ta", -1, -1),
-    new Among("lta", 3, -1),
-    new Among("sta", 3, -1)
+private final static Among2 a_1[] = {
+    new Among2("lla", -1, -1),
+    new Among2("na", -1, -1),
+    new Among2("ssa", -1, -1),
+    new Among2("ta", -1, -1),
+    new Among2("lta", 3, -1),
+    new Among2("sta", 3, -1)
 };
 
-private final static Among a_2[] = {
-    new Among("ll\u00E4", -1, -1),
-    new Among("n\u00E4", -1, -1),
-    new Among("ss\u00E4", -1, -1),
-    new Among("t\u00E4", -1, -1),
-    new Among("lt\u00E4", 3, -1),
-    new Among("st\u00E4", 3, -1)
+private final static Among2 a_2[] = {
+    new Among2("ll\u00E4", -1, -1),
+    new Among2("n\u00E4", -1, -1),
+    new Among2("ss\u00E4", -1, -1),
+    new Among2("t\u00E4", -1, -1),
+    new Among2("lt\u00E4", 3, -1),
+    new Among2("st\u00E4", 3, -1)
 };
 
-private final static Among a_3[] = {
-    new Among("lle", -1, -1),
-    new Among("ine", -1, -1)
+private final static Among2 a_3[] = {
+    new Among2("lle", -1, -1),
+    new Among2("ine", -1, -1)
 };
 
-private final static Among a_4[] = {
-    new Among("nsa", -1, 3),
-    new Among("mme", -1, 3),
-    new Among("nne", -1, 3),
-    new Among("ni", -1, 2),
-    new Among("si", -1, 1),
-    new Among("an", -1, 4),
-    new Among("en", -1, 6),
-    new Among("\u00E4n", -1, 5),
-    new Among("ns\u00E4", -1, 3)
+private final static Among2 a_4[] = {
+    new Among2("nsa", -1, 3),
+    new Among2("mme", -1, 3),
+    new Among2("nne", -1, 3),
+    new Among2("ni", -1, 2),
+    new Among2("si", -1, 1),
+    new Among2("an", -1, 4),
+    new Among2("en", -1, 6),
+    new Among2("\u00E4n", -1, 5),
+    new Among2("ns\u00E4", -1, 3)
 };
 
-private final static Among a_5[] = {
-    new Among("aa", -1, -1),
-    new Among("ee", -1, -1),
-    new Among("ii", -1, -1),
-    new Among("oo", -1, -1),
-    new Among("uu", -1, -1),
-    new Among("\u00E4\u00E4", -1, -1),
-    new Among("\u00F6\u00F6", -1, -1)
+private final static Among2 a_5[] = {
+    new Among2("aa", -1, -1),
+    new Among2("ee", -1, -1),
+    new Among2("ii", -1, -1),
+    new Among2("oo", -1, -1),
+    new Among2("uu", -1, -1),
+    new Among2("\u00E4\u00E4", -1, -1),
+    new Among2("\u00F6\u00F6", -1, -1)
 };
 
-private final static Among a_6[] = {
-    new Among("a", -1, 8),
-    new Among("lla", 0, -1),
-    new Among("na", 0, -1),
-    new Among("ssa", 0, -1),
-    new Among("ta", 0, -1),
-    new Among("lta", 4, -1),
-    new Among("sta", 4, -1),
-    new Among("tta", 4, 2),
-    new Among("lle", -1, -1),
-    new Among("ine", -1, -1),
-    new Among("ksi", -1, -1),
-    new Among("n", -1, 7),
-    new Among("han", 11, 1),
-    new Among("den", 11, -1, "r_VI", finnishStemmer.class),
-    new Among("seen", 11, -1, "r_LONG", finnishStemmer.class),
-    new Among("hen", 11, 2),
-    new Among("tten", 11, -1, "r_VI", finnishStemmer.class),
-    new Among("hin", 11, 3),
-    new Among("siin", 11, -1, "r_VI", finnishStemmer.class),
-    new Among("hon", 11, 4),
-    new Among("h\u00E4n", 11, 5),
-    new Among("h\u00F6n", 11, 6),
-    new Among("\u00E4", -1, 8),
-    new Among("ll\u00E4", 22, -1),
-    new Among("n\u00E4", 22, -1),
-    new Among("ss\u00E4", 22, -1),
-    new Among("t\u00E4", 22, -1),
-    new Among("lt\u00E4", 26, -1),
-    new Among("st\u00E4", 26, -1),
-    new Among("tt\u00E4", 26, 2)
+private final static Among2 a_6[] = {
+    new Among2("a", -1, 8),
+    new Among2("lla", 0, -1),
+    new Among2("na", 0, -1),
+    new Among2("ssa", 0, -1),
+    new Among2("ta", 0, -1),
+    new Among2("lta", 4, -1),
+    new Among2("sta", 4, -1),
+    new Among2("tta", 4, 2),
+    new Among2("lle", -1, -1),
+    new Among2("ine", -1, -1),
+    new Among2("ksi", -1, -1),
+    new Among2("n", -1, 7),
+    new Among2("han", 11, 1),
+    new Among2("den", 11, -1, "r_VI", finnishStemmer.class),
+    new Among2("seen", 11, -1, "r_LONG", finnishStemmer.class),
+    new Among2("hen", 11, 2),
+    new Among2("tten", 11, -1, "r_VI", finnishStemmer.class),
+    new Among2("hin", 11, 3),
+    new Among2("siin", 11, -1, "r_VI", finnishStemmer.class),
+    new Among2("hon", 11, 4),
+    new Among2("h\u00E4n", 11, 5),
+    new Among2("h\u00F6n", 11, 6),
+    new Among2("\u00E4", -1, 8),
+    new Among2("ll\u00E4", 22, -1),
+    new Among2("n\u00E4", 22, -1),
+    new Among2("ss\u00E4", 22, -1),
+    new Among2("t\u00E4", 22, -1),
+    new Among2("lt\u00E4", 26, -1),
+    new Among2("st\u00E4", 26, -1),
+    new Among2("tt\u00E4", 26, 2)
 };
 
-private final static Among a_7[] = {
-    new Among("eja", -1, -1),
-    new Among("mma", -1, 1),
-    new Among("imma", 1, -1),
-    new Among("mpa", -1, 1),
-    new Among("impa", 3, -1),
-    new Among("mmi", -1, 1),
-    new Among("immi", 5, -1),
-    new Among("mpi", -1, 1),
-    new Among("impi", 7, -1),
-    new Among("ej\u00E4", -1, -1),
-    new Among("mm\u00E4", -1, 1),
-    new Among("imm\u00E4", 10, -1),
-    new Among("mp\u00E4", -1, 1),
-    new Among("imp\u00E4", 12, -1)
+private final static Among2 a_7[] = {
+    new Among2("eja", -1, -1),
+    new Among2("mma", -1, 1),
+    new Among2("imma", 1, -1),
+    new Among2("mpa", -1, 1),
+    new Among2("impa", 3, -1),
+    new Among2("mmi", -1, 1),
+    new Among2("immi", 5, -1),
+    new Among2("mpi", -1, 1),
+    new Among2("impi", 7, -1),
+    new Among2("ej\u00E4", -1, -1),
+    new Among2("mm\u00E4", -1, 1),
+    new Among2("imm\u00E4", 10, -1),
+    new Among2("mp\u00E4", -1, 1),
+    new Among2("imp\u00E4", 12, -1)
 };
 
-private final static Among a_8[] = {
-    new Among("i", -1, -1),
-    new Among("j", -1, -1)
+private final static Among2 a_8[] = {
+    new Among2("i", -1, -1),
+    new Among2("j", -1, -1)
 };
 
-private final static Among a_9[] = {
-    new Among("mma", -1, 1),
-    new Among("imma", 0, -1)
+private final static Among2 a_9[] = {
+    new Among2("mma", -1, 1),
+    new Among2("imma", 0, -1)
 };
 
 private static final char g_AEI[] = {17, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8 };
@@ -348,7 +348,7 @@ private boolean r_possessive() {
             break;
         case 4:
             // (, line 82
-            // among, line 82
+            // Among2, line 82
             if (find_among_b(a_1) == 0)
             {
                 return false;
@@ -358,7 +358,7 @@ private boolean r_possessive() {
             break;
         case 5:
             // (, line 84
-            // among, line 84
+            // Among2, line 84
             if (find_among_b(a_2) == 0)
             {
                 return false;
@@ -368,7 +368,7 @@ private boolean r_possessive() {
             break;
         case 6:
             // (, line 87
-            // among, line 87
+            // Among2, line 87
             if (find_among_b(a_3) == 0)
             {
                 return false;
@@ -381,7 +381,7 @@ private boolean r_possessive() {
 }
 
 public boolean r_LONG() {
-    // among, line 92
+    // Among2, line 92
     if (find_among_b(a_5) == 0)
     {
         return false;

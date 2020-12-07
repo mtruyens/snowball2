@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,54 +15,54 @@ public class danishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("hed", -1, 1),
-    new Among("ethed", 0, 1),
-    new Among("ered", -1, 1),
-    new Among("e", -1, 1),
-    new Among("erede", 3, 1),
-    new Among("ende", 3, 1),
-    new Among("erende", 5, 1),
-    new Among("ene", 3, 1),
-    new Among("erne", 3, 1),
-    new Among("ere", 3, 1),
-    new Among("en", -1, 1),
-    new Among("heden", 10, 1),
-    new Among("eren", 10, 1),
-    new Among("er", -1, 1),
-    new Among("heder", 13, 1),
-    new Among("erer", 13, 1),
-    new Among("s", -1, 2),
-    new Among("heds", 16, 1),
-    new Among("es", 16, 1),
-    new Among("endes", 18, 1),
-    new Among("erendes", 19, 1),
-    new Among("enes", 18, 1),
-    new Among("ernes", 18, 1),
-    new Among("eres", 18, 1),
-    new Among("ens", 16, 1),
-    new Among("hedens", 24, 1),
-    new Among("erens", 24, 1),
-    new Among("ers", 16, 1),
-    new Among("ets", 16, 1),
-    new Among("erets", 28, 1),
-    new Among("et", -1, 1),
-    new Among("eret", 30, 1)
+private final static Among2 a_0[] = {
+    new Among2("hed", -1, 1),
+    new Among2("ethed", 0, 1),
+    new Among2("ered", -1, 1),
+    new Among2("e", -1, 1),
+    new Among2("erede", 3, 1),
+    new Among2("ende", 3, 1),
+    new Among2("erende", 5, 1),
+    new Among2("ene", 3, 1),
+    new Among2("erne", 3, 1),
+    new Among2("ere", 3, 1),
+    new Among2("en", -1, 1),
+    new Among2("heden", 10, 1),
+    new Among2("eren", 10, 1),
+    new Among2("er", -1, 1),
+    new Among2("heder", 13, 1),
+    new Among2("erer", 13, 1),
+    new Among2("s", -1, 2),
+    new Among2("heds", 16, 1),
+    new Among2("es", 16, 1),
+    new Among2("endes", 18, 1),
+    new Among2("erendes", 19, 1),
+    new Among2("enes", 18, 1),
+    new Among2("ernes", 18, 1),
+    new Among2("eres", 18, 1),
+    new Among2("ens", 16, 1),
+    new Among2("hedens", 24, 1),
+    new Among2("erens", 24, 1),
+    new Among2("ers", 16, 1),
+    new Among2("ets", 16, 1),
+    new Among2("erets", 28, 1),
+    new Among2("et", -1, 1),
+    new Among2("eret", 30, 1)
 };
 
-private final static Among a_1[] = {
-    new Among("gd", -1, -1),
-    new Among("dt", -1, -1),
-    new Among("gt", -1, -1),
-    new Among("kt", -1, -1)
+private final static Among2 a_1[] = {
+    new Among2("gd", -1, -1),
+    new Among2("dt", -1, -1),
+    new Among2("gt", -1, -1),
+    new Among2("kt", -1, -1)
 };
 
-private final static Among a_2[] = {
-    new Among("ig", -1, 1),
-    new Among("lig", 0, 1),
-    new Among("elig", 1, 1),
-    new Among("els", -1, 1),
-    new Among("l\u00F8st", -1, 2)
+private final static Among2 a_2[] = {
+    new Among2("ig", -1, 1),
+    new Among2("lig", 0, 1),
+    new Among2("elig", 1, 1),
+    new Among2("els", -1, 1),
+    new Among2("l\u00F8st", -1, 2)
 };
 
 private static final char g_c[] = {119, 223, 119, 1 };

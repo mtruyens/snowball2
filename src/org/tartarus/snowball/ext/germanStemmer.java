@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,46 +15,46 @@ public class germanStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("", -1, 5),
-    new Among("U", 0, 2),
-    new Among("Y", 0, 1),
-    new Among("\u00E4", 0, 3),
-    new Among("\u00F6", 0, 4),
-    new Among("\u00FC", 0, 2)
+private final static Among2 a_0[] = {
+    new Among2("", -1, 5),
+    new Among2("U", 0, 2),
+    new Among2("Y", 0, 1),
+    new Among2("\u00E4", 0, 3),
+    new Among2("\u00F6", 0, 4),
+    new Among2("\u00FC", 0, 2)
 };
 
-private final static Among a_1[] = {
-    new Among("e", -1, 2),
-    new Among("em", -1, 1),
-    new Among("en", -1, 2),
-    new Among("ern", -1, 1),
-    new Among("er", -1, 1),
-    new Among("s", -1, 3),
-    new Among("es", 5, 2)
+private final static Among2 a_1[] = {
+    new Among2("e", -1, 2),
+    new Among2("em", -1, 1),
+    new Among2("en", -1, 2),
+    new Among2("ern", -1, 1),
+    new Among2("er", -1, 1),
+    new Among2("s", -1, 3),
+    new Among2("es", 5, 2)
 };
 
-private final static Among a_2[] = {
-    new Among("en", -1, 1),
-    new Among("er", -1, 1),
-    new Among("st", -1, 2),
-    new Among("est", 2, 1)
+private final static Among2 a_2[] = {
+    new Among2("en", -1, 1),
+    new Among2("er", -1, 1),
+    new Among2("st", -1, 2),
+    new Among2("est", 2, 1)
 };
 
-private final static Among a_3[] = {
-    new Among("ig", -1, 1),
-    new Among("lich", -1, 1)
+private final static Among2 a_3[] = {
+    new Among2("ig", -1, 1),
+    new Among2("lich", -1, 1)
 };
 
-private final static Among a_4[] = {
-    new Among("end", -1, 1),
-    new Among("ig", -1, 2),
-    new Among("ung", -1, 1),
-    new Among("lich", -1, 3),
-    new Among("isch", -1, 2),
-    new Among("ik", -1, 2),
-    new Among("heit", -1, 3),
-    new Among("keit", -1, 4)
+private final static Among2 a_4[] = {
+    new Among2("end", -1, 1),
+    new Among2("ig", -1, 2),
+    new Among2("ung", -1, 1),
+    new Among2("lich", -1, 3),
+    new Among2("isch", -1, 2),
+    new Among2("ik", -1, 2),
+    new Among2("heit", -1, 3),
+    new Among2("keit", -1, 4)
 };
 
 private static final char g_v[] = {17, 65, 16, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 32, 8 };

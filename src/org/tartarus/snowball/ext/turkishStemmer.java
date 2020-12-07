@@ -2,7 +2,7 @@
 
 package org.tartarus.snowball.ext;
 
-import org.tartarus.snowball.Among;
+import org.tartarus.snowball.Among2;
 
 /**
  * This class implements the stemming algorithm defined by a snowball script.
@@ -15,196 +15,196 @@ public class turkishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
     private static final long serialVersionUID = 1L;
 
-private final static Among a_0[] = {
-    new Among("m", -1, -1),
-    new Among("n", -1, -1),
-    new Among("miz", -1, -1),
-    new Among("niz", -1, -1),
-    new Among("muz", -1, -1),
-    new Among("nuz", -1, -1),
-    new Among("m\u00FCz", -1, -1),
-    new Among("n\u00FCz", -1, -1),
-    new Among("m\u0131z", -1, -1),
-    new Among("n\u0131z", -1, -1)
+private final static Among2 a_0[] = {
+    new Among2("m", -1, -1),
+    new Among2("n", -1, -1),
+    new Among2("miz", -1, -1),
+    new Among2("niz", -1, -1),
+    new Among2("muz", -1, -1),
+    new Among2("nuz", -1, -1),
+    new Among2("m\u00FCz", -1, -1),
+    new Among2("n\u00FCz", -1, -1),
+    new Among2("m\u0131z", -1, -1),
+    new Among2("n\u0131z", -1, -1)
 };
 
-private final static Among a_1[] = {
-    new Among("leri", -1, -1),
-    new Among("lar\u0131", -1, -1)
+private final static Among2 a_1[] = {
+    new Among2("leri", -1, -1),
+    new Among2("lar\u0131", -1, -1)
 };
 
-private final static Among a_2[] = {
-    new Among("ni", -1, -1),
-    new Among("nu", -1, -1),
-    new Among("n\u00FC", -1, -1),
-    new Among("n\u0131", -1, -1)
+private final static Among2 a_2[] = {
+    new Among2("ni", -1, -1),
+    new Among2("nu", -1, -1),
+    new Among2("n\u00FC", -1, -1),
+    new Among2("n\u0131", -1, -1)
 };
 
-private final static Among a_3[] = {
-    new Among("in", -1, -1),
-    new Among("un", -1, -1),
-    new Among("\u00FCn", -1, -1),
-    new Among("\u0131n", -1, -1)
+private final static Among2 a_3[] = {
+    new Among2("in", -1, -1),
+    new Among2("un", -1, -1),
+    new Among2("\u00FCn", -1, -1),
+    new Among2("\u0131n", -1, -1)
 };
 
-private final static Among a_4[] = {
-    new Among("a", -1, -1),
-    new Among("e", -1, -1)
+private final static Among2 a_4[] = {
+    new Among2("a", -1, -1),
+    new Among2("e", -1, -1)
 };
 
-private final static Among a_5[] = {
-    new Among("na", -1, -1),
-    new Among("ne", -1, -1)
+private final static Among2 a_5[] = {
+    new Among2("na", -1, -1),
+    new Among2("ne", -1, -1)
 };
 
-private final static Among a_6[] = {
-    new Among("da", -1, -1),
-    new Among("ta", -1, -1),
-    new Among("de", -1, -1),
-    new Among("te", -1, -1)
+private final static Among2 a_6[] = {
+    new Among2("da", -1, -1),
+    new Among2("ta", -1, -1),
+    new Among2("de", -1, -1),
+    new Among2("te", -1, -1)
 };
 
-private final static Among a_7[] = {
-    new Among("nda", -1, -1),
-    new Among("nde", -1, -1)
+private final static Among2 a_7[] = {
+    new Among2("nda", -1, -1),
+    new Among2("nde", -1, -1)
 };
 
-private final static Among a_8[] = {
-    new Among("dan", -1, -1),
-    new Among("tan", -1, -1),
-    new Among("den", -1, -1),
-    new Among("ten", -1, -1)
+private final static Among2 a_8[] = {
+    new Among2("dan", -1, -1),
+    new Among2("tan", -1, -1),
+    new Among2("den", -1, -1),
+    new Among2("ten", -1, -1)
 };
 
-private final static Among a_9[] = {
-    new Among("ndan", -1, -1),
-    new Among("nden", -1, -1)
+private final static Among2 a_9[] = {
+    new Among2("ndan", -1, -1),
+    new Among2("nden", -1, -1)
 };
 
-private final static Among a_10[] = {
-    new Among("la", -1, -1),
-    new Among("le", -1, -1)
+private final static Among2 a_10[] = {
+    new Among2("la", -1, -1),
+    new Among2("le", -1, -1)
 };
 
-private final static Among a_11[] = {
-    new Among("ca", -1, -1),
-    new Among("ce", -1, -1)
+private final static Among2 a_11[] = {
+    new Among2("ca", -1, -1),
+    new Among2("ce", -1, -1)
 };
 
-private final static Among a_12[] = {
-    new Among("im", -1, -1),
-    new Among("um", -1, -1),
-    new Among("\u00FCm", -1, -1),
-    new Among("\u0131m", -1, -1)
+private final static Among2 a_12[] = {
+    new Among2("im", -1, -1),
+    new Among2("um", -1, -1),
+    new Among2("\u00FCm", -1, -1),
+    new Among2("\u0131m", -1, -1)
 };
 
-private final static Among a_13[] = {
-    new Among("sin", -1, -1),
-    new Among("sun", -1, -1),
-    new Among("s\u00FCn", -1, -1),
-    new Among("s\u0131n", -1, -1)
+private final static Among2 a_13[] = {
+    new Among2("sin", -1, -1),
+    new Among2("sun", -1, -1),
+    new Among2("s\u00FCn", -1, -1),
+    new Among2("s\u0131n", -1, -1)
 };
 
-private final static Among a_14[] = {
-    new Among("iz", -1, -1),
-    new Among("uz", -1, -1),
-    new Among("\u00FCz", -1, -1),
-    new Among("\u0131z", -1, -1)
+private final static Among2 a_14[] = {
+    new Among2("iz", -1, -1),
+    new Among2("uz", -1, -1),
+    new Among2("\u00FCz", -1, -1),
+    new Among2("\u0131z", -1, -1)
 };
 
-private final static Among a_15[] = {
-    new Among("siniz", -1, -1),
-    new Among("sunuz", -1, -1),
-    new Among("s\u00FCn\u00FCz", -1, -1),
-    new Among("s\u0131n\u0131z", -1, -1)
+private final static Among2 a_15[] = {
+    new Among2("siniz", -1, -1),
+    new Among2("sunuz", -1, -1),
+    new Among2("s\u00FCn\u00FCz", -1, -1),
+    new Among2("s\u0131n\u0131z", -1, -1)
 };
 
-private final static Among a_16[] = {
-    new Among("lar", -1, -1),
-    new Among("ler", -1, -1)
+private final static Among2 a_16[] = {
+    new Among2("lar", -1, -1),
+    new Among2("ler", -1, -1)
 };
 
-private final static Among a_17[] = {
-    new Among("niz", -1, -1),
-    new Among("nuz", -1, -1),
-    new Among("n\u00FCz", -1, -1),
-    new Among("n\u0131z", -1, -1)
+private final static Among2 a_17[] = {
+    new Among2("niz", -1, -1),
+    new Among2("nuz", -1, -1),
+    new Among2("n\u00FCz", -1, -1),
+    new Among2("n\u0131z", -1, -1)
 };
 
-private final static Among a_18[] = {
-    new Among("dir", -1, -1),
-    new Among("tir", -1, -1),
-    new Among("dur", -1, -1),
-    new Among("tur", -1, -1),
-    new Among("d\u00FCr", -1, -1),
-    new Among("t\u00FCr", -1, -1),
-    new Among("d\u0131r", -1, -1),
-    new Among("t\u0131r", -1, -1)
+private final static Among2 a_18[] = {
+    new Among2("dir", -1, -1),
+    new Among2("tir", -1, -1),
+    new Among2("dur", -1, -1),
+    new Among2("tur", -1, -1),
+    new Among2("d\u00FCr", -1, -1),
+    new Among2("t\u00FCr", -1, -1),
+    new Among2("d\u0131r", -1, -1),
+    new Among2("t\u0131r", -1, -1)
 };
 
-private final static Among a_19[] = {
-    new Among("cas\u0131na", -1, -1),
-    new Among("cesine", -1, -1)
+private final static Among2 a_19[] = {
+    new Among2("cas\u0131na", -1, -1),
+    new Among2("cesine", -1, -1)
 };
 
-private final static Among a_20[] = {
-    new Among("di", -1, -1),
-    new Among("ti", -1, -1),
-    new Among("dik", -1, -1),
-    new Among("tik", -1, -1),
-    new Among("duk", -1, -1),
-    new Among("tuk", -1, -1),
-    new Among("d\u00FCk", -1, -1),
-    new Among("t\u00FCk", -1, -1),
-    new Among("d\u0131k", -1, -1),
-    new Among("t\u0131k", -1, -1),
-    new Among("dim", -1, -1),
-    new Among("tim", -1, -1),
-    new Among("dum", -1, -1),
-    new Among("tum", -1, -1),
-    new Among("d\u00FCm", -1, -1),
-    new Among("t\u00FCm", -1, -1),
-    new Among("d\u0131m", -1, -1),
-    new Among("t\u0131m", -1, -1),
-    new Among("din", -1, -1),
-    new Among("tin", -1, -1),
-    new Among("dun", -1, -1),
-    new Among("tun", -1, -1),
-    new Among("d\u00FCn", -1, -1),
-    new Among("t\u00FCn", -1, -1),
-    new Among("d\u0131n", -1, -1),
-    new Among("t\u0131n", -1, -1),
-    new Among("du", -1, -1),
-    new Among("tu", -1, -1),
-    new Among("d\u00FC", -1, -1),
-    new Among("t\u00FC", -1, -1),
-    new Among("d\u0131", -1, -1),
-    new Among("t\u0131", -1, -1)
+private final static Among2 a_20[] = {
+    new Among2("di", -1, -1),
+    new Among2("ti", -1, -1),
+    new Among2("dik", -1, -1),
+    new Among2("tik", -1, -1),
+    new Among2("duk", -1, -1),
+    new Among2("tuk", -1, -1),
+    new Among2("d\u00FCk", -1, -1),
+    new Among2("t\u00FCk", -1, -1),
+    new Among2("d\u0131k", -1, -1),
+    new Among2("t\u0131k", -1, -1),
+    new Among2("dim", -1, -1),
+    new Among2("tim", -1, -1),
+    new Among2("dum", -1, -1),
+    new Among2("tum", -1, -1),
+    new Among2("d\u00FCm", -1, -1),
+    new Among2("t\u00FCm", -1, -1),
+    new Among2("d\u0131m", -1, -1),
+    new Among2("t\u0131m", -1, -1),
+    new Among2("din", -1, -1),
+    new Among2("tin", -1, -1),
+    new Among2("dun", -1, -1),
+    new Among2("tun", -1, -1),
+    new Among2("d\u00FCn", -1, -1),
+    new Among2("t\u00FCn", -1, -1),
+    new Among2("d\u0131n", -1, -1),
+    new Among2("t\u0131n", -1, -1),
+    new Among2("du", -1, -1),
+    new Among2("tu", -1, -1),
+    new Among2("d\u00FC", -1, -1),
+    new Among2("t\u00FC", -1, -1),
+    new Among2("d\u0131", -1, -1),
+    new Among2("t\u0131", -1, -1)
 };
 
-private final static Among a_21[] = {
-    new Among("sa", -1, -1),
-    new Among("se", -1, -1),
-    new Among("sak", -1, -1),
-    new Among("sek", -1, -1),
-    new Among("sam", -1, -1),
-    new Among("sem", -1, -1),
-    new Among("san", -1, -1),
-    new Among("sen", -1, -1)
+private final static Among2 a_21[] = {
+    new Among2("sa", -1, -1),
+    new Among2("se", -1, -1),
+    new Among2("sak", -1, -1),
+    new Among2("sek", -1, -1),
+    new Among2("sam", -1, -1),
+    new Among2("sem", -1, -1),
+    new Among2("san", -1, -1),
+    new Among2("sen", -1, -1)
 };
 
-private final static Among a_22[] = {
-    new Among("mi\u015F", -1, -1),
-    new Among("mu\u015F", -1, -1),
-    new Among("m\u00FC\u015F", -1, -1),
-    new Among("m\u0131\u015F", -1, -1)
+private final static Among2 a_22[] = {
+    new Among2("mi\u015F", -1, -1),
+    new Among2("mu\u015F", -1, -1),
+    new Among2("m\u00FC\u015F", -1, -1),
+    new Among2("m\u0131\u015F", -1, -1)
 };
 
-private final static Among a_23[] = {
-    new Among("b", -1, 1),
-    new Among("c", -1, 2),
-    new Among("d", -1, 3),
-    new Among("\u011F", -1, 4)
+private final static Among2 a_23[] = {
+    new Among2("b", -1, 1),
+    new Among2("c", -1, 2),
+    new Among2("d", -1, 3),
+    new Among2("\u011F", -1, 4)
 };
 
 private static final char g_vowel[] = {17, 65, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 8, 0, 0, 0, 0, 0, 0, 1 };
@@ -728,7 +728,7 @@ private boolean r_mark_suffix_with_optional_U_vowel() {
 
 private boolean r_mark_possessives() {
     // (, line 164
-    // among, line 165
+    // Among2, line 165
     if (find_among_b(a_0) == 0)
     {
         return false;
@@ -764,7 +764,7 @@ private boolean r_mark_sU() {
 
 private boolean r_mark_lArI() {
     // (, line 176
-    // among, line 177
+    // Among2, line 177
     if (find_among_b(a_1) == 0)
     {
         return false;
@@ -799,7 +799,7 @@ private boolean r_mark_nU() {
     {
         return false;
     }
-    // among, line 188
+    // Among2, line 188
     if (find_among_b(a_2) == 0)
     {
         return false;
@@ -814,7 +814,7 @@ private boolean r_mark_nUn() {
     {
         return false;
     }
-    // among, line 193
+    // Among2, line 193
     if (find_among_b(a_3) == 0)
     {
         return false;
@@ -835,7 +835,7 @@ private boolean r_mark_yA() {
     {
         return false;
     }
-    // among, line 199
+    // Among2, line 199
     if (find_among_b(a_4) == 0)
     {
         return false;
@@ -856,7 +856,7 @@ private boolean r_mark_nA() {
     {
         return false;
     }
-    // among, line 205
+    // Among2, line 205
     if (find_among_b(a_5) == 0)
     {
         return false;
@@ -871,7 +871,7 @@ private boolean r_mark_DA() {
     {
         return false;
     }
-    // among, line 210
+    // Among2, line 210
     if (find_among_b(a_6) == 0)
     {
         return false;
@@ -886,7 +886,7 @@ private boolean r_mark_ndA() {
     {
         return false;
     }
-    // among, line 215
+    // Among2, line 215
     if (find_among_b(a_7) == 0)
     {
         return false;
@@ -901,7 +901,7 @@ private boolean r_mark_DAn() {
     {
         return false;
     }
-    // among, line 220
+    // Among2, line 220
     if (find_among_b(a_8) == 0)
     {
         return false;
@@ -916,7 +916,7 @@ private boolean r_mark_ndAn() {
     {
         return false;
     }
-    // among, line 225
+    // Among2, line 225
     if (find_among_b(a_9) == 0)
     {
         return false;
@@ -931,7 +931,7 @@ private boolean r_mark_ylA() {
     {
         return false;
     }
-    // among, line 230
+    // Among2, line 230
     if (find_among_b(a_10) == 0)
     {
         return false;
@@ -962,7 +962,7 @@ private boolean r_mark_ncA() {
     {
         return false;
     }
-    // among, line 240
+    // Among2, line 240
     if (find_among_b(a_11) == 0)
     {
         return false;
@@ -983,7 +983,7 @@ private boolean r_mark_yUm() {
     {
         return false;
     }
-    // among, line 246
+    // Among2, line 246
     if (find_among_b(a_12) == 0)
     {
         return false;
@@ -1004,7 +1004,7 @@ private boolean r_mark_sUn() {
     {
         return false;
     }
-    // among, line 252
+    // Among2, line 252
     if (find_among_b(a_13) == 0)
     {
         return false;
@@ -1019,7 +1019,7 @@ private boolean r_mark_yUz() {
     {
         return false;
     }
-    // among, line 257
+    // Among2, line 257
     if (find_among_b(a_14) == 0)
     {
         return false;
@@ -1035,7 +1035,7 @@ private boolean r_mark_yUz() {
 
 private boolean r_mark_sUnUz() {
     // (, line 261
-    // among, line 262
+    // Among2, line 262
     if (find_among_b(a_15) == 0)
     {
         return false;
@@ -1050,7 +1050,7 @@ private boolean r_mark_lAr() {
     {
         return false;
     }
-    // among, line 267
+    // Among2, line 267
     if (find_among_b(a_16) == 0)
     {
         return false;
@@ -1065,7 +1065,7 @@ private boolean r_mark_nUz() {
     {
         return false;
     }
-    // among, line 272
+    // Among2, line 272
     if (find_among_b(a_17) == 0)
     {
         return false;
@@ -1080,7 +1080,7 @@ private boolean r_mark_DUr() {
     {
         return false;
     }
-    // among, line 277
+    // Among2, line 277
     if (find_among_b(a_18) == 0)
     {
         return false;
@@ -1090,7 +1090,7 @@ private boolean r_mark_DUr() {
 
 private boolean r_mark_cAsInA() {
     // (, line 280
-    // among, line 281
+    // Among2, line 281
     if (find_among_b(a_19) == 0)
     {
         return false;
@@ -1105,7 +1105,7 @@ private boolean r_mark_yDU() {
     {
         return false;
     }
-    // among, line 286
+    // Among2, line 286
     if (find_among_b(a_20) == 0)
     {
         return false;
@@ -1121,7 +1121,7 @@ private boolean r_mark_yDU() {
 
 private boolean r_mark_ysA() {
     // (, line 294
-    // among, line 295
+    // Among2, line 295
     if (find_among_b(a_21) == 0)
     {
         return false;
@@ -1142,7 +1142,7 @@ private boolean r_mark_ymUs_() {
     {
         return false;
     }
-    // among, line 301
+    // Among2, line 301
     if (find_among_b(a_22) == 0)
     {
         return false;
