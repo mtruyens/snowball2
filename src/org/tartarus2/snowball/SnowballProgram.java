@@ -1,5 +1,5 @@
 
-package org.tartarus.snowball;
+package org.tartarus2.snowball;
 import java.lang.reflect.InvocationTargetException;
 import java.io.Serializable;
 
